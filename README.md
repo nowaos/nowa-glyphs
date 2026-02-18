@@ -14,6 +14,6 @@ If you like this project, consider supporting its development:
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 Copyright (c) 2025, Alexandre Magro
