@@ -1,9 +1,27 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="Nowa Icon Theme"/>
+  <img src="assets/logo.svg"/>
 </p>
 
 <p align="center">
   A modern icon theme for GNOME desktop.
+</p>
+
+# Previews
+
+<p align="center">
+  <img src="assets/preview-accessories.png"/>
+</p>
+
+<p align="center">
+  <img src="assets/preview-system.png"/>
+</p>
+
+<p align="center">
+  <img src="assets/preview-utilities.png"/>
+</p>
+
+<p align="center">
+  <img src="assets/folders-and-files.png"/>
 </p>
 
 ## Support
