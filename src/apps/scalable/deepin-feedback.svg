@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" viewBox="0 0 64 64" id="svg20" sodipodi:docname="deepin-feedback.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+  <sodipodi:namedview id="namedview20" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="svg20"/>
+  <defs id="defs15">
+    <filter id="deepin-feedback-a" x="-0.06605487" y="-0.11190515" width="1.1321097" height="1.1976991">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" id="feOffset1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3" id="feGaussianBlur1"/>
+      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1" id="feComposite1"/>
+      <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" id="feColorMatrix1"/>
+      <feMerge id="feMerge2">
+        <feMergeNode in="shadowMatrixOuter1" id="feMergeNode1"/>
+        <feMergeNode in="SourceGraphic" id="feMergeNode2"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="deepin-feedback-b" x1="26.576" x2="67.866" y1="12.519" y2="97.344" gradientTransform="scale(1.0755 .9298)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#90FF8A" offset="0" id="stop2"/>
+      <stop stop-color="#00B9E4" offset="1" id="stop3"/>
+    </linearGradient>
+    <linearGradient id="deepin-feedback-c" x1="38.141" x2="24.287" y1="78.319" y2="64.775" gradientTransform="scale(1.3385 .74709)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF" stop-opacity=".494" offset="0" id="stop4"/>
+      <stop stop-color="#FFF" offset="1" id="stop5"/>
+    </linearGradient>
+    <filter id="deepin-feedback-d" x="-0.36923077" y="-0.061238469" width="1.7384615" height="1.147993">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" id="feOffset5"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2" id="feGaussianBlur5"/>
+      <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" id="feColorMatrix5"/>
+      <feMerge id="feMerge6">
+        <feMergeNode in="shadowMatrixOuter1" id="feMergeNode5"/>
+        <feMergeNode in="SourceGraphic" id="feMergeNode6"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="deepin-feedback-e" x2="8.7457" y1="3.6415" y2="3.6415" gradientTransform="scale(1.2019 .83205)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6D049" offset="0" id="stop6"/>
+      <stop stop-color="#EC9500" offset="1" id="stop7"/>
+    </linearGradient>
+    <linearGradient id="deepin-feedback-f" x2="7.1993" y1="22.213" y2="22.213" gradientTransform="scale(1.6125 .62017)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F6F6" offset="0" id="stop8"/>
+      <stop stop-color="#747474" offset="1" id="stop9"/>
+    </linearGradient>
+    <linearGradient id="deepin-feedback-g" x1="-.79349" x2="19.902" y1="17.508" y2="17.508" gradientTransform="scale(.56309 1.7759)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E5E5E" offset="0" id="stop10"/>
+      <stop stop-color="#373737" offset="1" id="stop11"/>
+    </linearGradient>
+    <linearGradient id="deepin-feedback-h" x1=".27215" x2="9.611" y1="76.876" y2="76.876" gradientTransform="scale(1.2019 .83205)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEACA" offset="0" id="stop12"/>
+      <stop stop-color="#E07431" offset="1" id="stop13"/>
+    </linearGradient>
+    <filter id="filter1057-3" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur13"/>
+    </filter>
+    <linearGradient id="linearGradient1053-6" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="matrix(1.0000066,0,0,1.0000066,131.49919,-0.51043988)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#dee0e2" offset="0" id="stop14"/>
+      <stop stop-color="#f1f3f5" stop-opacity=".99608" offset="1" id="stop15"/>
+    </linearGradient>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect x="4.5" y="4.5" width="55" height="55" fill="url(#linearGradient1053-6)" stroke-width="2.74441" id="bg" style="fill:url(#linearGradient1053-6);stroke-linecap:round" rx="10"/>
+  <g transform="matrix(.31144 0 0 .31144 15.026 15.737)" fill="none" fill-rule="evenodd" filter="url(#deepin-feedback-a)" id="art">
+    <path d="m15 13h79c8.2843 0 15 6.7157 15 15v51c0 8.2843-6.7157 15-15 15h-62.306c-0.60828 0-1.1957 0.22177-1.6522 0.62377l-13.966 12.298c-0.51811 0.45624-1.308 0.40609-1.7642-0.11201-0.201-0.22826-0.31189-0.52196-0.31189-0.8261v-11.984c-7.732 0-14-6.268-14-14v-52c0-8.2843 6.7157-15 15-15z" fill="url(#deepin-feedback-b)" id="path16"/>
+    <path d="m83.5 66c1.6569 0 3 1.3431 3 3s-1.3431 3-3 3h-58.5c-1.6569 0-3-1.3431-3-3s1.3431-3 3-3zm0-15c1.6569 0 3 1.3431 3 3s-1.3431 3-3 3h-58.5c-1.6569 0-3-1.3431-3-3s1.3431-3 3-3zm0-15c1.6569 0 3 1.3431 3 3s-1.3431 3-3 3h-58.5c-1.6569 0-3-1.3431-3-3s1.3431-3 3-3z" fill="url(#deepin-feedback-c)" fill-rule="nonzero" id="path17"/>
+    <g transform="translate(85)" filter="url(#deepin-feedback-d)" id="g19">
+      <path d="m2.5 0h8c1.3807 0 2.5 1.1193 2.5 2.5v6.5h-13v-6.5c0-1.3807 1.1193-2.5 2.5-2.5z" fill="url(#deepin-feedback-e)" id="path18"/>
+      <rect y="11" width="13" height="5" fill="url(#deepin-feedback-f)" id="rect18"/>
+      <rect y="18" width="13" height="41" fill="url(#deepin-feedback-g)" id="rect19"/>
+      <polygon points="13 61 11 70 2 70 0 61" fill="url(#deepin-feedback-h)" id="polygon19"/>
+      <path d="m3 72h7l-3.0528 6.1056c-0.12349 0.24699-0.42383 0.3471-0.67082 0.22361-0.096764-0.048382-0.17522-0.12684-0.22361-0.22361z" fill="#312f2f" id="path19"/>
+    </g>
+  </g>
+</svg>

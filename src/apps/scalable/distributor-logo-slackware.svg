@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" version="1.1" id="svg2" sodipodi:docname="distributor-logo-slackware.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+  <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="svg2"/>
+  <defs id="defs2">
+    <filter id="filter1057-9" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1"/>
+    </filter>
+    <linearGradient id="linearGradient1053-1" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="matrix(1.0000071,0,0,1.0000071,131.49576,-0.51035985)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1d2123" offset="0" id="stop1"/>
+      <stop stop-color="#33393e" stop-opacity=".99608" offset="1" id="stop2"/>
+    </linearGradient>
+    <filter id="filter1057-9-7" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1-5"/>
+    </filter>
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1057" x="-0.026999999" width="1.054" y="-0.026999999" height="1.054">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="0.61875" id="feGaussianBlur1059"/>
+    </filter>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect y="4.5" x="4.5" height="55" width="55" id="bg" style="fill:url(#linearGradient1053-1);fill-opacity:1;stroke-width:2.74444;stroke-linecap:round;font-variation-settings:normal;opacity:1;vector-effect:none;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" rx="10"/>
+  <g id="art"><path fill="#ffffff" d="m 21.819642,47.418887 h 1.356877 c 0.257013,-0.517806 0.582059,-0.774819 0.967579,-0.774819 0.260792,0 0.842851,0.128507 1.746176,0.38552 2.84604,0.646312 5.110022,0.971357 6.788165,0.971357 6.595405,-0.257013 10.152011,-3.231559 10.666037,-8.91986 0,-2.328235 -0.967578,-4.527964 -2.910294,-6.595406 -1.549637,-1.549637 -4.134884,-3.23156 -7.755743,-5.041989 -4.006378,-2.199728 -6.009567,-4.138664 -6.009567,-5.820587 0.257013,-2.195949 1.874682,-3.360066 4.845449,-3.488573 4.006379,0.128507 6.727692,2.328235 8.148822,6.591626 h 1.938936 l -0.971358,-7.944723 h -0.967578 c -0.260792,0.128506 -0.325045,0.18898 -0.196539,0.18898 a 1.8860214,1.8860214 0 0 1 -0.967578,0.393079 c -0.132286,0 -0.582059,-0.132286 -1.360657,-0.389299 -2.324455,-0.646312 -4.395677,-0.971358 -6.206106,-0.971358 -6.334613,0.389299 -9.694679,3.103053 -10.083978,8.145042 0.774818,4.784976 3.685112,8.016536 8.73088,9.698459 4.263391,1.681923 6.655879,4.074411 7.173685,7.177464 -0.260793,3.099274 -2.135475,4.716943 -5.624048,4.849229 -4.138664,0 -6.984704,-2.456741 -8.534341,-7.370223 h -1.938936 l 1.164117,8.91986" font-family="'刘德华字体叶根友仿版'" font-size="62.261px" font-weight="700" letter-spacing="0" word-spacing="0" id="path2" style="stroke-width:3.7796"/></g>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" id="svg3" sodipodi:docname="termius.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+  <sodipodi:namedview id="namedview3" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="svg3"/>
+  <defs id="defs2">
+    <filter id="filter1057-2-7" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1"/>
+    </filter>
+    <linearGradient id="linearGradient1053-0" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="translate(131.5,-0.51)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1d2123" offset="0" id="stop1"/>
+      <stop stop-color="#33393e" stop-opacity=".99608" offset="1" id="stop2"/>
+    </linearGradient>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect x="4.5" y="4.5" width="55" height="55" fill="url(#linearGradient1053-0)" stroke-width="2.7444" id="bg" style="fill:url(#linearGradient1053-0);stroke-linecap:round" rx="10"/>
+  <g id="art"><path d="m 27.854,15.369 c -5.7757,-6.39e-4 -10.416,4.4727 -11.053,10.088 -2.3557,2.1201 -3.7927,5.1007 -3.8008,8.3125 a 3.0003,3.0003 0 0 0 0,0.0078 c -6.87e-4,6.2042 5.0927,11.298 11.297,11.297 a 3.0003,3.0003 0 0 0 0.02734,0 c 0.04716,-4.39e-4 0.09348,-0.01264 0.14062,-0.01367 2.1099,2.2194 5.0078,3.5664 8.123,3.5703 a 3.0003,3.0003 0 0 0 0.01172,0 c 3.2141,-0.0066 6.197,-1.445 8.3184,-3.8027 5.6133,-0.63882 10.083,-5.2767 10.082,-11.051 -1.68e-4,-2.547 -1.0082,-4.9178 -2.5703,-6.9004 -0.52399,-5.7289 -5.2366,-10.32 -11.094,-10.32 a 3.0003,3.0003 0 0 0 -0.01758,0 c -1.2364,0.0065 -2.4343,0.28736 -3.5957,0.6875 -1.731,-1.077 -3.6436,-1.812 -5.7051,-1.8438 a 3.0003,3.0003 0 0 0 -0.04297,-0.02734 v 0.01953 c -0.04177,-4.8e-4 -0.07928,-0.02342 -0.12109,-0.02344 z m -0.002,3 a 8.2963,8.2963 0 0 1 5.5977,2.1777 8.2963,8.2963 0 0 1 3.8848,-0.99023 8.2963,8.2963 0 0 1 8.2949,8.2949 8.2963,8.2963 0 0 1 -0.0059,0.11328 8.2963,8.2963 0 0 1 2.377,5.8125 8.2963,8.2963 0 0 1 -8.2949,8.2969 8.2963,8.2963 0 0 1 -0.30664,-0.02148 8.2963,8.2963 0 0 1 -6.8066,3.5781 8.2963,8.2963 0 0 1 -6.8887,-3.6895 8.2963,8.2963 0 0 1 -1.4062,0.13281 8.2963,8.2963 0 0 1 -8.2969,-8.2969 8.2963,8.2963 0 0 1 3.5762,-6.8027 8.2963,8.2963 0 0 1 -0.02148,-0.30664 8.2963,8.2963 0 0 1 8.2969,-8.2988 z m -1.1348,9.0488 a 1,1 0 0 0 -0.25586,0.05273 1,1 0 0 0 -0.57227,0.50781 1,1 0 0 0 0.46289,1.3379 l 2.2891,1.1113 -2.2891,1.1113 a 1,1 0 0 0 -0.46289,1.3359 1,1 0 0 0 1.3359,0.46289 l 4.1406,-2.0117 a 1.0001,1.0001 0 0 0 0,-1.7988 l -4.1406,-2.0117 a 1,1 0 0 0 -0.50781,-0.09766 z m 5.4336,6.875 a 1,1 0 0 0 -0.80078,0.33398 1,1 0 0 0 0.08008,1.4121 c 0,0 0.36566,0.31132 0.91797,0.55274 0.55231,0.24142 1.3569,0.4668 2.3926,0.4668 1.0357,0 1.8403,-0.22538 2.3926,-0.4668 0.55231,-0.24142 0.91797,-0.55274 0.91797,-0.55274 a 1,1 0 0 0 0.08203,-1.4121 1,1 0 0 0 -1.4121,-0.08203 c 0,0 -0.06474,0.0713 -0.38867,0.21289 -0.32393,0.14159 -0.84219,0.30078 -1.5918,0.30078 -0.74961,0 -1.2659,-0.15919 -1.5898,-0.30078 -0.32393,-0.14159 -0.38867,-0.21289 -0.38867,-0.21289 A 1,1 0 0 0 32.1509,34.2928 Z" color="#000000" fill="#ffffff" stroke-linejoin="round" style="stroke-linecap:round;-inkscape-stroke:none" id="path3"/></g>
+</svg>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="Apps-Visual-Studio-Code" width="64" height="64" enable-background="new 0 0 1024 1024" image-rendering="optimizeSpeed" version="1.1" viewBox="0 0 64 64" sodipodi:docname="com.github.louis77.tuner.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+  <sodipodi:namedview id="namedview28" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="Apps-Visual-Studio-Code"/>
+  <metadata id="metadata1">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs7">
+    
+    
+    <filter id="filter1057-27" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur2"/>
+    </filter>
+    <linearGradient id="linearGradient1053-93" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="translate(131.5,-0.51039)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#dee0e2" offset="0" id="stop2"/>
+      <stop stop-color="#f1f3f5" stop-opacity=".99608" offset="1" id="stop3"/>
+    </linearGradient>
+    <radialGradient id="radialGradient1015" cx="65.029" cy="109.39" r="28.579" gradientTransform="matrix(.48895 0 0 .36863 18.388 3.4472)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFAFA" offset="0" id="stop4"/>
+      <stop stop-color="#D4D4D4" offset="1" id="stop5"/>
+    </radialGradient>
+    <radialGradient id="radialGradient1017" cx="64.311" cy="105.08" r="25.112" gradientTransform="matrix(.47887 0 0 .27834 19.035 12.352)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7E8087" offset="0" id="stop6"/>
+      <stop stop-color="#FAFAFA" offset="1" id="stop7"/>
+    </radialGradient>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect x="4.5" y="4.5" width="55" height="55" fill="url(#linearGradient1053-93)" stroke-width="2.7444" id="bg" style="fill:url(#linearGradient1053-93);stroke-linecap:round" rx="10"/>
+  <g id="art"><g transform="translate(60.898,-10.635)" fill="#969696" stroke-width="4.9059" id="g24" style="stroke-linecap:round">
+    <circle cx="-31.718" cy="29.254999" r="1.75" id="circle8"/>
+    <circle cx="-26.079" cy="29.254999" r="1.75" id="circle9"/>
+    <circle cx="-34.367001" cy="33.945999" r="1.75" id="circle10"/>
+    <circle cx="-28.954" cy="33.945999" r="1.75" id="circle11"/>
+    <circle cx="-23.431" cy="33.945999" r="1.75" id="circle12"/>
+    <circle cx="-31.718" cy="38.694" r="1.75" id="circle13"/>
+    <circle cx="-26.079" cy="38.694" r="1.75" id="circle14"/>
+    <circle cx="-37.852001" cy="27.486" r="1.75" id="circle15"/>
+    <circle cx="-19.822001" cy="27.486" r="1.75" id="circle16"/>
+    <circle cx="-39.966999" cy="33.945999" r="1.75" id="circle17"/>
+    <circle cx="-17.83" cy="33.945999" r="1.75" id="circle18"/>
+    <circle cx="-37.852001" cy="40.551998" r="1.75" id="circle19"/>
+    <circle cx="-19.822001" cy="40.551998" r="1.75" id="circle20"/>
+    <circle cx="-32.305" cy="23.649" r="1.75" id="circle21"/>
+    <circle cx="-25.493" cy="23.649" r="1.75" id="circle22"/>
+    <circle cx="-32.305" cy="44.098999" r="1.75" id="circle23"/>
+    <circle cx="-25.493" cy="44.098999" r="1.75" id="circle24"/>
+  </g><circle cx="50.643002" cy="14.264" r="3" fill="#ff5656" stroke-width="3.7068" id="circle25" style="stroke-linecap:round"/><g transform="translate(-17.761 9.3367)" id="g28">
+    <circle class="st10" cx="49.761" cy="38.581" r="8.5217" fill="url(#radialGradient1015)" stroke-width=".48696" id="circle26"/>
+    <circle class="st11" cx="49.761" cy="38.581" r="6.8174" fill="#bf8256" stroke="#de3e80" stroke-linecap="round" stroke-linejoin="round" stroke-width=".44484" id="circle27"/>
+    <circle class="st12" cx="49.761" cy="38.581" r="5.8435" fill="url(#radialGradient1017)" stroke="#abacae" stroke-linecap="round" stroke-linejoin="round" stroke-width=".31935" id="circle28"/>
+    <path class="st13" d="m49.761 35.805c-0.14609 0-0.24348-0.09739-0.24348-0.24348v-2.2887c0-0.14609 0.0974-0.24348 0.24348-0.24348 0.14609 0 0.24348 0.09739 0.24348 0.24348v2.2887c0 0.14609-0.0974 0.24348-0.24348 0.24348z" fill="#dea47a" stroke="#ababad" stroke-width=".12987" id="path28"/>
+  </g></g>
+  
+  
+</svg>

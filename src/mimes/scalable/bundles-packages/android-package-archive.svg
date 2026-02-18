@@ -1,0 +1,40 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="android-package-archive" clip-path="url(#clip0_3145_1373)">
+<g id="Package - Product">
+<rect id="Rectangle" x="3" y="54" width="58" height="10" fill="url(#pattern0_3145_1373)"/>
+<g id="Box">
+<rect id="Front" x="4" y="4" width="56" height="56" rx="4.3" fill="url(#paint0_linear_3145_1373)"/>
+<path id="Top" d="M4 16H60V8.3C60 5.92518 58.0748 4 55.7 4H8.3C5.92517 4 4 5.92518 4 8.3V16Z" fill="url(#paint1_linear_3145_1373)"/>
+</g>
+<g id="Strap">
+<path id="Vector" d="M35 20H29L29 4H35V20Z" fill="#DACDB4"/>
+<path id="Vector_2" d="M35 20H29L29 16H35V20Z" fill="#CCBA94"/>
+</g>
+<g id="Front_2">
+<g id="Desc" opacity="0.2">
+<path id="Vector_3" d="M20 22H8V23H20V22Z" fill="black"/>
+<path id="Vector_4" d="M16 24H8V25H16V24Z" fill="black"/>
+<path id="Vector_5" d="M18 26H8V27H18V26Z" fill="black"/>
+</g>
+</g>
+</g>
+<path id="Vector_6" opacity="0.8" d="M27.0596 46.3202L29.66 43.72C29.7549 43.6277 29.8303 43.5174 29.8818 43.3955C29.9333 43.2736 29.9599 43.1426 29.9599 43.0102C29.9599 42.8779 29.9333 42.7469 29.8818 42.625C29.8303 42.5031 29.7549 42.3927 29.66 42.3005C29.5677 42.2054 29.4573 42.1298 29.3353 42.0782C29.2132 42.0266 29.0821 42 28.9496 42C28.8171 42 28.686 42.0266 28.5639 42.0782C28.4419 42.1298 28.3315 42.2054 28.2392 42.3005L25.28 45.2607C23.6439 44.4305 21.8347 43.9988 20 44.0008C18.08 44.0008 16.28 44.4603 14.6792 45.2607L11.6996 42.3005C11.6073 42.2056 11.497 42.1302 11.3751 42.0787C11.2532 42.0272 11.1221 42.0006 10.9898 42.0006C10.8575 42.0006 10.7264 42.0272 10.6045 42.0787C10.4826 42.1302 10.3723 42.2056 10.28 42.3005C10.1851 42.3927 10.1097 42.5031 10.0582 42.625C10.0067 42.7469 9.98013 42.8779 9.98013 43.0102C9.98013 43.1426 10.0067 43.2736 10.0582 43.3955C10.1097 43.5174 10.1851 43.6277 10.28 43.72L12.8996 46.3406C9.9392 48.5197 8 52.0199 8 56H32C32.0021 54.1106 31.5553 52.2477 30.6964 50.5648C29.8374 48.8819 28.591 47.4271 27.0596 46.3202ZM15.7136 51.7139H14V50.0004H15.7136V51.7139ZM26 51.7139H24.284V50.0004H26V51.7139Z" fill="#2EA100"/>
+</g>
+<defs>
+<pattern id="pattern0_3145_1373" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_3145_1373" transform="scale(0.0169492 0.1)"/>
+</pattern>
+<linearGradient id="paint0_linear_3145_1373" x1="32" y1="4" x2="32" y2="60" gradientUnits="userSpaceOnUse">
+<stop offset="0.248454" stop-color="#D1D1D6"/>
+<stop offset="1" stop-color="#AEAEB2"/>
+</linearGradient>
+<linearGradient id="paint1_linear_3145_1373" x1="32" y1="4" x2="32" y2="16" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6EA"/>
+<stop offset="1" stop-color="#E5E5EA"/>
+</linearGradient>
+<clipPath id="clip0_3145_1373">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+<image id="image0_3145_1373" width="59" height="10" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAKCAYAAAAKAya7AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAMFJREFUSInVltEOwyAIRaH1/794rXvBhF2vDhb6MBIC1gY4gVpV6kQLY6H0iiCRAvEdTfrRPAjUkz5bh4pQZzMq4GMOlm8H0sGPKsaiyX3hh9MT1kN3wLs8TFZdYjA30QvWCC9tATrgmvnN1INHIKOgK2D/jAEPwJfpZVbN/4hxJAr5e4mOMRtllbnDQizLw4R9u6yrt8yjjCNMx/ipA4rZVb5vkAhbdkAxif56dnu/dhb9zN4k1ReBJy4WJRcKEZE37lJlFEBdtGUAAAAASUVORK5CYII="/>
+</defs>
+</svg>

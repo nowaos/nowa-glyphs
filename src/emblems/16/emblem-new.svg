@@ -1,0 +1,25 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="emblem-new" clip-path="url(#clip0_2037_263)">
+<rect id="Rectangle 5" width="15" height="15" rx="7.5" fill="black"/>
+<g id="Emblem-16">
+<rect id="Background" width="15" height="15" rx="7.5" fill="url(#paint0_linear_2037_263)"/>
+<rect id="Border" x="0.25" y="0.25" width="14.5" height="14.5" rx="7.25" stroke="#0A3BAD" stroke-opacity="0.5" stroke-width="0.5"/>
+<rect id="Light" x="0.75" y="0.75" width="13.5" height="13.5" rx="6.75" stroke="url(#paint1_linear_2037_263)" stroke-width="0.5"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2037_263" x1="7.5" y1="0.00168229" x2="7.5" y2="14.9983" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2AC9F2"/>
+<stop offset="1" stop-color="#2C74F1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2037_263" x1="7.5" y1="14.5" x2="7.5" y2="0.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.3"/>
+<stop offset="0.211538" stop-color="white" stop-opacity="0.15"/>
+<stop offset="0.798077" stop-color="white" stop-opacity="0.25"/>
+<stop offset="1" stop-color="white" stop-opacity="0.4"/>
+</linearGradient>
+<clipPath id="clip0_2037_263">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

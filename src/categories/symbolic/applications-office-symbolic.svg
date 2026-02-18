@@ -1,0 +1,12 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="applications-office" clip-path="url(#clip0_2048_1129)">
+<g id="Frame">
+<path id="Vector" d="M4 3V1C4 0.5 4.5 0 5 0H14C14.5 0 15 0.5 15 1V12C15 12.5 14.5 13 14 13H12V15C12 15.5 11.5 16 11 16H2C1.5 16 1.00195 15.5 1.00195 15V4C1.00195 3.5 1.5 3 2 3H4ZM5 3H11C11.5 3 12 3.5 12 4V12H14V1H5V3ZM4 7V8H9V7H4ZM4 11V12H9V11H4Z" fill="black"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2048_1129">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

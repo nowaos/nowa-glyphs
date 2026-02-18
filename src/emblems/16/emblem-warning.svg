@@ -1,0 +1,39 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="emblem-warning" clip-path="url(#clip0_2037_257)">
+<g id="Emblem-16">
+<rect id="Background" width="15" height="15" rx="2" fill="url(#paint0_linear_2037_257)"/>
+<path id="Border" d="M2 0.25H13C13.9665 0.25 14.75 1.0335 14.75 2V13C14.75 13.9665 13.9665 14.75 13 14.75H2C1.0335 14.75 0.25 13.9665 0.25 13V2L0.258789 1.82129C0.342338 0.997479 0.997479 0.342338 1.82129 0.258789L2 0.25Z" stroke="#E42C00" stroke-opacity="0.5" stroke-width="0.5"/>
+<rect id="Light" x="0.75" y="0.75" width="13.5" height="13.5" rx="1.25" stroke="url(#paint1_linear_2037_257)" stroke-width="0.5"/>
+</g>
+<g id="Logo">
+<g id="Union" filter="url(#filter0_f_2037_257)">
+<path d="M7.5 11.5C8.05228 11.5 8.5 11.9477 8.5 12.5C8.5 13.0523 8.05228 13.5 7.5 13.5C6.94772 13.5 6.5 13.0523 6.5 12.5C6.5 11.9477 6.94772 11.5 7.5 11.5Z" fill="#E42C00" fill-opacity="0.5"/>
+<path d="M7.5 2.5C7.91262 2.5 8.28334 2.70131 8.54102 2.95898C8.79869 3.21666 9 3.58738 9 4C9 4.02749 8.99767 4.05492 8.99316 4.08203L7.99316 10.082C7.95298 10.3231 7.74442 10.5 7.5 10.5C7.25558 10.5 7.04702 10.3231 7.00684 10.082L6.00684 4.08203C6.00233 4.05492 6 4.02749 6 4C6 3.58738 6.20131 3.21666 6.45898 2.95898C6.71666 2.70131 7.08738 2.5 7.5 2.5Z" fill="#E42C00" fill-opacity="0.5"/>
+</g>
+<g id="Union_2">
+<path d="M7.5 11C8.05228 11 8.5 11.4477 8.5 12C8.5 12.5523 8.05228 13 7.5 13C6.94772 13 6.5 12.5523 6.5 12C6.5 11.4477 6.94772 11 7.5 11Z" fill="white"/>
+<path d="M7.5 2C7.91262 2 8.28334 2.20131 8.54102 2.45898C8.79869 2.71666 9 3.08738 9 3.5C9 3.52749 8.99767 3.55492 8.99316 3.58203L7.99316 9.58203C7.95298 9.82313 7.74442 10 7.5 10C7.25558 10 7.04702 9.82313 7.00684 9.58203L6.00684 3.58203C6.00233 3.55492 6 3.52749 6 3.5C6 3.08738 6.20131 2.71666 6.45898 2.45898C6.71666 2.20131 7.08738 2 7.5 2Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_2037_257" x="4" y="0.5" width="7" height="15" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_2037_257"/>
+</filter>
+<linearGradient id="paint0_linear_2037_257" x1="7.5" y1="15" x2="7.5" y2="-2.11956e-07" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF5B59"/>
+<stop offset="1" stop-color="#FF983D"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2037_257" x1="7.5" y1="14.5" x2="7.5" y2="0.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.3"/>
+<stop offset="0.211538" stop-color="white" stop-opacity="0.15"/>
+<stop offset="0.798077" stop-color="white" stop-opacity="0.25"/>
+<stop offset="1" stop-color="white" stop-opacity="0.4"/>
+</linearGradient>
+<clipPath id="clip0_2037_257">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

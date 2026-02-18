@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" id="svg5" sodipodi:docname="rambox.svg" xml:space="preserve" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"><sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="svg5"/>
+  
+  <defs id="defs4">
+    <linearGradient id="linearGradient7" inkscape:collect="always">
+      <stop style="stop-color:#35bed7;stop-opacity:0.99215686" offset="0" id="stop7"/>
+      <stop style="stop-color:#25023c;stop-opacity:1" offset="1" id="stop8"/>
+    </linearGradient>
+    <linearGradient id="a" x1="7.984" x2="7.984" y1="19.565" y2="1.612" gradientTransform="matrix(3.7796,0,0,3.7796,-89.590788,0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#282155" id="stop1"/>
+      <stop offset="1" stop-color="#35bed6" id="stop2"/>
+    </linearGradient>
+    <linearGradient id="b" x1="24.672" x2="24.672" y1="21.45" y2="60.739" gradientUnits="userSpaceOnUse" gradientTransform="translate(-89.590788)">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9" id="stop3"/>
+      <stop offset="1" stop-color="#f2f2f2" id="stop4"/>
+    </linearGradient>
+    <filter id="filter1057" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1"/>
+    </filter>
+    <linearGradient id="linearGradient1053" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="translate(131.49991,-0.50845877)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2e55e7" offset="0" id="stop1-3"/>
+      <stop stop-color="#0d7eef" offset="1" id="stop2-6"/>
+    </linearGradient>
+    <linearGradient inkscape:collect="always" xlink:href="#b" id="linearGradient6" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.49950041)" x1="24.672" y1="21.45" x2="24.672" y2="60.739"/>
+    <linearGradient inkscape:collect="always" xlink:href="#linearGradient7" id="linearGradient8" x1="59.5" y1="4.4999995" x2="9.1205177" y2="55.348827" gradientUnits="userSpaceOnUse"/>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect x="4.5" y="4.5" width="55" height="55" stroke-linecap="round" stroke-width="2.7444" id="bg" style="fill:url(#linearGradient8);fill-opacity:1" rx="10"/>
+  <g id="art"><path id="path7" style="fill:url(#linearGradient6)" d="M 31.353516 14.119141 C 31.036782 14.120672 29.942219 14.545516 29.195312 14.982422 C 28.145315 15.598421 26.444593 17.343985 25.933594 18.333984 C 25.739594 18.707984 25.44725 19.528251 25.28125 20.15625 L 24.980469 21.298828 L 24.607422 20.431641 C 24.401422 19.954641 24.182094 18.953984 24.121094 18.208984 C 24.063906 17.498907 23.959352 16.910808 23.886719 16.857422 L 23.884766 16.857422 L 23.882812 16.855469 L 23.880859 16.855469 L 23.878906 16.855469 C 23.694906 16.856469 22.734062 18.428314 21.914062 20.070312 C 20.790064 22.322311 19.788093 24.965644 18.746094 28.431641 C 18.206094 30.230639 17.269109 32.727517 16.662109 33.978516 C 15.277111 36.835513 13.316138 38.932157 10.994141 40.035156 C 9.6741028 40.663106 6.3309982 41.56486 4.5 41.880859 L 4.5 49.5 C 4.5 55.04 8.96 59.5 14.5 59.5 L 32.925781 59.5 C 33.353501 57.205142 33.369089 53.385718 32.875 51.144531 C 32.330001 48.669534 32.223846 48.816484 34.464844 48.896484 C 35.807842 48.944484 36.827485 48.852654 37.771484 48.597656 C 38.521484 48.393656 39.674079 48.207594 40.330078 48.183594 C 41.630077 48.133594 43.381313 47.462124 44.195312 46.703125 C 44.754312 46.181126 45.533203 44.793406 45.533203 44.316406 C 45.533203 44.151406 45.728797 43.839047 45.966797 43.623047 C 46.266797 43.351047 46.400391 42.958984 46.400391 42.333984 C 46.400391 41.203986 45.634217 39.976889 43.824219 38.212891 C 42.57122 36.990892 42.496094 36.861483 42.496094 35.896484 C 42.496094 34.323486 41.452577 33.61011 40.142578 34.287109 C 39.515579 34.611109 39.465906 34.608892 39.253906 34.212891 C 38.978907 33.697891 38.954657 32.244141 39.222656 32.244141 C 39.329656 32.244141 39.719844 31.961234 40.089844 31.615234 C 41.329843 30.456236 40.719639 28.502109 38.931641 27.912109 C 38.527641 27.77911 37.938093 27.330062 37.621094 26.914062 C 36.796095 25.834065 35.528749 25.06825 34.09375 24.78125 C 32.909751 24.54525 32.841344 24.494374 32.652344 23.734375 C 32.203344 21.938377 33.665127 19.747562 36.078125 18.601562 C 37.118124 18.107564 40.113001 17.285156 40.875 17.285156 C 40.947 17.285156 40.949819 17.199846 40.880859 17.089844 C 40.67586 16.757844 37.843655 16.201172 36.347656 16.201172 C 34.013659 16.201172 30.985452 17.395611 29.939453 18.724609 L 29.490234 19.294922 L 29.490234 18.765625 C 29.490234 17.825626 30.117064 16.083249 30.789062 15.15625 C 31.147063 14.66125 31.441406 14.212156 31.441406 14.160156 C 31.441406 14.151156 31.435655 14.14078 31.429688 14.134766 C 31.419353 14.12646 31.402234 14.121385 31.380859 14.119141 L 31.380859 14.121094 C 31.372297 14.12025 31.363733 14.119091 31.353516 14.119141 z "/></g>
+</svg>

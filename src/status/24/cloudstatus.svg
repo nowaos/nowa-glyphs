@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="cloudstatus.svg"
+   width="24"
+   height="24"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="20.659091"
+     inkscape:cx="8.0594059"
+     inkscape:cy="9.8987899"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <style
+       id="current-color-scheme"
+       type="text/css">.ColorScheme-Text {
+                color:#f2f2f2;
+            }</style>
+  </defs>
+  <path
+     class="ColorScheme-Text"
+     d="m 12,5 a 6,6 0 0 0 -6,6 l 0.004,0.129 A 4,4 0 0 0 3,15 4,4 0 0 0 7,19 h 9 A 5,5 0 0 0 21,14 5,5 0 0 0 17.758,9.324 6,6 0 0 0 12,5 m 0,1 A 5,5 0 0 1 16.92,10.111 4,4 0 0 1 20,14 4,4 0 0 1 16,18 H 7 A 3,3 0 0 1 4,15 3,3 0 0 1 7,12 l 0.107,0.006 A 5,5 0 0 1 7,11 5,5 0 0 1 12,6"
+     style="fill:currentColor;fill-opacity:1;stroke:none"
+     id="path1" />
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1" id="svg8" sodipodi:docname="myrlyn.svg" xml:space="preserve" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"><sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showgrid="true" inkscape:current-layer="svg8"><inkscape:grid id="grid1" units="px" originx="0" originy="0" spacingx="0.5" spacingy="0.5" empcolor="#0099e5" empopacity="0.30196078" color="#0099e5" opacity="0.14901961" empspacing="2" enabled="true" visible="true"/></sodipodi:namedview>
+  
+  <defs id="defs8">
+    <linearGradient id="linearGradient65558" inkscape:collect="always">
+      <stop style="stop-color:#eff1f3;stop-opacity:0.99607843" offset="0" id="stop65558"/>
+      <stop style="stop-color:#e0e2e4;stop-opacity:1" offset="1" id="stop65559"/>
+    </linearGradient>
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1057" x="-0.026999999" width="1.054" y="-0.026999999" height="1.054">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="0.61875" id="feGaussianBlur1059"/>
+    </filter>
+    <linearGradient inkscape:collect="always" xlink:href="#linearGradient1051" id="linearGradient1053" x1="-127" y1="60" x2="-72" y2="5" gradientUnits="userSpaceOnUse" gradientTransform="translate(131.5,-0.51)"/>
+    <linearGradient inkscape:collect="always" id="linearGradient1051">
+      <stop style="stop-color:#8cd750;stop-opacity:1" offset="0" id="stop1047"/>
+      <stop id="stop989" offset="0.4958486" style="stop-color:#7dcd32;stop-opacity:0.99607843"/>
+      <stop style="stop-color:#87d241;stop-opacity:0.99607843" offset="1" id="stop1049"/>
+    </linearGradient>
+    <linearGradient inkscape:collect="always" xlink:href="#linearGradient65558" id="linearGradient65559" x1="59.499996" y1="4.4999995" x2="7.0956163" y2="59.500008" gradientUnits="userSpaceOnUse"/>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect y="4.5" x="4.5" height="55" width="55" id="bg" style="fill:url(#linearGradient1053);fill-opacity:1;stroke-width:2.74436;stroke-linecap:round" rx="10"/>
+  <g id="art"><path id="rect65557" style="fill:url(#linearGradient65559);fill-opacity:1;stroke-width:2.74436;stroke-linecap:round" d="M 14.5 4.5 C 10.434443 4.5 6.9512503 6.9011536 5.3847656 10.369141 C 6.1240356 10.577781 9.4074632 11.718839 10.589844 12.083984 C 11.772233 12.449129 12.84339 12.748047 12.96875 12.748047 C 12.96973 12.747898 12.973609 12.746294 12.974609 12.746094 L 12.976562 12.746094 L 12.978516 12.744141 L 12.980469 12.744141 L 12.982422 12.742188 C 13.099754 12.635546 13.195313 11.456207 13.195312 10.03125 C 13.195312 6.8444535 12.763575 7.0650095 17.441406 7.8671875 C 29.981156 10.017571 40.451863 12.870514 46.804688 15.867188 C 50.091116 17.417421 51.625528 18.991146 53.429688 22.666016 C 54.843584 25.545962 57.675498 33.733885 57.921875 35.654297 L 58.068359 36.796875 L 56.080078 38.060547 C 51.102374 41.228505 48.127173 42.209031 43.494141 42.207031 C 40.806301 42.205831 39.804942 42.083264 37.789062 41.505859 C 32.484338 39.986434 26.606339 37.253781 20.886719 33.650391 C 19.459969 32.751535 18.249576 32.058968 18.197266 32.111328 C 18.144896 32.163698 18.671057 33.571411 19.367188 35.238281 L 20.632812 38.269531 L 24.998047 40.291016 C 31.803381 43.44209 37.467302 45.368457 41.117188 45.775391 C 44.380867 46.139267 50.40839 44.700945 54.720703 42.529297 C 57.73736 41.010133 57.926011 41.167785 56.933594 44.380859 C 56.12655 46.993764 55.242931 47.845218 51.394531 49.714844 C 45.974309 52.34809 41.321686 53.642368 34.390625 54.443359 C 29.471902 55.011808 24.657166 54.972574 18.791016 54.320312 C 13.452323 53.726703 8.2303474 54.320863 6.0410156 54.851562 C 7.8098752 57.649784 10.931069 59.5 14.5 59.5 L 49.5 59.5 C 55.04 59.5 59.5 55.04 59.5 49.5 L 59.5 14.5 C 59.5 8.96 55.04 4.5 49.5 4.5 L 14.5 4.5 z M 39.962891 17.775391 C 37.712064 17.775391 37.015687 17.879885 35.908203 18.390625 C 29.520124 21.336624 27.860561 29.233379 32.550781 34.365234 C 33.994471 35.944861 35.325057 36.775567 37.380859 37.376953 C 38.091867 37.584942 39.414512 37.690306 40.541016 37.628906 C 44.127914 37.433394 47.286538 35.280832 48.945312 31.902344 C 49.658997 30.448749 49.744141 29.99979 49.744141 27.693359 C 49.744141 25.465845 49.64528 24.900994 49.021484 23.570312 C 48.055391 21.509453 46.44265 19.814457 44.378906 18.695312 C 42.76985 17.82274 42.536521 17.775391 39.962891 17.775391 z M 40.021484 20.470703 C 41.26571 20.492233 42.510713 20.70483 43.261719 21.101562 C 45.462154 22.263977 47.164062 25.077983 47.164062 27.556641 C 47.164062 30.499931 44.954301 33.52964 42.212891 34.34375 C 39.254262 35.22237 36.554614 34.528481 34.632812 32.396484 C 33.238 30.849115 32.670804 29.193849 32.8125 27.09375 C 32.998802 24.332245 34.402897 22.177312 36.789062 20.990234 C 37.534492 20.619396 38.777257 20.449174 40.021484 20.470703 z M 41.300781 24.195312 C 40.684757 24.187613 40.066207 24.302765 39.548828 24.570312 C 37.617443 25.56907 38.115143 27.456968 40.439453 27.949219 C 42.395997 28.36358 44.5965 27.107878 44.248047 25.775391 C 44.001383 24.832149 42.656033 24.212332 41.300781 24.195312 z "/></g>
+</svg>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" version="1.1" id="svg4" sodipodi:docname="gnome-2048.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+  <defs id="defs4">
+    <filter id="filter1057-1" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1"/>
+    </filter>
+    <linearGradient id="linearGradient1053-2" x1="-127" x2="-80.658997" y1="60" y2="13.659" gradientTransform="matrix(1.0000071,0,0,1.0000071,131.49969,-0.51020926)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7d1e" offset="0" id="stop1"/>
+      <stop stop-color="#ffa53c" offset="1" id="stop2"/>
+    </linearGradient>
+    <linearGradient id="linearGradient1086" x1="-16.403999" x2="-16.403999" y1="-1.0211" y2="3.2121" gradientTransform="translate(-4.4978,4.7624)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffefd" offset="0" id="stop3"/>
+      <stop stop-color="#fffcfa" offset=".063352" id="stop4"/>
+      <stop stop-color="#ffebdb" offset=".94176" id="stop5"/>
+      <stop stop-color="#ffcba8" offset="1" id="stop6"/>
+    </linearGradient>
+    <linearGradient id="linearGradient1088" x1="-16.403999" x2="-16.403999" y1="-1.0583" y2="3.1749001" gradientTransform="translate(5.027)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffbf8" offset="0" id="stop7"/>
+      <stop stop-color="#ffeadb" offset=".064016" id="stop8"/>
+      <stop stop-color="#ffe2cb" offset=".94132" id="stop9"/>
+      <stop stop-color="#ffc195" offset="1" id="stop10"/>
+    </linearGradient>
+    <linearGradient id="linearGradient1090" x1="-16.403999" x2="-16.403999" y1="-1.0583" y2="3.1749001" gradientTransform="translate(0.26458,15.162)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffefd" offset="0" id="stop11"/>
+      <stop stop-color="#ffd7b8" offset=".035366" id="stop12"/>
+      <stop stop-color="#ffcca2" offset=".93861" id="stop13"/>
+      <stop stop-color="#f9ab72" offset="1" id="stop14"/>
+    </linearGradient>
+    <linearGradient id="linearGradient1092" x1="-16.403999" x2="-16.403999" y1="-1.0583" y2="3.1749001" gradientTransform="translate(5.027,15.162)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffefd" offset="0" id="stop15"/>
+      <stop stop-color="#ffca9e" offset=".03199" id="stop16"/>
+      <stop stop-color="#ffb977" offset=".94441" id="stop17"/>
+      <stop stop-color="#f79b50" offset="1" id="stop18"/>
+    </linearGradient>
+    <filter id="filter1057-1-3" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1-6"/>
+    </filter>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect x="4.5" y="4.5" width="55" height="55" fill="url(#linearGradient1053-2)" stroke-linecap="round" stroke-width="2.74441" id="bg" style="fill:url(#linearGradient1053-2)" rx="10"/>
+  <g transform="matrix(4.0948208,0,0,4.0948208,87.796148,-2.8351558)" id="art">
+    <g transform="translate(4.4978)" id="g20">
+      <rect x="-22.754" y="3.7040999" width="4.2333002" height="4.2333002" ry="0.97684002" fill="url(#linearGradient1086)" fill-rule="evenodd" style="fill:url(#linearGradient1086);paint-order:stroke fill markers" id="rect20"/>
+      <text x="-21.426538" y="6.8790307" fill="#fa863f" font-family="sans-serif" font-size="2.929px" stroke-width="0.073224" style="line-height:1.25" xml:space="preserve" id="text20">
+        <tspan x="-21.426538" y="6.8790307" fill="#fa863f" stroke-width="0.073224" id="tspan20">2</tspan>
+      </text>
+    </g>
+    <g transform="translate(3.109e-7,4.7624)" id="g22">
+      <rect x="-13.229" y="-1.0583" width="4.2333002" height="4.2333002" ry="0.97684002" fill="url(#linearGradient1088)" fill-rule="evenodd" style="fill:url(#linearGradient1088);paint-order:stroke fill markers" id="rect21"/>
+      <g transform="translate(-0.017162,-0.0057206)" id="g21">
+        <text x="-11.901725" y="2.1166246" fill="#fa863f" font-family="sans-serif" font-size="2.929px" stroke-width="0.073224" style="line-height:1.25" xml:space="preserve" id="text21">
+          <tspan x="-11.901725" y="2.1166246" fill="#fa863f" stroke-width="0.073224" id="tspan21">0</tspan>
+        </text>
+      </g>
+    </g>
+    <g transform="translate(-0.26458,-5.027)" id="g24">
+      <rect x="-17.990999" y="14.104" width="4.2333002" height="4.2333002" ry="0.97684002" fill="url(#linearGradient1090)" fill-rule="evenodd" style="fill:url(#linearGradient1090);paint-order:stroke fill markers" id="rect22"/>
+      <g transform="translate(-0.00572,-0.0056847)" id="g23">
+        <text x="-16.664131" y="17.197578" fill="#fa863f" font-family="sans-serif" font-size="2.929px" stroke-width="0.073224" style="line-height:1.25" xml:space="preserve" id="text22">
+          <tspan x="-16.664131" y="17.197578" fill="#fa863f" stroke-width="0.073224" id="tspan22">4</tspan>
+        </text>
+      </g>
+    </g>
+    <g transform="translate(-5.722e-7,-5.027)" id="g26">
+      <rect x="-13.229" y="14.104" width="4.2333002" height="4.2333002" ry="0.97684002" fill="url(#linearGradient1092)" fill-rule="evenodd" style="fill:url(#linearGradient1092);paint-order:stroke fill markers" id="rect24"/>
+      <g transform="translate(-0.017128,-0.0057217)" id="g25">
+        <text x="-11.901725" y="17.197578" fill="#fa863f" font-family="sans-serif" font-size="2.929px" stroke-width="0.073224" style="line-height:1.25" xml:space="preserve" id="text24">
+          <tspan x="-11.901725" y="17.197578" fill="#fa863f" stroke-width="0.073224" id="tspan24">8</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

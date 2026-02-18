@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" id="svg12" sodipodi:docname="clementine.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+  <sodipodi:namedview id="namedview12" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="svg12"/>
+  <defs id="defs6">
+    <linearGradient id="e" x2="0" y1="505.8" y2="541.8" gradientTransform="translate(-384.57,504.56)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffcde" offset="0" id="stop1"/>
+      <stop stop-color="#fafac5" offset="1" id="stop2"/>
+    </linearGradient>
+    <radialGradient id="d" cx="24" cy="1028.4" r="16" gradientTransform="matrix(1.231 .00334 -.00334 1.2313 -2.11 -237.92)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f47750" offset="0" id="stop3"/>
+      <stop stop-color="#fdbc4b" offset="1" id="stop4"/>
+    </radialGradient>
+    <filter id="b" x="-0.059999998" y="-0.059999998" width="1.12" height="1.12" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.9" id="feGaussianBlur4"/>
+    </filter>
+    <linearGradient id="linearGradient862" x1="7.9373" x2="7.9373" y1="15.081" y2="1.852" gradientTransform="matrix(3.7119746,0,0,3.7119746,0.57156879,0.60240695)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff670a" offset="0" id="stop5"/>
+      <stop stop-color="#ffc53f" offset="1" id="stop6"/>
+    </linearGradient>
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1057" x="-0.026999999" width="1.054" y="-0.026999999" height="1.054">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="0.61875" id="feGaussianBlur1059"/>
+    </filter>
+  <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
+      <stop offset="0.65" id="stop1"/>
+      <stop offset="1" stop-opacity="0" id="stop2"/>
+    </radialGradient><linearGradient id="gradient_ds_b" x1="30.448999" y1="48.5" x2="30.492201" y2="62.500301" gradientUnits="userSpaceOnUse">
+      <stop offset="0.653846" id="stop3"/>
+      <stop offset="1" stop-opacity="0" id="stop4"/>
+    </linearGradient><radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
+      <stop offset="0.65" id="stop5"/>
+      <stop offset="1" stop-opacity="0" id="stop6"/>
+    </radialGradient><linearGradient id="gradient_ds_r" x1="47.5" y1="33.5" x2="61.5" y2="33.5009" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop7"/>
+      <stop offset="1" stop-opacity="0" id="stop8"/>
+    </linearGradient><linearGradient id="gradient_ds_l" x1="16.5" y1="33.894699" x2="2.5" y2="33.894699" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop9"/>
+      <stop offset="1" stop-opacity="0" id="stop10"/>
+    </linearGradient><radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.00843236,-14,14.0084,0.0189842,47.4916,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop11"/>
+      <stop offset="1" stop-opacity="0" id="stop12"/>
+    </radialGradient><linearGradient id="gradient_ds_t" x1="29.98" y1="18.5" x2="29.9158" y2="4.4998598" gradientUnits="userSpaceOnUse">
+      <stop offset="0.649038" id="stop13"/>
+      <stop offset="1" stop-opacity="0" id="stop14"/>
+    </linearGradient><radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.00843236,-14,-14.0084,0.0189842,16.5084,18.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.65" id="stop15"/>
+      <stop offset="1" stop-opacity="0" id="stop16"/>
+    </radialGradient></defs>
+  
+  <g id="ds" opacity="0.25">
+    <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+    <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
+    <path id="ds-bl" d="m 2.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+    <path id="ds-r" d="m 47.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_r)" style="fill:url(#gradient_ds_r)"/>
+    <path id="ds-l" d="m 2.5,18.5 h 14 v 30 h -14 z" fill="url(#gradient_ds_l)" style="fill:url(#gradient_ds_l)"/>
+    <path id="ds-tr" d="m 47.5,4.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+    <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
+    <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+  </g><rect x="4.5" y="4.5" width="55" height="55" rx="10" fill="url(#linearGradient862)" stroke-width="3.71197" id="bg" style="fill:url(#linearGradient862)"/>
+  <g transform="matrix(1.3333 0 0 1.3333 8e-7 -1339.1)" stroke-linejoin="round" stroke-width=".75" id="art">
+    <g stroke-width="1.5" id="g11">
+      <circle cx="24" cy="1028.4" r="18" filter="url(#b)" opacity=".15" stroke-linecap="round" id="circle10"/>
+      <circle cx="24" cy="1028.4" r="18" fill="url(#e)" stroke-linecap="round" id="circle11"/>
+      <path d="m24 1012.4c-3 0-5 2-5 2s1.193 4.052 2 6c0.856 2.066 3 6 3 6s2.144-3.934 3-6c0.807-1.948 2-6 2-6s-2-2-5-2m-6.363 2.564s-2.83 0-4.951 2.121-2.121 4.951-2.121 4.951 3.71 2.02 5.658 2.828c2.066 0.856 6.363 2.121 6.363 2.121s-1.265-4.297-2.121-6.363c-0.807-1.948-2.828-5.658-2.828-5.658m12.727 0s-2.02 3.71-2.828 5.658c-0.856 2.066-2.121 6.363-2.121 6.363s4.297-1.265 6.363-2.121c1.948-0.807 5.658-2.828 5.658-2.828s0-2.83-2.121-4.951-4.951-2.121-4.951-2.121m-20.363 8.436s-2 2-2 5 2 5 2 5 4.052-1.193 6-2c2.066-0.856 6-3 6-3s-3.934-2.144-6-3c-1.948-0.807-6-2-6-2m28 0s-4.052 1.193-6 2c-2.066 0.856-6 3-6 3s3.934 2.144 6 3c1.948 0.807 6 2 6 2s2-2 2-5-2-5-2-5m-15.414 6.414s-4.297 1.265-6.363 2.121c-1.948 0.807-5.658 2.828-5.658 2.828s0 2.83 2.121 4.951 4.951 2.121 4.951 2.121 2.02-3.71 2.828-5.658c0.856-2.066 2.121-6.363 2.121-6.363m2.828 0s1.265 4.297 2.121 6.363c0.807 1.948 2.828 5.658 2.828 5.658s2.83 0 4.951-2.121 2.121-4.951 2.121-4.951-3.71-2.02-5.658-2.828c-2.066-0.856-6.363-2.121-6.363-2.121m-1.414 0.586s-2.144 3.934-3 6c-0.807 1.948-2 6-2 6s2 2 5 2 5-2 5-2-1.193-4.052-2-6c-0.856-2.066-3-6-3-6" fill="url(#d)" id="path11"/>
+    </g>
+  </g>
+</svg>
