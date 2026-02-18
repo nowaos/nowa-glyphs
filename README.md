@@ -6,6 +6,13 @@
   A modern icon theme for GNOME desktop.
 </p>
 
+## Installation
+
+Run the installation script:
+```shell
+./install.sh
+```
+
 # Previews
 
 <p align="center">
