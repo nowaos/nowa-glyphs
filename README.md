@@ -6,6 +6,16 @@
   A modern icon theme for GNOME desktop.
 </p>
 
+## Previews
+
+<p align="center">
+  <img src="assets/examples-apps.png"/>
+</p>
+
+<p align="center">
+  <img src="assets/examples-folders-and-files.png"/>
+</p>
+
 ## Installation
 
 Run the installation script:
@@ -13,23 +23,12 @@ Run the installation script:
 ./install.sh
 ```
 
-# Previews
+**Note:** The script installs to `~/.local/share/icons` by default.
+To install system-wide (for all users), run with sudo:
 
-<p align="center">
-  <img src="assets/preview-accessories.png"/>
-</p>
-
-<p align="center">
-  <img src="assets/preview-system.png"/>
-</p>
-
-<p align="center">
-  <img src="assets/preview-utilities.png"/>
-</p>
-
-<p align="center">
-  <img src="assets/folders-and-files.png"/>
-</p>
+```shell
+sudo ./install.sh
+```
 
 ## Support
 
