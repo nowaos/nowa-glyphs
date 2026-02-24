@@ -27,7 +27,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="svg7"
+     inkscape:current-layer="cover"
      showgrid="false"><inkscape:grid
        id="grid2"
        units="px"
@@ -317,7 +317,7 @@
        x="10"
        height="44.417416"
        width="44"
-       id="bg-5"
+       id="paper"
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#f6f5f4;fill-opacity:1;stroke-width:0.241134;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
        rx="6.4166665" /><g
        id="cover"
@@ -327,8 +327,8 @@
          d="m 12.5,9.5304128 c -4.0000005,-0.00313 -8,4.0344652 -8,8.0727092 v 31.801174 0.0039 c 1.317e-4,0.347965 0.016941,0.692556 0.050781,1.031251 v 0.002 c 0.033968,0.339315 0.086179,0.67332 0.1523438,1.001674 v 0.002 c 0.066226,0.328334 0.1473574,0.650464 0.2441406,0.966181 v 0.002 c 0.1938673,0.632002 0.4474306,1.236664 0.7539063,1.808141 v 0.002 c 0.1531619,0.285482 0.3211918,0.562237 0.5,0.830127 v 0.002 c 0.178867,0.267887 0.3713414,0.526284 0.5742187,0.774917 0.1844652,0.226023 0.3809597,0.441891 0.5839844,0.650694 0.020362,0.02094 0.038052,0.04431 0.058594,0.06506 0.6774698,0.684731 1.4506627,1.269506 2.3007812,1.735183 0.283104,0.15515 0.574085,0.296416 0.873047,0.423937 1.196437,0.510486 2.51212,0.79312 3.896484,0.794635 h 35.023438 c 2.767408,-0.003 5.265094,-1.129261 7.070312,-2.953755 0.02051,-0.02072 0.03826,-0.04415 0.05859,-0.06506 0.65067,-0.669179 1.212021,-1.427698 1.658203,-2.259681 C 58.6053,53.650153 58.858863,53.045492 59.05273,52.41349 59.343998,51.463314 59.5,50.452927 59.5,49.404296 V 23.660488 c 0,-4.038244 -4,-8.076488 -8,-8.076488 H 33 c -6,0 -7,-6.0573668 -13.002172,-6.0477109 z"
          sodipodi:nodetypes="sscscccccccccccscccccscccsssccs" /><path
          id="cover-light"
-         style="font-variation-settings:normal;display:none;opacity:0.08;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.301418;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
-         d="m 12.5,9.5304109 c -4.0000005,-0.00313 -8,4.0337061 -8,8.0719501 v 2.018973 c 0,-4.038244 3.9999995,-8.07505 8,-8.07195 l 7.498047,0.0059 C 26.000219,11.545643 27,17.602361 33,17.602361 h 18.5 c 4,0 8,4.039621 8,8.077865 v -2.018974 c 0,-4.038244 -4,-8.077864 -8,-8.077864 H 33 c -6,0 -6.999781,-6.056718 -13.001953,-6.0470621 z" /><path
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.301418;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000;opacity:0.12"
+         d="M 12.5 9.5304109 C 8.4999995 9.5272809 4.5 13.564117 4.5 17.602361 L 4.5 18.611847 C 4.5 14.573603 8.4999995 10.536798 12.5 10.539898 L 19.998047 10.545813 C 26.000219 10.536157 27 16.592874 33 16.592874 L 51.5 16.592874 C 55.5 16.592874 59.5 20.632495 59.5 24.670739 L 59.5 23.661252 C 59.5 19.623008 55.5 15.583388 51.5 15.583388 L 33 15.583388 C 27 15.583388 26.000219 9.52667 19.998047 9.5363259 L 12.5 9.5304109 z " /><path
          id="cover-shadow"
          style="font-variation-settings:normal;display:inline;opacity:0.075;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.301418;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers;stop-color:#000000"
          d="m 12.5,7.5114376 c -4.0000005,-0.00313 -8,4.0337064 -8,8.0719504 v 2.018973 c 0,-4.038244 3.9999995,-8.0750801 8,-8.0719501 l 7.498047,0.00591 C 26.000219,9.52667 27,15.583388 33,15.583388 h 18.5 c 4,0 8,4.03962 8,8.077864 v -2.018973 c 0,-4.038244 -4,-8.077865 -8,-8.077865 H 33 c -6,0 -6.999781,-6.0567173 -13.001953,-6.0470614 z" /><path
