@@ -42,8 +42,8 @@ done
 # Copy symlinks
 cp -r "$SRC_DIR"/links/{actions,apps,mimes,places,preferences,status} "$THEME_DIR"
 
-# Flatten links/apps/scalable, links/apps/symbolic and links/actions/symbolic subfolders
-for LINKS_FLAT in "$THEME_DIR/apps/scalable" "$THEME_DIR/apps/symbolic" "$THEME_DIR/actions/symbolic"; do
+# Flatten links/apps/scalable, links/apps/symbolic, links/actions/symbolic and links/mimes/scalable subfolders
+for LINKS_FLAT in "$THEME_DIR/apps/scalable" "$THEME_DIR/apps/symbolic" "$THEME_DIR/actions/symbolic" "$THEME_DIR/mimes/scalable" "$THEME_DIR/mimes/symbolic" "$THEME_DIR/preferences/32" "$THEME_DIR/status/16" "$THEME_DIR/status/22" "$THEME_DIR/status/24" "$THEME_DIR/status/symbolic"; do
     if [ -d "$LINKS_FLAT" ]; then
         find "$LINKS_FLAT" -mindepth 2 -type l -exec mv -t "$LINKS_FLAT" {} +
         find "$LINKS_FLAT" -mindepth 1 -type d -empty -delete
