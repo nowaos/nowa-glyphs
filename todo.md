@@ -56,50 +56,168 @@ Pastas analisadas:
 
 ## Ícones a criar
 
-- Add `org.gnome.gitlab.somas.Apostrophe.svg` (ex-UberWriter, ícone novo — verificar identidade visual atual)
-- Add `io.github.alainm23.planify.svg` icon (Planify, task manager)
-- Add `org.gnome.Gnote.svg` icon (Gnote, GNOME notes app)
-- Add `com.cyberbotics.Webots.svg` icon (Webots, robotics simulator) — atualmente usando ícone herdado do bug-buddy
-- Add `plank.svg` icon (Plank dock) — redesenhar: mudar cor e adicionar âncora ao ícone
-- Add `boxbuddy-rs.svg` icon (BoxBuddy, GUI do Distrobox)
-- Add `tuxpaint.svg`
-- Add `com.belmoussaoui.Decoder.svg`
-- Add `io.github.diegoivan.pdf_metadata_editor.svg`
-- Add `it.mijorus.collector.svg`
-- Add `mtpaint.svg` (aliases: `com.github.wjaguar.mtpaint.svg`, `com.github.wjaguar.mtPaint.svg`, `mypaint.svg`)
-- Add `io.github.bgrabitmap.LazPaint.svg`
-- Add `evince.svg`
-- Add `io.gitlab.news_flash.NewsFlash.svg`
-- Add `org.gabmus.gfeeds.svg` / `org.gabmus.gnome-feeds.svg`
-- Add `com.vixalien.sticky.svg`
-- Add `com.github.lainsce.notejot.svg` / `io.github.lainsce.Notejot.svg`
-- Add `org.gnome.Sudoku.svg`
-- Add `org.gnome.gThumb.svg`
-- Add `seahorse.svg` / `org.gnome.seahorse.Application.svg` (Seahorse — gerenciador de senhas e chaves GPG do GNOME; atualmente usando fallback genérico `keyring-manager.svg`)
-- Add `org.gnome.Sysprof.svg` / `org.gnome.Sysprof2.svg` (GNOME Sysprof — profiler; atualmente usando fallback incorreto `jockey.svg`)
-- Add `keepassx.svg` + `keepassx2.svg` (KeePassX/KeePassXC — atualmente usando fallback do seahorse)
-- Replace "anydo" -> "Errands" icon
+> `fallback`: pasta em `links/apps/scalable/` a remover após criar o ícone em `src/`
+> `aliases`: symlinks a criar em `links/apps/scalable/<canonical>/`
 
-## Ícones a criar + remover fallback em links/
+```yaml
+development:
+  io.github.fkinoshita.Wildcard:  # regex tester
+    fallback: regextester
+    aliases:
+      - com.felipekinoshita.Wildcard.svg
 
-> Após criar o ícone em `src/`, remover o symlink correspondente de `links/apps/scalable/`
+education:
+  com.cyberbotics.Webots:  # robotics simulator — atualmente com ícone herdado do bug-buddy
+    aliases: false
 
-- Add `org.gnome.Podcasts.svg` (GNOME Podcasts; fallback: `links/apps/scalable/accessories-podcast/`)
-- Add `geeqie.svg` / `org.geeqie.Geeqie.svg` (Geeqie — visualizador de imagens; fallback: `links/apps/scalable/accessories-image-viewer/`)
-- Add `org.gnome.Screenshot.svg` / `gnome-screenshot.svg` (GNOME Screenshot; fallback: `links/apps/scalable/accessories-screenshot/`)
-- Add `org.gnome.Pitivi.svg` / `pitivi.svg` (Pitivi — editor de vídeo GNOME; fallback: `links/apps/scalable/avidemux/`)
-- Add `org.gnome.World.Iotas.svg` (Iotas — notas GNOME; fallback: `links/apps/scalable/bookmarks-organize/`)
-- Add `qalculate-gtk.svg` / `qalculate.svg` (Qalculate!; fallback: `links/apps/scalable/calculator/`)
-- Add `fbreader.svg` / `FBReader.svg` (FBReader — leitor de ebook; fallback: `links/apps/scalable/calibre-gui/`)
-- Add `org.gnome.World.PikaBackup.svg` (Pika Backup; fallback: `links/apps/scalable/deja-dup/`)
-- Add `org.nickvision.tubeconverter.svg` (Tube Converter; fallback: `links/apps/scalable/clip/`)
-- Add `org.gnome.gitlab.YaLTeR.VideoTrimmer.svg` (Video Trimmer; fallback: `links/apps/scalable/curlew/`)
-- Add `io.gitlab.adhami3310.Footage.svg` (Footage; fallback: `links/apps/scalable/curlew/`)
-- Add `io.github.celluloid_player.Celluloid.svg` (Celluloid — media player GNOME; fallback: `links/apps/scalable/gnome-mpv/`)
-- Add `org.libretro.RetroArch.svg` (RetroArch — plataforma de emulação; fallback: `links/apps/scalable/gnome-arcade/`)
-- Add `com.github.ryonakano.reco.svg` (Reco — gravador de áudio GNOME; fallback: `links/apps/scalable/gnome-sound-recorder/`)
-- Add `io.github.giantpinkrobots.bootqt.svg` (BootQt — gravador de USB; fallback: `links/apps/scalable/gnome-multi-writer/`)
-- Add `com.raggesilver.BlackBox.svg` (BlackBox — terminal GNOME; fallback: `links/apps/scalable/maui-station/`)
-- Add `io.github.fkinoshita.Wildcard.svg` (Wildcard — regex tester GNOME; fallback: `links/apps/scalable/regextester/`)
-- Add `io.github.giantpinkrobots.varia.svg` (Varia — download manager GNOME; fallback: `links/apps/scalable/xdman/`)
-- Add `org.ryujinx.Ryujinx.svg` (Ryujinx — emulador Nintendo Switch; fallback: `links/apps/scalable/yuzu/`)
+games:
+  org.gnome.Sudoku:
+    aliases: false
+  org.libretro.RetroArch:  # emulation platform
+    fallback: gnome-arcade
+    aliases: false
+  org.ryujinx.Ryujinx:  # Nintendo Switch emulator
+    fallback: yuzu
+    aliases: false
+
+graphics:
+  io.github.bgrabitmap.LazPaint:
+    aliases: false
+  org.geeqie.Geeqie:  # image viewer
+    fallback: accessories-image-viewer
+    aliases:
+      - geeqie.svg
+  org.gnome.gThumb:
+    aliases: false
+  mtpaint:
+    aliases:
+      - com.github.wjaguar.mtpaint.svg
+      - com.github.wjaguar.mtPaint.svg
+      - mypaint.svg  # MyPaint como fallback até ter ícone próprio
+  tuxpaint:
+    aliases:
+      - org.tuxpaint.Tuxpaint.svg
+
+internet:
+  io.gitlab.news_flash.NewsFlash:
+    aliases: false
+  org.gabmus.gfeeds:
+    aliases:
+      - org.gabmus.gnome-feeds.svg
+  org.nickvision.tubeconverter:  # Tube Converter
+    fallback: clip
+    aliases: false
+  io.github.giantpinkrobots.varia:  # download manager
+    fallback: xdman
+    aliases: false
+
+media:
+  org.gnome.Podcasts:
+    fallback: accessories-podcast
+    aliases: false
+  org.gnome.Pitivi:  # video editor
+    fallback: avidemux
+    aliases:
+      - pitivi.svg
+      - org.pitivi.Pitivi.svg
+  org.gnome.gitlab.YaLTeR.VideoTrimmer:
+    fallback: curlew
+    aliases: false
+  io.gitlab.adhami3310.Footage:
+    fallback: curlew
+    aliases: false
+  io.github.celluloid_player.Celluloid:  # media player
+    fallback: gnome-mpv
+    aliases:
+      - io.github.celluloid-player.Celluloid.svg
+      - io.github.Celluloid.svg
+  com.github.ryonakano.reco:  # audio recorder
+    fallback: gnome-sound-recorder
+    aliases:
+      - reco.svg
+
+office:
+  org.gnome.gitlab.somas.Apostrophe:  # ex-UberWriter — verificar identidade visual atual
+    aliases: false
+  evince:  # Document Viewer
+    aliases: false
+  io.github.diegoivan.pdf_metadata_editor:
+    aliases: false
+  fbreader:  # ebook reader
+    fallback: calibre-gui
+    aliases:
+      - FBReader.svg
+
+productivity:
+  org.gnome.Gnote:  # GNOME notes app
+    aliases: false
+  com.vixalien.sticky:
+    aliases: false
+  com.github.lainsce.notejot:
+    aliases:
+      - io.github.lainsce.Notejot.svg
+  errands:  # Substituir ícone do anydo
+    aliases: false
+  io.github.alainm23.planify:  # Planify task manager
+    fallback: planner
+    aliases: false
+  org.gnome.World.Iotas:  # GNOME notes
+    fallback: bookmarks-organize
+    aliases:
+      - org.gnome.gitlab.cheywood.Iotas.svg
+  it.mijorus.collector:
+    aliases: false
+  com.belmoussaoui.Decoder:
+    aliases: false
+
+science:
+  qalculate-gtk:  # Qalculate!
+    fallback: calculator
+    aliases:
+      - qalculate.svg
+      - qalculate-applet.svg
+      - qalculate-qt.svg
+      - io.github.Qalculate.qalculate-qt.svg
+      - io.github.qalculate.Qalculate.svg
+      - io.github.Qalculate.svg
+
+security:
+  org.gnome.seahorse.Application:  # Seahorse — gerenciador de senhas/GPG
+    aliases:
+      - seahorse.svg
+      - seahorse-preferences.svg
+  keepassx:  # KeePassX/KeePassXC
+    aliases:
+      - keepassx2.svg
+      - keepassxc.svg
+      - org.keepassxc.KeePassXC.svg
+      - appimagekit-org.keepassxc.KeePassXC.svg
+
+system:
+  boxbuddy-rs:  # BoxBuddy — GUI do Distrobox
+    aliases: false
+  org.gnome.Screenshot:
+    fallback: accessories-screenshot
+    aliases:
+      - gnome-screenshot.svg
+      - gnome-panel-screenshot.svg
+  org.gnome.Sysprof:  # profiler — fallback atual: jockey.svg (incorreto)
+    aliases:
+      - org.gnome.Sysprof2.svg
+      - org.gnome.Sysprof3.svg
+      - sysprof.svg
+  org.gnome.World.PikaBackup:  # backup
+    fallback: deja-dup
+    aliases: false
+  io.github.giantpinkrobots.bootqt:  # USB writer
+    fallback: gnome-multi-writer
+    aliases:
+      - bootqt.svg
+  plank:  # Plank dock — redesenhar: mudar cor e adicionar âncora
+    aliases: false
+
+terminals:
+  com.raggesilver.BlackBox:  # terminal
+    fallback: maui-station
+    aliases: false
+```
