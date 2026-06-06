@@ -31,8 +31,8 @@ cp -r "$SRC_DIR"/src/cursor.theme "$THEME_DIR"
 # Copy icon folders
 cp -r "$SRC_DIR"/src/{actions,animations,apps,categories,cursors,devices,emblems,mimes,places,preferences,status} "$THEME_DIR"
 
-# Flatten mimes/scalable and apps/scalable src subfolders
-for FLAT_DIR in "$THEME_DIR/mimes/scalable" "$THEME_DIR/apps/scalable"; do
+# Flatten mimes/scalable, apps/scalable and actions/symbolic src subfolders
+for FLAT_DIR in "$THEME_DIR/mimes/scalable" "$THEME_DIR/apps/scalable" "$THEME_DIR/actions/symbolic"; do
     if [ -d "$FLAT_DIR" ]; then
         find "$FLAT_DIR" -mindepth 2 -type f -exec mv -t "$FLAT_DIR" {} +
         find "$FLAT_DIR" -mindepth 1 -type d -empty -delete

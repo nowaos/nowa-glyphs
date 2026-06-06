@@ -28,6 +28,32 @@ Pastas analisadas:
 - [x] terminals
 - [x] wine
 
+## Organizar `src/actions/symbolic/` em categorias
+
+- [x] Categorização concluída — 1.186 ícones organizados em 17 subpastas
+
+### Subpastas criadas
+
+| Pasta | Ícones | Descrição |
+|---|---:|---|
+| `de-budgie/` | 11 | `budgie-*`, `shuffler-*` |
+| `de-cinnamon/` | 12 | `cinnamon-*`, `nemo-*` |
+| `maps/` | 107 | POIs de mapa (bank, bar, hospital, route-transit-*, etc.) |
+| `system/` | 47 | `am-*` (hardware monitor) + ações de sistema (hibernate, shutdown, etc.) |
+| `drawing/` | 405 | Ferramentas Inkscape (align, path, node, layer, paint, etc.) |
+| `typography/` | 59 | `format-text-*`, `font-*`, `glyph-*`, `text-*`, bold, italic, etc. |
+| `development/` | 65 | `builder-*`, `lang-*`, `debug-*`, `xml-*`, vcs, etc. |
+| `calendar/` | 15 | Alarmes, lembretes, compromissos, aniversários |
+| `communication/` | 42 | Mail, chat, chamadas, contatos, mensagens |
+| `media/` | 36 | Áudio/vídeo (play, pause, volume, screencast, etc.) |
+| `security/` | 21 | `permissions-*`, `app-safety-*`, `auditable-code`, etc. |
+| `parental-control/` | 14 | Controle parental (cigarette, drug-use, gambling, nudity, violence, etc.) |
+| `filesystem/` | 34 | Arquivos, pastas, documentos, impressão |
+| `apps/` | 12 | Gestão de aplicativos (instalar, remover, flatpak, snap, etc.) |
+| `internet/` | 17 | `ephy-*` (GNOME Web) + ícones web (globe, webpage, etc.) |
+| `3rd-apps/` | 9 | Ícones privados de apps específicos (twitter, dino, dconf-editor, brisk-menu) |
+| `ui/` | 280 | Catch-all: ações genéricas de interface (view-*, window-*, go-*, edit-*, etc.) |
+
 ## Ícones a criar
 
 - Add `org.gnome.gitlab.somas.Apostrophe.svg` (ex-UberWriter, ícone novo — verificar identidade visual atual)
