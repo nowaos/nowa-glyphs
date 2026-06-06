@@ -2,7 +2,9 @@
 set -eo pipefail
 
 # Destination directory
-if [ "$UID" -eq 0 ]; then
+if [ -n "$1" ]; then
+  DEST_DIR="$1"
+elif [ "$UID" -eq 0 ]; then
   DEST_DIR="/usr/share/icons"
 else
   DEST_DIR="$HOME/.local/share/icons"
@@ -29,7 +31,7 @@ cp -r "$SRC_DIR"/src/cursor.theme "$THEME_DIR"
 # Copy icon folders
 cp -r "$SRC_DIR"/src/{actions,animations,apps,categories,cursors,devices,emblems,mimes,places,preferences,status} "$THEME_DIR"
 
-# Flatten mimes/scalable and apps/scalable subfolders
+# Flatten mimes/scalable and apps/scalable src subfolders
 for FLAT_DIR in "$THEME_DIR/mimes/scalable" "$THEME_DIR/apps/scalable"; do
     if [ -d "$FLAT_DIR" ]; then
         find "$FLAT_DIR" -mindepth 2 -type f -exec mv -t "$FLAT_DIR" {} +
@@ -39,6 +41,13 @@ done
 
 # Copy symlinks
 cp -r "$SRC_DIR"/links/{actions,apps,mimes,places,preferences,status} "$THEME_DIR"
+
+# Flatten links/apps/scalable subfolders
+LINKS_FLAT="$THEME_DIR/apps/scalable"
+if [ -d "$LINKS_FLAT" ]; then
+    find "$LINKS_FLAT" -mindepth 2 -type l -exec mv -t "$LINKS_FLAT" {} +
+    find "$LINKS_FLAT" -mindepth 1 -type d -empty -delete
+fi
 
 # Create @2x symlinks
 (
