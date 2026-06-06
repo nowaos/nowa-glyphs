@@ -75,3 +75,31 @@ Pastas analisadas:
 - Add `com.github.lainsce.notejot.svg` / `io.github.lainsce.Notejot.svg`
 - Add `org.gnome.Sudoku.svg`
 - Add `org.gnome.gThumb.svg`
+- Add `seahorse.svg` / `org.gnome.seahorse.Application.svg` (Seahorse — gerenciador de senhas e chaves GPG do GNOME; atualmente usando fallback genérico `keyring-manager.svg`)
+- Add `org.gnome.Sysprof.svg` / `org.gnome.Sysprof2.svg` (GNOME Sysprof — profiler; atualmente usando fallback incorreto `jockey.svg`)
+- Add `keepassx.svg` + `keepassx2.svg` (KeePassX/KeePassXC — atualmente usando fallback do seahorse)
+- Replace "anydo" -> "Errands" icon
+
+## Ícones a criar + remover fallback em links/
+
+> Após criar o ícone em `src/`, remover o symlink correspondente de `links/apps/scalable/`
+
+- Add `org.gnome.Podcasts.svg` (GNOME Podcasts; fallback: `links/apps/scalable/accessories-podcast/`)
+- Add `geeqie.svg` / `org.geeqie.Geeqie.svg` (Geeqie — visualizador de imagens; fallback: `links/apps/scalable/accessories-image-viewer/`)
+- Add `org.gnome.Screenshot.svg` / `gnome-screenshot.svg` (GNOME Screenshot; fallback: `links/apps/scalable/accessories-screenshot/`)
+- Add `org.gnome.Pitivi.svg` / `pitivi.svg` (Pitivi — editor de vídeo GNOME; fallback: `links/apps/scalable/avidemux/`)
+- Add `org.gnome.World.Iotas.svg` (Iotas — notas GNOME; fallback: `links/apps/scalable/bookmarks-organize/`)
+- Add `qalculate-gtk.svg` / `qalculate.svg` (Qalculate!; fallback: `links/apps/scalable/calculator/`)
+- Add `fbreader.svg` / `FBReader.svg` (FBReader — leitor de ebook; fallback: `links/apps/scalable/calibre-gui/`)
+- Add `org.gnome.World.PikaBackup.svg` (Pika Backup; fallback: `links/apps/scalable/deja-dup/`)
+- Add `org.nickvision.tubeconverter.svg` (Tube Converter; fallback: `links/apps/scalable/clip/`)
+- Add `org.gnome.gitlab.YaLTeR.VideoTrimmer.svg` (Video Trimmer; fallback: `links/apps/scalable/curlew/`)
+- Add `io.gitlab.adhami3310.Footage.svg` (Footage; fallback: `links/apps/scalable/curlew/`)
+- Add `io.github.celluloid_player.Celluloid.svg` (Celluloid — media player GNOME; fallback: `links/apps/scalable/gnome-mpv/`)
+- Add `org.libretro.RetroArch.svg` (RetroArch — plataforma de emulação; fallback: `links/apps/scalable/gnome-arcade/`)
+- Add `com.github.ryonakano.reco.svg` (Reco — gravador de áudio GNOME; fallback: `links/apps/scalable/gnome-sound-recorder/`)
+- Add `io.github.giantpinkrobots.bootqt.svg` (BootQt — gravador de USB; fallback: `links/apps/scalable/gnome-multi-writer/`)
+- Add `com.raggesilver.BlackBox.svg` (BlackBox — terminal GNOME; fallback: `links/apps/scalable/maui-station/`)
+- Add `io.github.fkinoshita.Wildcard.svg` (Wildcard — regex tester GNOME; fallback: `links/apps/scalable/regextester/`)
+- Add `io.github.giantpinkrobots.varia.svg` (Varia — download manager GNOME; fallback: `links/apps/scalable/xdman/`)
+- Add `org.ryujinx.Ryujinx.svg` (Ryujinx — emulador Nintendo Switch; fallback: `links/apps/scalable/yuzu/`)
