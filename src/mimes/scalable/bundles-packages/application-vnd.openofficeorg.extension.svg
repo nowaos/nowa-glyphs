@@ -1,0 +1,42 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="application-vnd.openofficeorg.extension.svg" clip-path="url(#clip0_3181_1467)">
+<g id="Package - Product">
+<rect id="Rectangle" x="3" y="54" width="58" height="10" fill="url(#pattern0_3181_1467)"/>
+<g id="Box">
+<rect id="Front" x="4" y="4" width="56" height="56" rx="4.3" fill="url(#paint0_linear_3181_1467)"/>
+<path id="Top" d="M4 16H60V8.3C60 5.92518 58.0748 4 55.7 4H8.3C5.92517 4 4 5.92518 4 8.3V16Z" fill="url(#paint1_linear_3181_1467)"/>
+</g>
+<g id="Strap">
+<path id="Vector" d="M35 20H29L29 4H35V20Z" fill="#DACDB4"/>
+<path id="Vector_2" d="M35 20H29L29 16H35V20Z" fill="#CCBA94"/>
+</g>
+<g id="Front_2">
+<g id="Desc" opacity="0.2">
+<path id="Vector_3" d="M20 22H8V23H20V22Z" fill="black"/>
+<path id="Vector_4" d="M16 24H8V25H16V24Z" fill="black"/>
+<path id="Vector_5" d="M18 26H8V27H18V26Z" fill="black"/>
+</g>
+</g>
+</g>
+<g id="Front Face">
+<path id="Intersect" d="M9.52331 56C9.12713 55.988 8.75004 55.8268 8.46761 55.5487C8.18517 55.2705 8.01816 54.896 8 54.5L8 41.4783C8.00737 41.1821 8.10041 40.8943 8.26785 40.6498C8.4353 40.4052 8.6701 40.2145 8.94367 40.1006C9.22323 39.9955 9.52695 39.9722 9.81925 40.0334C10.1116 40.0946 10.3804 40.2378 10.5943 40.4462L23.5529 53.4341C23.7657 53.6453 23.9109 53.9151 23.9702 54.209C24.0294 54.5029 24 54.8078 23.8856 55.0849C23.7611 55.3619 23.558 55.5962 23.3015 55.7589C23.0611 55.9113 22.7837 55.9946 22.4998 56L9.52331 56Z" fill="#2EA100"/>
+</g>
+</g>
+<defs>
+<pattern id="pattern0_3181_1467" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_3181_1467" transform="scale(0.0169492 0.1)"/>
+</pattern>
+<linearGradient id="paint0_linear_3181_1467" x1="32" y1="4" x2="32" y2="60" gradientUnits="userSpaceOnUse">
+<stop offset="0.248454" stop-color="#D1D1D6"/>
+<stop offset="1" stop-color="#AEAEB2"/>
+</linearGradient>
+<linearGradient id="paint1_linear_3181_1467" x1="32" y1="4" x2="32" y2="16" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6EA"/>
+<stop offset="1" stop-color="#E5E5EA"/>
+</linearGradient>
+<clipPath id="clip0_3181_1467">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+<image id="image0_3181_1467" width="59" height="10" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAKCAYAAAAKAya7AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAMFJREFUSInVltEOwyAIRaH1/794rXvBhF2vDhb6MBIC1gY4gVpV6kQLY6H0iiCRAvEdTfrRPAjUkz5bh4pQZzMq4GMOlm8H0sGPKsaiyX3hh9MT1kN3wLs8TFZdYjA30QvWCC9tATrgmvnN1INHIKOgK2D/jAEPwJfpZVbN/4hxJAr5e4mOMRtllbnDQizLw4R9u6yrt8yjjCNMx/ipA4rZVb5vkAhbdkAxif56dnu/dhb9zN4k1ReBJy4WJRcKEZE37lJlFEBdtGUAAAAASUVORK5CYII="/>
+</defs>
+</svg>

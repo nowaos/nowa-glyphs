@@ -1,0 +1,36 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="application-x-bzip-compressed-tar" clip-path="url(#clip0_3179_1431)">
+<g id="Package">
+<rect id="Rectangle" x="3" y="54" width="58" height="10" fill="url(#pattern0_3179_1431)"/>
+<g id="Box">
+<rect id="Front" x="4" y="4" width="56" height="56" rx="4.3" fill="url(#paint0_linear_3179_1431)"/>
+<path id="Top" d="M4 16H60V8.3C60 5.92518 58.0748 4 55.7 4H8.3C5.92517 4 4 5.92518 4 8.3V16Z" fill="#E6CDA6"/>
+</g>
+<g id="Strap">
+<path id="Vector" d="M35 20H29L29 4H35V20Z" fill="#E8E2D6"/>
+<path id="Vector_2" d="M35 20H29L29 16H35V20Z" fill="#D0C5B3"/>
+</g>
+<g id="Front_2">
+<g id="Desc" opacity="0.2">
+<path id="Vector_3" d="M20 22H8V23H20V22Z" fill="black"/>
+<path id="Vector_4" d="M16 24H8V25H16V24Z" fill="black"/>
+<path id="Vector_5" d="M18 26H8V27H18V26Z" fill="black"/>
+</g>
+</g>
+</g>
+<path id="Name" opacity="0.4" d="M8.47727 34.598V33.2727H15.4403V34.598H12.7429V42H11.1747V34.598H8.47727ZM16.7827 42V33.2727H20.1236C20.7543 33.2727 21.2784 33.3722 21.696 33.571C22.1165 33.767 22.4304 34.0355 22.6378 34.3764C22.848 34.7173 22.9531 35.1037 22.9531 35.5355C22.9531 35.8906 22.8849 36.1946 22.7486 36.4474C22.6122 36.6974 22.429 36.9006 22.1989 37.0568C21.9688 37.2131 21.7116 37.3253 21.4276 37.3935V37.4787C21.7372 37.4957 22.0341 37.5909 22.3182 37.7642C22.6051 37.9347 22.8395 38.1761 23.0213 38.4886C23.2031 38.8011 23.294 39.179 23.294 39.6222C23.294 40.0739 23.1847 40.4801 22.9659 40.8409C22.7472 41.1989 22.4176 41.4815 21.9773 41.6889C21.5369 41.8963 20.983 42 20.3153 42H16.7827ZM18.3636 40.679H20.0639C20.6378 40.679 21.0511 40.5696 21.304 40.3509C21.5597 40.1293 21.6875 39.8452 21.6875 39.4986C21.6875 39.2401 21.6236 39.0071 21.4957 38.7997C21.3679 38.5895 21.1861 38.4247 20.9503 38.3054C20.7145 38.1832 20.4332 38.1222 20.1065 38.1222H18.3636V40.679ZM18.3636 36.9844H19.9276C20.2003 36.9844 20.446 36.9347 20.6648 36.8352C20.8835 36.733 21.0554 36.5895 21.1804 36.4048C21.3082 36.2173 21.3722 35.9957 21.3722 35.7401C21.3722 35.402 21.2528 35.1236 21.0142 34.9048C20.7784 34.6861 20.4276 34.5767 19.9616 34.5767H18.3636V36.9844ZM24.5075 42V41.0156L28.9819 34.598H24.4819V33.2727H30.9421V34.2571L26.4719 40.6747H30.9677V42H24.5075Z" fill="black"/>
+</g>
+<defs>
+<pattern id="pattern0_3179_1431" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_3179_1431" transform="scale(0.0169492 0.1)"/>
+</pattern>
+<linearGradient id="paint0_linear_3179_1431" x1="29.9979" y1="60" x2="29.9979" y2="4" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B29876"/>
+<stop offset="1" stop-color="#D2B788"/>
+</linearGradient>
+<clipPath id="clip0_3179_1431">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+<image id="image0_3179_1431" width="59" height="10" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAKCAYAAAAKAya7AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAMFJREFUSInVltEOwyAIRaH1/794rXvBhF2vDhb6MBIC1gY4gVpV6kQLY6H0iiCRAvEdTfrRPAjUkz5bh4pQZzMq4GMOlm8H0sGPKsaiyX3hh9MT1kN3wLs8TFZdYjA30QvWCC9tATrgmvnN1INHIKOgK2D/jAEPwJfpZVbN/4hxJAr5e4mOMRtllbnDQizLw4R9u6yrt8yjjCNMx/ipA4rZVb5vkAhbdkAxif56dnu/dhb9zN4k1ReBJy4WJRcKEZE37lJlFEBdtGUAAAAASUVORK5CYII="/>
+</defs>
+</svg>

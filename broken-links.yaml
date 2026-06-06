@@ -1,0 +1,59 @@
+# Broken symlinks outside apps/scalable
+# Format: symlink: missing-target
+# Checked against nowa-glyphs-test installation
+
+actions/symbolic:
+  pin-symbolic.svg: xapp-pin-symbolic.svg
+  tool-highlight-symbolic.svg: xapp-format-text-highlight-symbolic.svg
+  unpin-symbolic.svg: xapp-unpin-symbolic.svg
+  update-symbolic.svg: emblem-synchronizing-symbolic.svg
+  xapp-go-history-next-symbolic-rtl.svg: xapp-go-history-previous-symbolic.svg
+  xapp-go-history-previous-symbolic-rtl.svg: xapp-go-history-next-symbolic.svg
+
+
+preferences/32:
+  # → applications-education-language.svg
+  applications-development-translation.svg: applications-education-language.svg
+  applications-languages.svg: applications-education-language.svg
+
+  # → applications-internet.svg
+  applications-development-web.svg: applications-internet.svg
+  applications-webbrowsers.svg: applications-internet.svg
+
+  # → credentials-preferences.svg
+  cs-online-accounts.svg: credentials-preferences.svg
+  preferences-desktop-online-accounts.svg: credentials-preferences.svg
+  preferences-mail-accounts.svg: credentials-preferences.svg
+
+  # → outros
+  preferences-certificates.svg: gufw.svg
+  preferences-desktop-applications.svg: applications-system.svg
+
+status/16:
+  # Apontam para ../../actions/16/ (pasta não existe)
+  appointment-recurring.svg: ../../actions/16/view-refresh.svg
+  appointment-reminder.svg: ../../actions/16/notifications.svg
+  irc-channel-joined.svg: ../../actions/16/irc-channel-active.svg
+  irc-channel-parted.svg: ../../actions/16/irc-channel-inactive.svg
+  pidgin-tray-away.svg: ../../actions/16/im-user-away.svg
+  pidgin-tray-busy.svg: ../../actions/16/im-user-busy.svg
+  pidgin-tray-email.svg: ../../actions/16/mail-mark-unread.svg
+  pidgin-tray-invisible.svg: ../../actions/16/im-invisible-user.svg
+  pidgin-tray-offline.svg: ../../actions/16/im-user-offline.svg
+  task-recurring.svg: ../../actions/16/view-refresh.svg
+  task-reminder.svg: ../../actions/16/notifications.svg
+  user-away.svg: ../../actions/16/im-user-away.svg
+  user-busy.svg: ../../actions/16/im-user-busy.svg
+  user-invisible.svg: ../../actions/16/im-invisible-user.svg
+  user-offline.svg: ../../actions/16/im-user-offline.svg
+  user-online.svg: ../../actions/16/im-user-online.svg
+
+  # Alvo inexistente no mesmo contexto
+  gpm-brightness-lcd.svg: xfpm-brightness-lcd.svg
+  pidgin-tray-available.svg: im-user-online.svg
+  user-available.svg: im-user-online.svg
+
+status/32:
+  # Apontam para ../../actions/32/ (pasta não existe)
+  appointment-recurring.svg: ../../actions/32/view-refresh.svg
+  task-recurring.svg: ../../actions/32/view-refresh.svg
