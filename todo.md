@@ -54,6 +54,18 @@ Pastas analisadas:
 | `3rd-apps/` | 9 | Ícones privados de apps específicos (twitter, dino, dconf-editor, brisk-menu) |
 | `ui/` | 280 | Catch-all: ações genéricas de interface (view-*, window-*, go-*, edit-*, etc.) |
 
+## Ícones faltando em `src/categories/32/`
+
+- [ ] `applications-accessories` (oficial)
+- [ ] `applications-audiovideo` (oficial)
+- [ ] `applications-development` (oficial)
+- [ ] `applications-graphics` (oficial)
+- [ ] `applications-internet` (oficial)
+- [ ] `applications-office` (oficial)
+- [ ] `applications-all` (extensão GNOME Software)
+- [ ] `applications-featured` (extensão GNOME Software)
+- [ ] `applications-settings` (extensão GNOME Control Center)
+
 ## Ícones a criar
 
 > `fallback`: pasta em `links/apps/scalable/` a remover após criar o ícone em `src/`
@@ -67,6 +79,8 @@ development:
       - com.felipekinoshita.Wildcard.svg
 
 education:
+  org.gramps_project.Gramps:  # genealogy software
+    aliases: false
   com.cyberbotics.Webots:  # robotics simulator — atualmente com ícone herdado do bug-buddy
     aliases: false
 

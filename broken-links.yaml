@@ -2,15 +2,6 @@
 # Format: symlink: missing-target
 # Checked against nowa-glyphs-test installation
 
-actions/symbolic:
-  pin-symbolic.svg: xapp-pin-symbolic.svg
-  tool-highlight-symbolic.svg: xapp-format-text-highlight-symbolic.svg
-  unpin-symbolic.svg: xapp-unpin-symbolic.svg
-  update-symbolic.svg: emblem-synchronizing-symbolic.svg
-  xapp-go-history-next-symbolic-rtl.svg: xapp-go-history-previous-symbolic.svg
-  xapp-go-history-previous-symbolic-rtl.svg: xapp-go-history-next-symbolic.svg
-
-
 preferences/32:
   # → applications-education-language.svg
   applications-development-translation.svg: applications-education-language.svg
