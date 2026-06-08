@@ -201,11 +201,115 @@ class SvgTracker
     self
   end
 
+  # Returns a Set of all hex colors used in the given groups and their referenced defs.
+  def colors_in(group_ids)
+    refs = Set.new
+    group_ids.each do |gid|
+      node = @doc.at_css("##{gid}")
+      collect_color_refs(node, refs) if node
+    end
+    expand_color_refs(refs)
+
+    colors = Set.new
+    refs.each do |id|
+      el = @doc.at_css('defs')&.children&.find { |n| n['id'] == id }
+      collect_hex_colors(el, colors) if el
+    end
+    group_ids.each do |gid|
+      node = @doc.at_css("##{gid}")
+      collect_hex_colors(node, colors) if node
+    end
+    colors
+  end
+
+  # Applies a { hex => hex } mapping across the document.
+  # Safe to run globally — the mapping only contains in-scope colors.
+  def replace_colors!(mapping)
+    @doc.traverse do |node|
+      next unless node.is_a?(Nokogiri::XML::Element)
+      COLOR_ATTRS.each { |a| remap_attribute!(node, a, mapping) }
+      remap_inline_style!(node, mapping)
+    end
+  end
+
   def save(path = nil)
     File.write(path || @path, @doc.to_xml)
   end
 
   private
+
+  COLOR_ATTRS = %w[fill stroke stop-color].freeze
+
+  def collect_color_refs(node, refs)
+    COLOR_ATTRS.each { |a| refs.merge(url_refs_in(node[a])) }
+    if (style = node['style'])
+      style.split(';').each do |part|
+        k, v = part.split(':', 2).map(&:strip)
+        refs.merge(url_refs_in(v)) if COLOR_ATTRS.include?(k.to_s.downcase)
+      end
+    end
+    node.element_children.each { |c| collect_color_refs(c, refs) }
+  end
+
+  def expand_color_refs(refs)
+    defs = @doc.at_css('defs')
+    return unless defs
+
+    queue = refs.to_a.dup
+    while (id = queue.shift)
+      el = defs.children.find { |n| n['id'] == id }
+      next unless el
+
+      href = el['xlink:href'] || el['href']
+      if href&.start_with?('#')
+        ref = href[1..]
+        unless refs.include?(ref)
+          refs.add(ref)
+          queue << ref
+        end
+      end
+
+      nested = Set.new
+      collect_color_refs(el, nested)
+      nested.each do |r|
+        unless refs.include?(r)
+          refs.add(r)
+          queue << r
+        end
+      end
+    end
+  end
+
+  def collect_hex_colors(node, colors)
+    node.traverse do |n|
+      next unless n.is_a?(Nokogiri::XML::Element)
+      COLOR_ATTRS.each { |a| colors.merge(hex_values_in(n[a])) }
+      colors.merge(hex_values_in(n['style']))
+    end
+  end
+
+  def hex_values_in(val)
+    return [] unless val
+    val.scan(/#[0-9a-fA-F]{6}\b/).map(&:downcase)
+  end
+
+  def url_refs_in(val)
+    return [] unless val
+    val.scan(/url\(#([^)]+)\)/).flatten
+  end
+
+  def remap_attribute!(node, attr, mapping)
+    val = node[attr]
+    return unless val
+    new_val = val.gsub(/#[0-9a-fA-F]{6}\b/) { |hex| mapping.fetch(hex.downcase, hex) }
+    node[attr] = new_val if new_val != val
+  end
+
+  def remap_inline_style!(node, mapping)
+    return unless (style = node['style'])
+    new_style = style.gsub(/#[0-9a-fA-F]{6}\b/) { |hex| mapping.fetch(hex.downcase, hex) }
+    node['style'] = new_style if new_style != style
+  end
 
   def normalize (node)
     node.to_xml.gsub(/ xmlns="[^"]*"/, '').gsub(/>\s+</, '><').gsub(/\s+/, ' ').strip

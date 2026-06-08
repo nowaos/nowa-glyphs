@@ -1,3 +1,11 @@
+# Replaces the drop shadow group (#ds) with the canonical template.
+# Creates a new versioned file (e.g. icon.v2.svg) — never edits the original.
+#
+# Usage:
+#   ruby scripts/autofixes/reapply_shadows.rb                                 # all icons in src/apps/scalable/
+#   ruby scripts/autofixes/reapply_shadows.rb -d src/apps/scalable/gnome-core # one category
+#   ruby scripts/autofixes/reapply_shadows.rb -f org.gnome.Clocks.svg         # one icon by filename
+
 require_relative '../core/icon_preprocessor'
 
 IconPreprocessor.update do |tracker, ds_files|
