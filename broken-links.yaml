@@ -2,23 +2,6 @@
 # Format: symlink: missing-target
 # Checked against nowa-glyphs-test installation
 
-preferences/32:
-  # → applications-education-language.svg
-  applications-development-translation.svg: applications-education-language.svg
-  applications-languages.svg: applications-education-language.svg
-
-  # → applications-internet.svg
-  applications-development-web.svg: applications-internet.svg
-  applications-webbrowsers.svg: applications-internet.svg
-
-  # → credentials-preferences.svg
-  cs-online-accounts.svg: credentials-preferences.svg
-  preferences-desktop-online-accounts.svg: credentials-preferences.svg
-  preferences-mail-accounts.svg: credentials-preferences.svg
-
-  # → outros
-  preferences-certificates.svg: gufw.svg
-  preferences-desktop-applications.svg: applications-system.svg
 
 status/16:
   # Apontam para ../../actions/16/ (pasta não existe)

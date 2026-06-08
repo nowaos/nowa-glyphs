@@ -1,12 +1,56 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="applications-office" clip-path="url(#clip0_2048_1129)">
-<g id="Frame">
-<path id="Vector" d="M4 3V1C4 0.5 4.5 0 5 0H14C14.5 0 15 0.5 15 1V12C15 12.5 14.5 13 14 13H12V15C12 15.5 11.5 16 11 16H2C1.5 16 1.00195 15.5 1.00195 15V4C1.00195 3.5 1.5 3 2 3H4ZM5 3H11C11.5 3 12 3.5 12 4V12H14V1H5V3ZM4 7V8H9V7H4ZM4 11V12H9V11H4Z" fill="black"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_2048_1129">
-<rect width="16" height="16" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="applications-science-symbolic (Copy).svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:current-layer="svg1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.5"
+       spacingy="0.5"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="2"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip0_2048_1137">
+      <rect
+         width="16"
+         height="16"
+         fill="white"
+         id="rect1" />
+    </clipPath>
+  </defs>
+  <path
+     d="m 2.3320263,14.447368 q -0.5583421,0 -0.9451842,-0.386842 Q 1,13.673684 1,13.115342 V 5.4636052 Q 1,4.9052631 1.3868421,4.5184209 1.7736842,4.1315788 2.3320263,4.1315788 h 3.0890264 v -1.246921 q 0,-0.5583421 0.3868421,-0.9451842 Q 6.1947369,1.5526315 6.753079,1.5526315 h 2.4938421 q 0.5583421,0 0.9451839,0.3868421 0.386842,0.3868421 0.386842,0.9451842 v 1.246921 h 3.089027 q 0.558342,0 0.945184,0.3868421 Q 15,4.9052631 15,5.4636052 v 7.6517368 q 0,0.558342 -0.386842,0.945184 -0.386842,0.386842 -0.945184,0.386842 z m 0,-1.105263 H 13.667974 q 0.08511,0 0.155842,-0.07092 0.07092,-0.07074 0.07092,-0.155842 V 5.4636052 q 0,-0.085105 -0.07092,-0.1558421 -0.07074,-0.070921 -0.155842,-0.070921 H 2.3320263 q -0.085105,0 -0.1558421,0.070921 -0.070921,0.070737 -0.070921,0.1558421 v 7.6517368 q 0,0.08511 0.070921,0.155842 0.070737,0.07092 0.1558421,0.07092 z M 6.5263158,4.1315789 h 2.9473685 v -1.246921 q 0,-0.085105 -0.070921,-0.1558421 -0.070737,-0.070921 -0.1558421,-0.070921 H 6.753079 q -0.085105,0 -0.1558421,0.070921 -0.070921,0.070737 -0.070921,0.1558421 z M 2.1052632,13.342105 V 5.236842 Z"
+     id="path1"
+     style="fill:#000000;fill-opacity:1;stroke-width:0.025" />
 </svg>

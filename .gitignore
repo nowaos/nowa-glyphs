@@ -1,0 +1,16 @@
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# GTK icon cache
+icon-theme.cache
+
+# Local
+/design/

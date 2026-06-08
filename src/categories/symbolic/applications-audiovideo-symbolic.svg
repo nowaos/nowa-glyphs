@@ -1,12 +1,56 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="applications-audiovideo" clip-path="url(#clip0_2048_977)">
-<g id="Frame">
-<path id="Vector" d="M12.8272 8.32992L4.60319 13.9333C4.4249 14.0548 4.18402 14.0056 4.06516 13.8234C4.02267 13.7582 4 13.6817 4 13.6034V2.39652C4 2.17752 4.1737 2 4.38798 2C4.46457 2 4.53946 2.02317 4.60319 2.06659L12.8272 7.67002C13.0055 7.79152 13.0537 8.03776 12.9348 8.21992C12.9064 8.26346 12.8698 8.30089 12.8272 8.32992Z" fill="black"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_2048_977">
-<rect width="16" height="16" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="applications-audiovideo-symbolic.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:current-layer="svg1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.5"
+       spacingy="0.5"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="2"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip0_2048_977">
+      <rect
+         width="16"
+         height="16"
+         fill="white"
+         id="rect1" />
+    </clipPath>
+  </defs>
+  <path
+     d="M 7.1115527,10.479658 10.321053,8.4179737 q 0.236526,-0.1501315 0.236526,-0.4172368 0,-0.2671053 -0.236526,-0.4187105 L 7.1115527,5.5203421 Q 6.8636053,5.3503158 6.6027632,5.493079 6.3421053,5.6358421 6.3421053,5.9383158 v 4.1233682 q 0,0.302474 0.2606579,0.445237 0.2608421,0.142763 0.5087895,-0.02726 z M 8.0012895,15 Q 6.5489737,15 5.2711053,14.448842 3.9932368,13.897684 3.0480526,12.952868 2.1028684,12.008053 1.5513421,10.730737 1,9.4534211 1,8.0012895 1,6.5489737 1.5511579,5.2711053 2.1023158,3.9932369 3.0471316,3.0480526 3.9919474,2.1028684 5.2692632,1.5513421 6.546579,1 7.9987106,1 9.4510264,1 10.728895,1.5511579 12.006763,2.1023158 12.951947,3.0471316 13.897132,3.9919474 14.448658,5.2692632 15,6.546579 15,7.9987106 q 0,1.4523158 -0.551158,2.7301844 -0.551158,1.277868 -1.495974,2.223052 -0.944815,0.945185 -2.222131,1.496711 Q 9.4534211,15 8.0012895,15 Z M 8,13.894737 q 2.468421,0 4.181579,-1.713158 Q 13.894737,10.468421 13.894737,8 q 0,-2.468421 -1.713158,-4.1815789 Q 10.468421,2.1052632 8,2.1052632 q -2.468421,0 -4.1815789,1.7131579 Q 2.1052632,5.531579 2.1052632,8 q 0,2.468421 1.7131579,4.181579 Q 5.531579,13.894737 8,13.894737 Z M 8,8 Z"
+     id="path1"
+     style="fill:#000000;fill-opacity:1;stroke-width:0.025" />
 </svg>

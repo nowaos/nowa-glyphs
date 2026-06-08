@@ -56,15 +56,24 @@ Pastas analisadas:
 
 ## Ícones faltando em `src/categories/32/`
 
-- [ ] `applications-accessories` (oficial)
-- [ ] `applications-audiovideo` (oficial)
-- [ ] `applications-development` (oficial)
-- [ ] `applications-graphics` (oficial)
-- [ ] `applications-internet` (oficial)
-- [ ] `applications-office` (oficial)
-- [ ] `applications-all` (extensão GNOME Software)
-- [ ] `applications-featured` (extensão GNOME Software)
-- [ ] `applications-settings` (extensão GNOME Control Center)
+Freedesktop oficial:
+
+- [x] `applications-accessories`
+- [x] `applications-audiovideo`
+- [x] `applications-development`
+- [x] `applications-education`
+- [x] `applications-games`
+- [x] `applications-graphics`
+- [x] `applications-internet`
+- [x] `applications-office`
+- [x] `applications-science`
+- [x] `applications-system`
+- [x] `applications-utilities`
+
+Extensões GNOME:
+
+- [x] `applications-all` (GNOME Software)
+- [x] `applications-featured` (GNOME Software)
 
 ## Ícones a criar
 
@@ -95,6 +104,8 @@ games:
     aliases: false
 
 graphics:
+  info.febvre.Komikku:  # manga/comics reader
+    aliases: false
   io.github.bgrabitmap.LazPaint:
     aliases: false
   org.geeqie.Geeqie:  # image viewer
