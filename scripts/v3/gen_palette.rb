@@ -132,7 +132,7 @@ anchors_raw = {
   hues[:yellow] => { l: reversal_lch[:yellow][0], c: reversal_lch[:yellow][1] },
   hues[:green]  => { l: reversal_lch[:green][0],  c: reversal_lch[:green][1]  },
   hues[:sky]    => { l: reversal_lch[:blue][0],   c: reversal_lch[:blue][1]   },
-  hues[:indigo] => { l: reversal_lch[:purple][0], c: reversal_lch[:purple][1] },
+  hues[:purple] => { l: reversal_lch[:purple][0], c: reversal_lch[:purple][1] },
 }
 sorted_anchors = anchors_raw.sort_by { |h, _| h }
 
@@ -157,7 +157,7 @@ BUMP  = 0.90
 
 target_c = {}
 GRID_FAMILIES.each { |name| target_c[name] = interp_wheel(sorted_anchors, hues[name], :c) * BUMP }
-%i[cherry orange amber lime pink purple].each { |name| target_c[name] = avg_c * BUMP * 1.05 }
+target_c[:purple] *= 0.95
 target_c[:brown] = target_c[:orange] * 0.60
 
 $stderr.puts "\n=== Grid hues & base L ==="

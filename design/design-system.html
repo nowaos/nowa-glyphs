@@ -348,6 +348,183 @@ body {
   font-size: .8rem;
 }
 
+/* ── BLEND PICKER ── */
+.blend-picker {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(24px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  padding: .75rem 1rem;
+  width: 640px;
+  border-radius: 16px;
+  background: var(--bg-topbar);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,.14), 0 1px 4px rgba(0,0,0,.06);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease, transform .28s cubic-bezier(.34,1.4,.64,1);
+}
+.blend-picker.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bp-blend-area {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.bp-slot-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  flex-shrink: 0;
+}
+
+.bp-slot {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1.5px dashed var(--border-strong);
+  flex-shrink: 0;
+  transition: border-color .15s, background .15s;
+  background: transparent;
+}
+.bp-slot.filled { border-style: solid; border-color: rgba(0,0,0,.1); }
+
+.bp-slot-hex {
+  font-size: .75rem;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-2);
+  letter-spacing: .01em;
+  text-align: center;
+}
+
+.bp-slider-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  min-width: 0;
+}
+
+input[type=range].bp-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background: var(--border-strong);
+}
+input[type=range].bp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--text-1);
+  border: 2px solid var(--bg);
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+  cursor: grab;
+}
+input[type=range].bp-range:active::-webkit-slider-thumb { cursor: grabbing; }
+
+.bp-pct-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bp-pct-n, .bp-pct-c {
+  font-size: .75rem;
+  font-weight: 600;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-2);
+  letter-spacing: .02em;
+}
+.bp-pct-label {
+  font-size: .7rem;
+  color: var(--text-2);
+  letter-spacing: .04em;
+}
+
+.bp-sep { width: 1px; height: 46px; background: var(--border); flex-shrink: 0; }
+
+.bp-result-area {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-shrink: 0;
+}
+
+.bp-result {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: .25rem .375rem;
+  transition: background .12s;
+}
+.bp-result:hover { background: var(--bg-subtle); }
+
+.bp-result-swatch {
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.bp-result-info {
+  display: flex;
+  flex-direction: column;
+  gap: .18rem;
+}
+
+.bp-result-hex {
+  font-size: .875rem;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-1);
+  letter-spacing: .03em;
+  min-width: 60px;
+}
+
+.bp-result-lch {
+  font-size: .72rem;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-2);
+  letter-spacing: .02em;
+  line-height: 1.5;
+}
+
+.bp-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-3);
+  font-size: 1rem;
+  line-height: 1;
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: color .12s, background .12s;
+  padding: 0;
+}
+.bp-dismiss:hover { color: var(--text-1); background: var(--bg-subtle); }
+
+.swatch.bp-selected { outline: 2px solid var(--text-1); outline-offset: 2px; z-index: 3; }
+
 /* ── TOAST ── */
 .toast {
   position: fixed;
@@ -502,6 +679,38 @@ body {
   </div>
 </section>
 
+<div class="blend-picker" id="blend-picker">
+  <div class="bp-blend-area">
+    <div class="bp-slot-group">
+      <div class="bp-slot" id="bp-neutral" title="Ctrl+click a neutral color"></div>
+      <span class="bp-slot-hex" id="bp-neutral-hex">neutral</span>
+    </div>
+    <div class="bp-slider-col">
+      <input type="range" class="bp-range" id="bp-slider" min="0" max="100" value="50">
+      <div class="bp-pct-bar">
+        <span class="bp-pct-n" id="bp-pct-n">50%</span>
+        <span class="bp-pct-label">blend</span>
+        <span class="bp-pct-c" id="bp-pct-c">50%</span>
+      </div>
+    </div>
+    <div class="bp-slot-group">
+      <div class="bp-slot" id="bp-chromatic" title="Ctrl+click a chromatic color"></div>
+      <span class="bp-slot-hex" id="bp-chromatic-hex">chromatic</span>
+    </div>
+  </div>
+  <div class="bp-sep"></div>
+  <div class="bp-result-area">
+    <div class="bp-result" id="bp-result" title="Click to copy">
+      <div class="bp-result-swatch" id="bp-result-swatch"></div>
+      <div class="bp-result-info">
+        <span class="bp-result-hex" id="bp-result-hex">—</span>
+        <span class="bp-result-lch" id="bp-result-lch">L —<br>C —<br>H —</span>
+      </div>
+    </div>
+    <button class="bp-dismiss" id="bp-dismiss" title="Dismiss (Esc)">×</button>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script src="assets/palette-data.js"></script>
@@ -521,7 +730,114 @@ function copy(hex) {
   });
 }
 
-function renderGrid(palette, id) {
+// ── BLEND PICKER ──────────────────────────────────────────────
+const _bp = {
+  el:         document.getElementById('blend-picker'),
+  neutral:    document.getElementById('bp-neutral'),
+  chromatic:  document.getElementById('bp-chromatic'),
+  neutralHex: document.getElementById('bp-neutral-hex'),
+  chromHex:   document.getElementById('bp-chromatic-hex'),
+  pctN:       document.getElementById('bp-pct-n'),
+  pctC:       document.getElementById('bp-pct-c'),
+  slider:     document.getElementById('bp-slider'),
+  result:     document.getElementById('bp-result'),
+  swatch:     document.getElementById('bp-result-swatch'),
+  hex:        document.getElementById('bp-result-hex'),
+  lch:        document.getElementById('bp-result-lch'),
+  dismiss:    document.getElementById('bp-dismiss'),
+  state:      { neutral: null, chromatic: null },
+  selected:   { neutral: null, chromatic: null },
+};
+_bp.result.style.display = 'none';
+
+function _bpLin(c){return c<=.04045?c/12.92:((c+.055)/1.055)**2.4;}
+function _bpSrgb(c){c=Math.max(0,Math.min(1,c));return c<=.0031308?12.92*c:1.055*c**(1/2.4)-.055;}
+
+function _bpBlend(a,b,t){
+  const p=h=>[1,3,5].map(i=>_bpLin(parseInt(h.slice(i,i+2),16)/255));
+  const [ra,ga,ba]=p(a),[rb,gb,bb]=p(b);
+  const h2=v=>Math.round(_bpSrgb(v)*255).toString(16).padStart(2,'0');
+  return '#'+h2(ra*(1-t)+rb*t)+h2(ga*(1-t)+gb*t)+h2(ba*(1-t)+bb*t);
+}
+
+function _bpToOklch(hex){
+  const [r,g,b]=[1,3,5].map(i=>_bpLin(parseInt(hex.slice(i,i+2),16)/255));
+  const x=.4122214708*r+.5363325363*g+.0514459929*b;
+  const y=.2119034982*r+.6806995451*g+.1073969566*b;
+  const z=.0883024619*r+.2817188376*g+.6299787005*b;
+  const l=Math.cbrt(.8189330101*x+.3618667424*y-.1288597137*z);
+  const m=Math.cbrt(.0329845436*x+.9293118715*y+.0361456387*z);
+  const s=Math.cbrt(.0482003018*x+.2643662691*y+.6338517070*z);
+  const L=.2104542553*l+.7936177850*m-.0040720468*s;
+  const a=1.9779984951*l-2.4285922050*m+.4505937099*s;
+  const bv=.0259040371*l+.7827717662*m-.8086757660*s;
+  const C=Math.sqrt(a*a+bv*bv);
+  const H=(Math.atan2(bv,a)*180/Math.PI+360)%360;
+  return {L,C,H};
+}
+
+function _bpSyncSwatch(){
+  requestAnimationFrame(()=>{
+    const info=_bp.el.querySelector('.bp-result-info');
+    const h=info.offsetHeight;
+    if(h>0){_bp.swatch.style.width=h+'px';_bp.swatch.style.height=h+'px';}
+  });
+}
+
+function _bpUpdate(){
+  const {neutral,chromatic}=_bp.state;
+  const hasResult=neutral&&chromatic;
+  _bp.result.style.display=hasResult?'flex':'none';
+
+  const t=_bp.slider.value/100;
+  _bp.pctN.textContent=`${Math.round((1-t)*100)}%`;
+  _bp.pctC.textContent=`${Math.round(t*100)}%`;
+
+  if(!hasResult)return;
+
+  const res=_bpBlend(neutral,chromatic,t);
+  _bp.swatch.style.background=res;
+  _bp.hex.textContent=res;
+  _bp.slider.style.background=`linear-gradient(to right,${neutral},${chromatic})`;
+
+  const {L,C,H}=_bpToOklch(res);
+  _bp.lch.innerHTML=`L ${L.toFixed(2)}<br>C ${C.toFixed(3)}<br>H ${H.toFixed(0)}°`;
+  _bpSyncSwatch();
+}
+
+function _bpShow(){_bp.el.classList.add('visible');}
+
+function _bpDismiss(){
+  _bp.el.classList.remove('visible');
+  _bp.state.neutral=_bp.state.chromatic=null;
+  _bp.neutral.style.background=''; _bp.neutral.classList.remove('filled');
+  _bp.chromatic.style.background=''; _bp.chromatic.classList.remove('filled');
+  _bp.neutralHex.textContent='neutral'; _bp.chromHex.textContent='chromatic';
+  Object.values(_bp.selected).forEach(s=>s?.classList.remove('bp-selected'));
+  _bp.selected.neutral=_bp.selected.chromatic=null;
+  _bp.result.style.display='none';
+  _bp.slider.style.background='';
+}
+
+_bp.dismiss.addEventListener('click',_bpDismiss);
+_bp.result.addEventListener('click',()=>{const h=_bp.hex.textContent;if(h&&h!=='—')copy(h);});
+_bp.slider.addEventListener('input',_bpUpdate);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')_bpDismiss();});
+
+function _bpSelect(type,hex,swatchEl){
+  _bp.selected[type]?.classList.remove('bp-selected');
+  _bp.selected[type]=swatchEl;
+  _bp.state[type]=hex;
+  _bp[type].style.background=hex;
+  _bp[type].classList.add('filled');
+  (type==='neutral'?_bp.neutralHex:_bp.chromHex).textContent=hex;
+  swatchEl.classList.add('bp-selected');
+  _bpShow();
+  _bpUpdate();
+}
+// ──────────────────────────────────────────────────────────────
+
+function renderGrid(palette, id, type) {
   const el=document.getElementById(id);
   palette.forEach(color=>{
     const col=document.createElement('div');
@@ -533,7 +849,10 @@ function renderGrid(palette, id) {
       s.style.background=hex;
       const c=ink(hex);
       s.innerHTML=`<span class="swatch-tone" style="color:${c}">${tone}</span><span class="swatch-hex" style="color:${c}">${hex}</span>`;
-      s.addEventListener('click',()=>copy(hex));
+      s.addEventListener('click',e=>{
+        if(e.ctrlKey||e.metaKey){e.preventDefault();_bpSelect(type,hex,s);}
+        else copy(hex);
+      });
       col.appendChild(s);
     });
     el.appendChild(col);
@@ -565,8 +884,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e=>
 
 const { CHROMATIC, NEUTRAL } = PALETTES.v3;
 
-renderGrid(CHROMATIC, 'grid-chromatic');
-renderGrid(NEUTRAL,   'grid-neutral');
+renderGrid(CHROMATIC, 'grid-chromatic', 'chromatic');
+renderGrid(NEUTRAL,   'grid-neutral',   'neutral');
 </script>
 </body>
 </html>

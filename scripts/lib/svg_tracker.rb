@@ -201,6 +201,13 @@ class SvgTracker
     self
   end
 
+  # Returns a Set of all hex colors used anywhere in the document.
+  def all_colors
+    colors = Set.new
+    collect_hex_colors(@doc.at_css('svg'), colors)
+    colors
+  end
+
   # Returns a Set of all hex colors used in the given groups and their referenced defs.
   def colors_in(group_ids)
     refs = Set.new

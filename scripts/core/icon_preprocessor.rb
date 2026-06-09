@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'ostruct'
+require 'pathname'
 require_relative '../lib/svg_tracker'
 
 module IconPreprocessor
@@ -20,28 +21,42 @@ module IconPreprocessor
 
       filename  = nil
       directory = nil
+      tag       = nil
       argv.each_with_index do |arg, i|
         filename  = argv[i + 1] if arg == '-f'
         directory = argv[i + 1] if arg == '-d'
+        tag       = argv[i + 1] if arg == '--tag'
       end
 
       @args = OpenStruct.new(
         filename:  filename,
         directory: directory,
-        new:       argv.include?('--new')
+        tag:       tag,
+        new:       argv.include?('--new'),
+        non_apps:  argv.include?('--non-apps')
       )
     end
 
     def update(&block)
       setup unless @args
+
+      files = files_to_process
+
+      unless @args.tag
+        versioned = files.select { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
+        unless versioned.empty?
+          abort "Error: uncommitted versioned files in selection — commit or remove them first:\n" +
+                versioned.map { |f| "  #{Pathname.new(f).relative_path_from(@root)}" }.join("\n")
+        end
+      end
+
       count = 0
-
-      files_to_process.each do |file_path|
+      files.each do |file_path|
         tracker = SvgTracker.new(file_path)
+        result  = yield tracker, @ds
+        next if result == false
 
-        yield tracker, @ds
-
-        tracker.save(next_version_path(file_path))
+        tracker.save(output_path(file_path))
         count += 1
       end
 
@@ -59,6 +74,16 @@ module IconPreprocessor
     end
 
     private
+
+    def output_path(path)
+      if @args.tag
+        dir  = File.dirname(path)
+        base = File.basename(path, '.svg').sub(/\.v\d+\z/, '').sub(/-[^.]+\z/, '')
+        File.join(dir, "#{base}-#{@args.tag}.svg")
+      else
+        next_version_path(path)
+      end
+    end
 
     def next_version_path(path)
       dir  = File.dirname(path)

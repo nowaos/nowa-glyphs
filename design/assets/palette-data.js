@@ -3,20 +3,20 @@
   const CHROMATIC = [
   { id:"red", name:"Red", usage:"Alerts · recording · errors", tones:{100:"#fedad6",200:"#feafa8",300:"#fa8179",400:"#ef4d4c",500:"#cf2b31",600:"#aa091c",700:"#7f0311"} },
   { id:"orange", name:"Orange", usage:"Audio & video · media", tones:{100:"#fee1d2",200:"#fec3a5",300:"#fda473",400:"#fd802f",500:"#da660e",600:"#b25208",700:"#8c3e03"} },
-  { id:"amber", name:"Amber", usage:"Highlights · warmth · harvest", tones:{100:"#fce4c5",200:"#fed39d",300:"#fec273",400:"#fdb13d",500:"#de9514",600:"#ba7c0e",700:"#976408"} },
+  { id:"amber", name:"Amber", usage:"Highlights · warmth · harvest", tones:{100:"#fae4c9",200:"#fed39d",300:"#fec273",400:"#fdb13d",500:"#de9514",600:"#ba7c0e",700:"#976408"} },
   { id:"yellow", name:"Yellow", usage:"Games · highlights · favorites", tones:{100:"#efe9cb",200:"#f3e5a9",300:"#f7e183",400:"#fbdd52",500:"#ddbf2a",600:"#bea314",700:"#9e880e"} },
-  { id:"lime", name:"Lime", usage:"Nature · agriculture · growth", tones:{100:"#e3edc9",200:"#d3e89e",300:"#c5e16d",400:"#b6da1c",500:"#9cbb16",600:"#839d10",700:"#6a800a"} },
+  { id:"lime", name:"Lime", usage:"Nature · agriculture · growth", tones:{100:"#e3edce",200:"#d5e6a8",300:"#c6e07f",400:"#b9d84c",500:"#9dbb25",600:"#839d10",700:"#6a800a"} },
   { id:"green", name:"Green", usage:"Education · productivity · success", tones:{100:"#d6f0d6",200:"#b2e6b2",300:"#8bdc8e",400:"#5ed067",500:"#3eb34a",600:"#229533",700:"#087820"} },
   { id:"mint", name:"Mint", usage:"Health · nature · freshness", tones:{100:"#cdf2e3",200:"#99e7ca",300:"#59dbb2",400:"#1bc99d",500:"#14a983",600:"#0d8b6b",700:"#076d53"} },
   { id:"cyan", name:"Cyan", usage:"Science · data · system", tones:{100:"#c9f1ef",200:"#8de3e0",300:"#34d4d1",400:"#19bdba",500:"#129e9c",600:"#0c807e",700:"#056362"} },
   { id:"turquoise", name:"Turquoise", usage:"Cloud · air · open", tones:{100:"#cbeffa",200:"#90ddf2",300:"#41c9e9",400:"#17b1d0",500:"#1093ad",600:"#0a768b",700:"#045a6b"} },
   { id:"sky", name:"Sky", usage:"Sky · social · network", tones:{100:"#d3ecfe",200:"#9ed4fc",300:"#67bbf6",400:"#14a2ed",500:"#0e85c5",600:"#076a9d",700:"#034f78"} },
-  { id:"blue", name:"Blue", usage:"Internet · communication · network", tones:{100:"#d4e2fe",200:"#a9c4fd",300:"#7ea5fd",400:"#5484fc",500:"#3766e4",600:"#224bc0",700:"#10319a"} },
-  { id:"indigo", name:"Indigo", usage:"Development · system · terminal", tones:{100:"#d3cffb",200:"#b6acfd",300:"#9b87fc",400:"#835cfb",500:"#6c36e4",600:"#5413bf",700:"#3b038d"} },
-  { id:"purple", name:"Purple", usage:"Graphics · design · creativity", tones:{100:"#e4d0f0",200:"#d2aae9",300:"#bf82e0",400:"#ac58d6",500:"#903bb8",600:"#731f97",700:"#560275"} },
-  { id:"pink", name:"Pink", usage:"Multimedia · entertainment · social", tones:{100:"#f3d1e8",200:"#e9a7d6",300:"#dc7dc4",400:"#cd4eb2",500:"#ae2f95",600:"#8d1078",700:"#690258"} },
-  { id:"cherry", name:"Cherry", usage:"Danger · critical · warnings", tones:{100:"#fdd3de",200:"#f8a8bf",300:"#ef7ca1",400:"#e34984",500:"#c3276a",600:"#9f0751",700:"#75023a"} },
-  { id:"brown", name:"Brown", usage:"Files · office · paper · cardboard", tones:{100:"#d5bfb4",200:"#c79e88",300:"#b87c5c",400:"#a75a2c",500:"#8a400b",600:"#682c00",700:"#461a00"} }
+  { id:"blue", name:"Blue", usage:"Internet · communication · network", tones:{100:"#dae6fe",200:"#afc8fe",300:"#85aafd",400:"#5a89fc",500:"#3f6ce1",600:"#2a51bd",700:"#173798"} },
+  { id:"indigo", name:"Indigo", usage:"Development · system · terminal", tones:{100:"#dcd9fe",200:"#beb6fd",300:"#a292fc",400:"#896afc",500:"#714bdf",600:"#582fba",700:"#411295"} },
+  { id:"purple", name:"Purple", usage:"Graphics · design · creativity", tones:{100:"#e3cbf1",200:"#d2a3ed",300:"#c178e7",400:"#af47df",500:"#9324c1",600:"#73069b",700:"#520170"} },
+  { id:"pink", name:"Pink", usage:"Multimedia · entertainment · social", tones:{100:"#f4cce8",200:"#eca1d8",300:"#e172c7",400:"#d33ab6",500:"#b40d99",600:"#8c0676",700:"#660156"} },
+  { id:"cherry", name:"Cherry", usage:"Danger · critical · warnings", tones:{100:"#fed1dd",200:"#fba4bd",300:"#f4769f",400:"#e83d82",500:"#c81068",600:"#9d0750",700:"#740239"} },
+  { id:"brown", name:"Brown", usage:"Files · office · paper · cardboard", tones:{100:"#d4c0b5",200:"#c69e8a",300:"#b67d5f",400:"#a55c32",500:"#884214",600:"#682c00",700:"#461a00"} }
   ];
   const NEUTRAL = [
   { id:"gray-light", name:"Gray Light", usage:"Backgrounds · surfaces · disabled", tones:{100:"#f2f2f7",200:"#e5e5ea",300:"#d1d1d6",400:"#c7c7cc",500:"#aeaeb2",600:"#8e8e93",700:"#636366"} },
