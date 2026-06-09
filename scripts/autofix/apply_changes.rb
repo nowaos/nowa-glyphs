@@ -5,39 +5,28 @@
 # After running, no .vN files remain in the target area.
 #
 # Usage:
-#   ruby scripts/autofix/apply_changes.rb                          # all src/apps/scalable/
-#   ruby scripts/autofix/apply_changes.rb -d test                  # specific directory
-#   ruby scripts/autofix/apply_changes.rb -f org.gnome.Music.svg   # specific file
-#   ruby scripts/autofix/apply_changes.rb --dry-run                # preview without applying
+#   ruby scripts/autofix/apply_changes.rb <path>           # file or directory (relative to root)
+#   ruby scripts/autofix/apply_changes.rb <path> --dry-run # preview without applying
 
 require 'fileutils'
 
 ROOT    = File.expand_path('../..', __dir__)
 dry_run = ARGV.include?('--dry-run')
 
-directory = nil
-filename  = nil
-ARGV.each_with_index do |arg, i|
-  directory = ARGV[i + 1] if arg == '-d'
-  filename  = ARGV[i + 1] if arg == '-f'
-end
+arg = ARGV.reject { |a| a.start_with?('-') }.first
+abort 'Error: path argument required (file or directory)' unless arg
 
-pattern = if directory
-  File.join(ROOT, directory, '*.svg')
-elsif filename&.include?(File::SEPARATOR)
-  File.join(ROOT, filename.sub(/\.svg\z/, '') + '.v*.svg')
+target = File.join(ROOT, arg)
+abort "Error: '#{arg}' not found" unless File.exist?(target)
+
+pattern = if File.file?(target)
+  target.sub(/\.svg\z/, '') + '.v*.svg'
 else
-  File.join(ROOT, 'src', 'apps', 'scalable', '**', '*.svg')
+  File.join(target, '**', '*.svg')
 end
 
 # Collect all .vN files in scope, group by original path
 versioned = Dir.glob(pattern).select { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
-
-if filename && !filename.include?(File::SEPARATOR)
-  versioned = versioned.select { |f|
-    File.basename(f, '.svg').sub(/\.v\d+\z/, '') + '.svg' == filename
-  }
-end
 
 groups = versioned.group_by { |f|
   base = File.basename(f, '.svg').sub(/\.v\d+\z/, '')

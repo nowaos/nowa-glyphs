@@ -2,19 +2,21 @@
 # Tagged files (-tag.svg) are left untouched.
 #
 # Usage:
-#   ruby scripts/autofix/undo_changes.rb                  # all src/apps/scalable/
-#   ruby scripts/autofix/undo_changes.rb -d test           # specific directory
-#   ruby scripts/autofix/undo_changes.rb -d test --dry-run # preview only
+#   ruby scripts/autofix/undo_changes.rb <path>           # file or directory (relative to root)
+#   ruby scripts/autofix/undo_changes.rb <path> --dry-run # preview only
 
 require 'fileutils'
 
 ROOT    = File.expand_path('../..', __dir__)
 dry_run = ARGV.include?('--dry-run')
 
-directory = nil
-ARGV.each_with_index { |arg, i| directory = ARGV[i + 1] if arg == '-d' }
+arg = ARGV.reject { |a| a.start_with?('-') }.first
+abort 'Error: path argument required (file or directory)' unless arg
 
-pattern = directory ? File.join(ROOT, directory, '*.svg') : File.join(ROOT, 'src', 'apps', 'scalable', '**', '*.svg')
+target = File.join(ROOT, arg)
+abort "Error: '#{arg}' not found" unless File.exist?(target)
+
+pattern = File.directory?(target) ? File.join(target, '**', '*.svg') : target
 
 versioned = Dir.glob(pattern).select { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
 

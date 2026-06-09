@@ -56,7 +56,7 @@ end
 | Method | Description |
 |---|---|
 | `builder.create_version` | Saves a versioned copy (`.vN`). Respects `--indent`/`--multiline`/`--tag` flags |
-| `builder.template_from(filename)` | Returns full path to `src/apps/templates/<filename>`, aborts if missing |
+| `builder.template_from(filename)` | Returns full path to `design/templates/apps/<filename>`, aborts if missing |
 | `builder.has_pending_version?` | True if a `.vN` sibling already exists for this file |
 | `builder.versioned?` | True if `create_version` was called for this file |
 | `builder.args` | `Args` instance for reading CLI flags |

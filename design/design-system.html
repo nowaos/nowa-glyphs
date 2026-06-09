@@ -523,7 +523,61 @@ input[type=range].bp-range:active::-webkit-slider-thumb { cursor: grabbing; }
 }
 .bp-dismiss:hover { color: var(--text-1); background: var(--bg-subtle); }
 
-.swatch.bp-selected { outline: 2px solid var(--text-1); outline-offset: 2px; z-index: 3; }
+.swatch.bp-selected   { outline: 2px solid var(--text-1); outline-offset: 2px; z-index: 3; }
+.swatch.search-match  { outline: 2px solid var(--text-1); outline-offset: 2px; z-index: 3; }
+
+/* ── COLOR SEARCH ── */
+.color-search {
+  position: fixed;
+  top: calc(var(--topbar-h) + 1.25rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  padding: .5rem .875rem;
+  border-radius: 12px;
+  background: var(--bg-topbar);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,.14), 0 1px 4px rgba(0,0,0,.06);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .22s cubic-bezier(.34,1.4,.64,1);
+}
+.color-search.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+.cs-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--border-strong);
+  transition: background .1s, border-color .1s;
+}
+.cs-swatch.has-color { border-color: transparent; }
+.cs-input {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  font-size: .82rem;
+  color: var(--text-1);
+  width: 86px;
+  letter-spacing: .04em;
+}
+.cs-input::placeholder { color: var(--text-3); }
+.cs-hint {
+  font-size: .72rem;
+  color: var(--text-3);
+  user-select: none;
+  white-space: nowrap;
+}
 
 /* ── TOAST ── */
 .toast {
@@ -679,6 +733,12 @@ input[type=range].bp-range:active::-webkit-slider-thumb { cursor: grabbing; }
   </div>
 </section>
 
+<div class="color-search" id="color-search">
+  <div class="cs-swatch" id="cs-swatch"></div>
+  <input type="text" class="cs-input" id="cs-input" placeholder="#hex" maxlength="7" autocomplete="off" spellcheck="false">
+  <span class="cs-hint">Esc to close</span>
+</div>
+
 <div class="blend-picker" id="blend-picker">
   <div class="bp-blend-area">
     <div class="bp-slot-group">
@@ -822,7 +882,67 @@ function _bpDismiss(){
 _bp.dismiss.addEventListener('click',_bpDismiss);
 _bp.result.addEventListener('click',()=>{const h=_bp.hex.textContent;if(h&&h!=='—')copy(h);});
 _bp.slider.addEventListener('input',_bpUpdate);
-document.addEventListener('keydown',e=>{if(e.key==='Escape')_bpDismiss();});
+// ──────────────────────────────────────────────────────────────
+
+// ── COLOR SEARCH ──────────────────────────────────────────────
+const _cs = {
+  el:     document.getElementById('color-search'),
+  input:  document.getElementById('cs-input'),
+  swatch: document.getElementById('cs-swatch'),
+  match:  null,
+};
+
+function _csOpen() {
+  _cs.el.classList.add('visible');
+  _cs.input.focus();
+  _cs.input.select();
+}
+
+function _csDismiss() {
+  _cs.el.classList.remove('visible');
+  _cs.input.blur();
+  _cs.input.value = '';
+  _cs.swatch.style.background = '';
+  _cs.swatch.classList.remove('has-color');
+  if (_cs.match) { _cs.match.classList.remove('search-match'); _cs.match = null; }
+}
+
+function _csSearch(hex) {
+  if (_cs.match) { _cs.match.classList.remove('search-match'); _cs.match = null; }
+  const el = document.querySelector(`.swatch[data-hex="${hex}"]`);
+  if (!el) return;
+  _cs.match = el;
+  el.classList.add('search-match');
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+_cs.input.addEventListener('input', () => {
+  let v = _cs.input.value.toLowerCase();
+  if (/^[0-9a-f]{6}$/.test(v)) v = '#' + v;
+  _cs.input.value = v;
+
+  if (_cs.match) { _cs.match.classList.remove('search-match'); _cs.match = null; }
+
+  if (/^#[0-9a-f]{6}$/.test(v)) {
+    _cs.swatch.style.background = v;
+    _cs.swatch.classList.add('has-color');
+    _csSearch(v);
+  } else {
+    _cs.swatch.style.background = '';
+    _cs.swatch.classList.remove('has-color');
+  }
+});
+// ──────────────────────────────────────────────────────────────
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { _bpDismiss(); _csDismiss(); }
+  if (e.key === "'") {
+    const tag = document.activeElement?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    e.preventDefault();
+    _csOpen();
+  }
+});
 
 function _bpSelect(type,hex,swatchEl){
   _bp.selected[type]?.classList.remove('bp-selected');
@@ -846,6 +966,7 @@ function renderGrid(palette, id, type) {
     Object.entries(color.tones).forEach(([tone,hex])=>{
       const s=document.createElement('div');
       s.className='swatch';
+      s.dataset.hex=hex;
       s.style.background=hex;
       const c=ink(hex);
       s.innerHTML=`<span class="swatch-tone" style="color:${c}">${tone}</span><span class="swatch-hex" style="color:${c}">${hex}</span>`;

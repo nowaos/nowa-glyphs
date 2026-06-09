@@ -50,7 +50,7 @@ module IconPreprocessor
     end
 
     def template_from(filename)
-      path = File.join(@root, 'src', 'apps', 'templates', filename)
+      path = File.join(@root, 'design', 'templates', 'apps', filename)
       abort "Error: template not found: #{path}" unless File.exist?(path)
       path
     end

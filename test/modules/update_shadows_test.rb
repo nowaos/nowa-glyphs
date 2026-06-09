@@ -28,7 +28,7 @@ describe 'update_shadows' do
     require_relative '../../scripts/lib/svg_tracker'
     t  = SvgTracker.new(abs(versioned(path)))
     ds = t.match_in([], :any, id: 'ds')
-    assert t.merged_equal?(ds, File.join(ROOT, 'src/apps/templates/ds.svg'), 'ds')
+    assert t.merged_equal?(ds, File.join(ROOT, 'design/templates/apps/ds.svg'), 'ds')
   end
 
   it 'should match round ds template' do
@@ -39,7 +39,7 @@ describe 'update_shadows' do
     require_relative '../../scripts/lib/svg_tracker'
     t  = SvgTracker.new(abs(versioned(path)))
     ds = t.match_in([], :any, id: 'ds')
-    assert t.merged_equal?(ds, File.join(ROOT, 'src/apps/templates/ds-round.svg'), 'ds')
+    assert t.merged_equal?(ds, File.join(ROOT, 'design/templates/apps/ds-round.svg'), 'ds')
   end
 
   it 'should print summary' do
