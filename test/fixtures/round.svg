@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 64 64"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+        
+    <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(28.996698,0.00989361,-0.00989812,29.009898,32.0033,33.4901)">
+          <stop offset="0.85" id="stop1"/>
+          <stop offset="1" stop-opacity="0" id="stop2"/>
+        </radialGradient>
+    
+        
+    <radialGradient id="gradient_ds_bl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,29,-29,0,32,33.5)">
+          <stop offset="0.846154" id="stop3"/>
+          <stop offset="1" stop-opacity="0" id="stop4"/>
+        </radialGradient>
+    
+        
+    <radialGradient id="gradient_ds_tr" cx="0" cy="0" r="1" gradientTransform="matrix(0.017467,-29,29.0175,0.0393245,31.9825,33.5)" gradientUnits="userSpaceOnUse">
+          <stop offset="0.85" id="stop5"/>
+          <stop offset="1" stop-opacity="0" id="stop6"/>
+        </radialGradient>
+    
+        
+    <radialGradient id="gradient_ds_tl" cx="0" cy="0" r="1" gradientTransform="matrix(-0.017467,-29,-29.0175,0.0393245,32.0175,33.5)" gradientUnits="userSpaceOnUse">
+          <stop offset="0.85" id="stop7"/>
+          <stop offset="1" stop-opacity="0" id="stop8"/>
+        </radialGradient>
+    
+      
+  </defs>
+  <g id="ds" opacity="0.25">
+      <path id="ds-br" d="m 32,33.5 h 29 v 29 H 32 Z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
+      <path id="ds-bl" d="m 3,33.5 h 29 v 29 H 3 Z" fill="url(#gradient_ds_bl)" style="fill:url(#gradient_ds_bl)"/>
+      <path id="ds-tr" d="m 32,4.5 h 29 v 29 H 32 Z" fill="url(#gradient_ds_tr)" style="fill:url(#gradient_ds_tr)"/>
+      <path id="ds-tl" d="M 32,4.5 H 3 v 29 h 29 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
+    </g>
+  <rect id="bg" x="4.5" y="4.5" width="55" height="55" rx="27.5" fill="#3a86ff"/>
+  <g id="art">
+    <rect x="20" y="20" width="24" height="24" fill="#3a86ff"/>
+  </g>
+</svg>

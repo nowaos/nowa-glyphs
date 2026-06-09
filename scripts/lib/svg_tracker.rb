@@ -159,34 +159,10 @@ class SvgTracker
 
   def clean_defs!
     defs = @doc.at_css('defs')
-    
     return self unless defs
 
     loop do
-      # collect all referenced IDs outside defs
-      referenced = Set.new
-
-      @doc.traverse do |node|
-        next if node.ancestors.any? { |a| a.name == 'defs' }
-        next unless node.is_a?(Nokogiri::XML::Element)
-
-        node.attributes.each_value do |attr|
-          attr.value.scan(/url\(#([^)]+)\)/) { referenced << $1 }
-          attr.value.scan(/^#(.+)/)          { referenced << $1 }
-        end
-      end
-
-      # also collect IDs referenced from within defs (xlink:href, href between defs)
-      defs.traverse do |node|
-        next unless node.is_a?(Nokogiri::XML::Element)
-
-        node.attributes.each_value do |attr|
-          attr.value.scan(/url\(#([^)]+)\)/) { referenced << $1 }
-          attr.value.scan(/^#(.+)/)          { referenced << $1 }
-        end
-      end
-
-      # remove unreferenced defs children
+      referenced = collect_referenced_ids
       removed = 0
       defs.element_children.each do |child|
         unless referenced.include?(child['id'])
@@ -194,11 +170,88 @@ class SvgTracker
           removed += 1
         end
       end
-
       break if removed == 0
     end
 
     self
+  end
+
+  def unused_def_nodes
+    defs = @doc.at_css('defs')
+    return [] unless defs
+    referenced = collect_referenced_ids
+    defs.element_children.reject { |child| referenced.include?(child['id']) }
+  end
+
+  def metadata_nodes
+    @doc.css('title, desc, metadata').to_a
+  end
+
+  def clean_metadata!
+    metadata_nodes.each(&:remove)
+    self
+  end
+
+  EDITOR_NS = %w[
+    http://www.inkscape.org/namespaces/inkscape
+    http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+  ].to_set.freeze
+
+  def inkscape_nodes
+    result = []
+    @doc.traverse do |node|
+      next unless node.is_a?(Nokogiri::XML::Element)
+      result << node if EDITOR_NS.include?(node.namespace&.href)
+    end
+    result
+  end
+
+  def inkscape_attr_count
+    count = 0
+    @doc.traverse do |node|
+      next unless node.is_a?(Nokogiri::XML::Element)
+      count += node.attribute_nodes.count { |a| EDITOR_NS.include?(a.namespace&.href) }
+    end
+    count
+  end
+
+  def clean_inkscape!
+    to_remove = []
+    @doc.traverse do |node|
+      next unless node.is_a?(Nokogiri::XML::Element)
+      if EDITOR_NS.include?(node.namespace&.href)
+        to_remove << node
+      else
+        node.attribute_nodes
+            .select { |a| EDITOR_NS.include?(a.namespace&.href) }
+            .each(&:remove)
+      end
+    end
+    to_remove.each(&:remove)
+    self
+  end
+
+  def outside_viewbox_nodes
+    svg   = @doc.at_css('svg')
+    return [] unless svg
+    vb = svg['viewBox']&.split(/[\s,]+/)&.map(&:to_f)
+    return [] unless vb&.size == 4
+    vx, vy, vw, vh = vb
+    vx2, vy2 = vx + vw, vy + vh
+
+    ignored_ancestors = %w[defs clipPath mask pattern]
+    result = []
+
+    @doc.traverse do |node|
+      next unless node.is_a?(Nokogiri::XML::Element)
+      next if node.ancestors.any? { |a| ignored_ancestors.include?(a.name) }
+      bounds = element_bounds(node)
+      next unless bounds
+      bx1, by1, bx2, by2 = bounds
+      result << node if bx2 < vx || bx1 > vx2 || by2 < vy || by1 > vy2
+    end
+
+    result
   end
 
   # Returns a Set of all hex colors used anywhere in the document.
@@ -239,8 +292,12 @@ class SvgTracker
     end
   end
 
-  def save(path = nil)
-    File.write(path || @path, @doc.to_xml)
+  def save(path = nil, indent: false, multiline: false)
+    xml = (indent || multiline) ? @doc.to_xml(indent: 2) : @doc.to_xml
+    xml = strip_editor_xmlns(xml)
+    xml = strip_blank_lines(xml)
+    xml = format_multiline_attrs(xml) if multiline
+    File.write(path || @path, xml)
   end
 
   private
@@ -303,6 +360,106 @@ class SvgTracker
   def url_refs_in(val)
     return [] unless val
     val.scan(/url\(#([^)]+)\)/).flatten
+  end
+
+  def collect_referenced_ids
+    referenced = Set.new
+    scan_refs = ->(node) {
+      node.attributes.each_value do |attr|
+        attr.value.scan(/url\(#([^)]+)\)/) { referenced << $1 }
+        attr.value.scan(/^#(.+)/)          { referenced << $1 }
+      end
+    }
+    @doc.traverse do |node|
+      next if node.ancestors.any? { |a| a.name == 'defs' }
+      next unless node.is_a?(Nokogiri::XML::Element)
+      scan_refs.call(node)
+    end
+    @doc.at_css('defs')&.traverse do |node|
+      next unless node.is_a?(Nokogiri::XML::Element)
+      scan_refs.call(node)
+    end
+    referenced
+  end
+
+  EDITOR_XMLNS_PREFIXES = %w[inkscape sodipodi rdf cc dc svg xlink].freeze
+
+  def strip_editor_xmlns(xml)
+    EDITOR_XMLNS_PREFIXES.reduce(xml) do |s, prefix|
+      candidate = s.gsub(/[ \t]+xmlns:#{prefix}="[^"]*"/, '')
+      candidate.match?(/\b#{Regexp.escape(prefix)}:/) ? s : candidate
+    end
+  end
+
+  def strip_blank_lines(xml)
+    xml.gsub(/\n[ \t]*\n/, "\n")
+  end
+
+  def format_multiline_attrs(xml, threshold: 3)
+    result = []
+    xml.each_line do |line|
+      m = line.chomp.match(/^(\s*)<([a-zA-Z][^\s\/>]*)(\s.+?)(\s*\/?>)\s*$/)
+      unless m
+        result << line
+        next
+      end
+      indent, tag, attrs_str, close = m[1], m[2], m[3], m[4].strip
+      attrs = attrs_str.scan(/([^\s=]+)="([^"]*)"/).map { |k, v| %(#{k}="#{v}") }
+      if attrs.size < threshold
+        result << line
+        next
+      end
+      result << "#{indent}<#{tag}\n"
+      attrs.each { |a| result << "#{indent}  #{a}\n" }
+      result << "#{indent}#{close}\n"
+    end
+    result.join
+  end
+
+  SHAPE_TAGS = %w[rect circle ellipse line path polygon polyline image].freeze
+
+  def element_bounds(node)
+    return nil unless SHAPE_TAGS.include?(node.name)
+    case node.name
+    when 'rect'
+      x, y, w, h = node['x'].to_f, node['y'].to_f, node['width'].to_f, node['height'].to_f
+      return nil if w.zero? && h.zero?
+      [x, y, x + w, y + h]
+    when 'circle'
+      cx, cy, r = node['cx'].to_f, node['cy'].to_f, node['r'].to_f
+      return nil if r.zero?
+      [cx - r, cy - r, cx + r, cy + r]
+    when 'ellipse'
+      cx, cy, rx, ry = node['cx'].to_f, node['cy'].to_f, node['rx'].to_f, node['ry'].to_f
+      return nil if rx.zero? && ry.zero?
+      [cx - rx, cy - ry, cx + rx, cy + ry]
+    when 'line'
+      x1, y1, x2, y2 = node['x1'].to_f, node['y1'].to_f, node['x2'].to_f, node['y2'].to_f
+      [[x1, x2].min, [y1, y2].min, [x1, x2].max, [y1, y2].max]
+    when 'path'
+      path_bounds(node['d'])
+    when 'polygon', 'polyline'
+      pts = node['points']&.scan(/-?[\d.]+/)&.map(&:to_f)
+      return nil unless pts && pts.size >= 2
+      xs = pts.each_slice(2).map(&:first)
+      ys = pts.each_slice(2).map(&:last)
+      [xs.min, ys.min, xs.max, ys.max]
+    when 'image'
+      x, y, w, h = node['x'].to_f, node['y'].to_f, node['width'].to_f, node['height'].to_f
+      [x, y, x + w, y + h]
+    end
+  end
+
+  def path_bounds(d)
+    return nil unless d
+    xs, ys = [], []
+    d.scan(/[ML]\s*(-?[\d.]+)[\s,]+(-?[\d.]+)/) { xs << $1.to_f; ys << $2.to_f }
+    d.scan(/H(-?[\d.]+)/)                        { xs << $1.to_f }
+    d.scan(/V(-?[\d.]+)/)                        { ys << $1.to_f }
+    return nil if xs.empty? && ys.empty?
+    xs = [0.0] if xs.empty?
+    ys = [0.0] if ys.empty?
+    [xs.min, ys.min, xs.max, ys.max]
   end
 
   def remap_attribute!(node, attr, mapping)

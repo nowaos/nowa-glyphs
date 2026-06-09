@@ -13,4 +13,6 @@ Thumbs.db
 icon-theme.cache
 
 # Local
-/test/
+/sandbox/
+/test/tmp/*
+!/test/tmp/.keep

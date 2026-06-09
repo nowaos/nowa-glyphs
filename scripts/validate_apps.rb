@@ -6,12 +6,11 @@ RED   = "\e[31m"
 DIM   = "\e[2m"
 RESET = "\e[0m"
 
-# Valid IDs
 VALID_IDS = %w[em art bg ds]
 
 failed_count = 0
 
-IconPreprocessor.each do |tracker, ds_files|
+IconPreprocessor.each do |builder, tracker|
   errors = []
 
   # 1. Root structure check
@@ -44,16 +43,14 @@ IconPreprocessor.each do |tracker, ds_files|
   if ds.nil?
     errors << "missing element with id=\"ds\""
   elsif bg && %w[10 27.5].include?(bg['rx'])
-    template_path = bg['rx'] == '10' ? ds_files.ds_square : ds_files.ds_round
-
+    template_path = bg['rx'] == '10' ? builder.template_from('ds.svg') : builder.template_from('ds-round.svg')
     unless tracker.merged_equal?(ds, template_path, 'ds')
       errors << "ds: does not match template (#{File.basename(template_path)})"
     end
   end
 
-  # Output
   unless errors.empty?
-    puts "#{RED}✗#{RESET} #{File.basename(tracker.file_path)}"
+    puts "#{RED}✗#{RESET} #{File.basename(tracker.path)}"
     errors.each { |e| puts "  #{DIM}·#{RESET} #{e}" }
     failed_count += 1
   end
