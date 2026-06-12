@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nowa Glyphs — Design System</title>
+<script>(function(){var t=localStorage.getItem('ng-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ── TOKENS ── */
+:root {
+  --bg:           #f7f9fc;
+  --bg-subtle:    #eef2f7;
+  --bg-topbar:    rgba(247, 249, 252, 0.82);
+  --border:       #e2e8f0;
+  --border-strong:#c8d3df;
+  --text-1:       #0f1b2d;
+  --text-2:       #526070;
+  --text-3:       #a8bac8;
+  --topbar-h:     56px;
+  --content-max:  1280px;
+  --pad-x:        2.5rem;
+}
+
+[data-theme="dark"] {
+  --bg:           #161618;
+  --bg-subtle:    #1c1c1e;
+  --bg-topbar:    rgba(22, 22, 24, 0.85);
+  --border:       #2c2c2e;
+  --border-strong:#3a3a3c;
+  --text-1:       #f2f2f7;
+  --text-2:       #8e8e93;
+  --text-3:       #3a3a3c;
+}
+
+/* ── BASE ── */
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-1);
+  -webkit-font-smoothing: antialiased;
+  transition: background .2s, color .2s;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--bg-topbar);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  transition: background .2s, border-color .2s;
+}
+
+.topbar-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pad-x);
+  gap: .5rem;
+}
+
+.topbar img { height: 24px; opacity: .85; }
+.topbar-name { font-size: .78rem; font-weight: 600; color: var(--text-1); letter-spacing: -.01em; }
+.topbar-sep  { font-size: .78rem; color: var(--text-3); }
+.topbar-page { font-size: .78rem; color: var(--text-2); }
+
+.topbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.topbar-nav a {
+  font-size: .72rem;
+  color: var(--text-2);
+  text-decoration: none;
+  letter-spacing: .02em;
+  transition: color .15s;
+}
+.topbar-nav a:hover { color: var(--text-1); }
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-2);
+  font-size: .8rem;
+  transition: border-color .15s, color .15s;
+}
+.theme-btn:hover { border-color: var(--text-2); color: var(--text-1); }
+
+/* ── PAGE SECTIONS ── */
+.page-section {
+  padding: 3.5rem var(--pad-x);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-section + .page-section {
+  padding-top: 0;
+}
+
+.section-eyebrow {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: .75rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  color: var(--text-1);
+  line-height: 1.1;
+  margin-top: 16px;
+}
+
+.section-desc {
+  font-size: .9rem;
+  color: var(--text-2);
+  margin-top: .5rem;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.section-divider { display: none; }
+
+.subsection-label {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: 1rem;
+}
+
+/* ── COLORS ── */
+.color-grid {
+  display: flex;
+  gap: 4px;
+}
+
+.color-grid + .color-grid {
+  margin-top: 2rem;
+}
+
+.color-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.col-header { margin-bottom: 4px; }
+
+.col-name {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-base-hex {
+  font-size: .55rem;
+  font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+.swatch {
+  height: 52px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 6px 5px;
+  transition: filter .08s ease, transform .08s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.swatch:hover {
+  filter: brightness(1.08);
+  z-index: 2;
+}
+
+.swatch:active { filter: brightness(.9); }
+
+.swatch-tone {
+  font-size: .52rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1;
+  margin-bottom: 2px;
+  opacity: 0;
+  transition: opacity .1s;
+}
+
+.swatch-hex {
+  font-size: .5rem;
+  font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity .1s;
+}
+
+.swatch:hover .swatch-tone,
+.swatch:hover .swatch-hex { opacity: 1; }
+
+/* ── SIZES ── */
+.sizes-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.size-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.size-visual {
+  height: 148px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.size-box {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.size-label {
+  font-size: .68rem;
+  font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+  color: var(--text-2);
+}
+
+.size-ctx {
+  font-size: .6rem;
+  color: var(--text-3);
+  text-align: center;
+  max-width: 72px;
+  line-height: 1.3;
+}
+
+/* ── USAGE TABLE ── */
+.usage-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .75rem;
+}
+
+.usage-table th {
+  text-align: left;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: .5rem .75rem;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.usage-table td {
+  padding: .5rem .75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  vertical-align: middle;
+}
+
+.usage-table td:first-child {
+  font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+  font-size: .7rem;
+  color: var(--text-1);
+}
+
+.usage-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+/* ── NOTES ── */
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-top: 4rem;
+  max-width: 660px;
+}
+
+.note {
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--border-strong);
+}
+
+.note-title {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: .4rem;
+}
+
+.note-body {
+  font-size: .875rem;
+  color: var(--text-2);
+  line-height: 1.75;
+}
+
+.note-body code, .note-title code {
+  font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+  font-size: .8rem;
+}
+
+/* ── BLEND PICKER ── */
+.blend-picker {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(24px);
+  z-index: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .875rem;
+  padding: 1rem 1.25rem;
+  width: 680px;
+  border-radius: 16px;
+  background: var(--bg-topbar);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,.14), 0 1px 4px rgba(0,0,0,.06);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease, transform .28s cubic-bezier(.34,1.4,.64,1);
+}
+.blend-picker.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bp-blend-area {
+  display: flex;
+  align-items: stretch;
+  gap: .75rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.bp-slot-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.bp-slot {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1.5px dashed var(--border-strong);
+  flex-shrink: 0;
+  transition: border-color .15s, background .15s;
+  background: transparent;
+}
+.bp-slot.filled { border-style: solid; border-color: rgba(0,0,0,.1); }
+
+.bp-slot-hex {
+  font-size: .68rem;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-2);
+  letter-spacing: .01em;
+  text-align: center;
+}
+
+.bp-center-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  min-width: 0;
+}
+
+.bp-slider-col {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+input[type=range].bp-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background: var(--border-strong);
+}
+input[type=range].bp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--text-1);
+  border: 2px solid var(--bg);
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+  cursor: grab;
+}
+input[type=range].bp-range:active::-webkit-slider-thumb { cursor: grabbing; }
+
+.bp-pct-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bp-pct-n, .bp-pct-c {
+  font-size: .72rem;
+  font-weight: 600;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-2);
+  letter-spacing: .02em;
+}
+.bp-pct-label {
+  font-size: .68rem;
+  color: var(--text-3);
+  letter-spacing: .04em;
+}
+
+.bp-presets {
+  display: flex;
+  gap: .4rem;
+}
+
+.bp-preset {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  cursor: pointer;
+}
+.bp-preset-chip {
+  width: 100%;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,.1);
+  background: var(--border);
+  transition: transform .12s, box-shadow .12s;
+}
+.bp-preset:hover .bp-preset-chip { transform: scaleY(1.08); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+.bp-preset.active .bp-preset-chip { outline: 2px solid var(--text-1); outline-offset: 1px; }
+.bp-preset-label {
+  font-size: .65rem;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-3);
+  letter-spacing: .02em;
+}
+.bp-preset.active .bp-preset-label { color: var(--text-2); }
+
+.bp-result-lch {
+  font-size: .72rem;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  color: var(--text-2);
+  letter-spacing: .02em;
+  line-height: 1.5;
+}
+
+.bp-sep { width: 1px; height: 64px; background: var(--border); flex-shrink: 0; align-self: center; }
+
+.bp-result-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-shrink: 0;
+}
+
+.bp-result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .625rem;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: .25rem .375rem;
+  transition: background .12s;
+}
+.bp-result:hover { background: var(--bg-subtle); }
+
+.bp-result-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  flex-shrink: 0;
+}
+
+.bp-result-swatch {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1.5px dashed var(--border-strong);
+  background: transparent;
+  flex-shrink: 0;
+}
+.bp-result-swatch.filled {
+  border-style: solid;
+  border-color: rgba(0,0,0,.1);
+}
+
+.bp-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-3);
+  font-size: 1rem;
+  line-height: 1;
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: color .12s, background .12s;
+  padding: 0;
+}
+.bp-dismiss:hover { color: var(--text-1); background: var(--bg-subtle); }
+
+.swatch.bp-selected   { outline: 2px solid var(--text-1); outline-offset: 2px; z-index: 3; }
+.swatch.search-match  { outline: 2px solid var(--text-1); outline-offset: 2px; z-index: 3; }
+
+/* ── COLOR SEARCH ── */
+.color-search {
+  position: fixed;
+  top: calc(var(--topbar-h) + 1.25rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  padding: .5rem .875rem;
+  border-radius: 12px;
+  background: var(--bg-topbar);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,.14), 0 1px 4px rgba(0,0,0,.06);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .22s cubic-bezier(.34,1.4,.64,1);
+}
+.color-search.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+.cs-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--border-strong);
+  transition: background .1s, border-color .1s;
+}
+.cs-swatch.has-color { border-color: transparent; }
+.cs-input {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'SF Mono','Fira Code',ui-monospace,monospace;
+  font-size: .82rem;
+  color: var(--text-1);
+  width: 86px;
+  letter-spacing: .04em;
+}
+.cs-input::placeholder { color: var(--text-3); }
+.cs-hint {
+  font-size: .72rem;
+  color: var(--text-3);
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: var(--text-1);
+  color: var(--bg);
+  padding: .35rem .875rem;
+  border-radius: 6px;
+  font-size: .7rem;
+  font-family: monospace;
+  z-index: 1000;
+  pointer-events: none;
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1);
+  box-shadow: 0 4px 20px rgba(0,0,0,.2);
+}
+
+.toast.show { transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <img src="../../assets/logo.svg" alt="">
+    <span class="topbar-name">Nowa Glyphs</span>
+    <span class="topbar-sep">/</span>
+    <span class="topbar-page">Design System</span>
+    <div class="topbar-nav">
+      <a href="#colors">Colors</a>
+      <a href="#app-icons">App Icons</a>
+      <button class="theme-btn" id="theme-btn" title="Toggle theme">☾</button>
+    </div>
+  </div>
+</nav>
+
+<!-- COLORS -->
+<section class="page-section" id="colors">
+  <p class="section-eyebrow">Foundation</p>
+  <h1 class="section-title">Colors</h1>
+  <p class="section-desc">Click to copy hex</p>
+  <div class="section-divider"></div>
+
+  <div class="color-grid" id="grid-palette"></div>
+
+</section>
+
+<!-- APP ICON RULES -->
+<section class="page-section" id="app-icons">
+  <p class="section-eyebrow">Guidelines</p>
+  <h1 class="section-title">App Icon Structure</h1>
+  <p class="section-desc">Rules enforced by <code style="font-size:.75rem;font-family:monospace;color:var(--text-2)">scripts/check_apps.rb</code> and <code style="font-size:.75rem;font-family:monospace;color:var(--text-2)">autofixes/reapply_shadows.rb</code></p>
+  <div class="section-divider"></div>
+
+  <p style="font-size:.9rem;color:var(--text-2);max-width:660px;line-height:1.75;margin-bottom:2.5rem">
+    Every app icon is drawn on a <strong style="color:var(--text-1);font-weight:600">64×64 px canvas</strong>. The visible shape occupies a <strong style="color:var(--text-1);font-weight:600">55×55 rect</strong> inset 4.5 px from each edge — that border is reserved exclusively for the drop shadow and must never contain artwork. The SVG root must not carry any <code style="font-family:monospace;font-size:.82rem">transform</code> attribute; all sizing is done by editing paths directly, never by scaling the root element.
+    <br><br>
+    Two background shapes are permitted. The <strong style="color:var(--text-1);font-weight:600">rounded square</strong> (<code style="font-family:monospace;font-size:.82rem">rx="10"</code>) is the standard form used by the vast majority of app icons. The <strong style="color:var(--text-1);font-weight:600">circle</strong> (<code style="font-family:monospace;font-size:.82rem">rx="27.5"</code>) exists for apps whose icon is inherently circular — think Spotify or Google Chrome. Rather than inscribing their round shape inside a square background, the <code style="font-family:monospace;font-size:.82rem">bg</code> itself becomes the circle, preserving the app's original visual identity. No other <code style="font-family:monospace;font-size:.82rem">rx</code> value is valid.
+  </p>
+
+  <p class="subsection-label">Canvas</p>
+  <div style="display:flex;gap:3rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:2.5rem">
+
+    <!-- Anatomy diagram -->
+    <div style="flex-shrink:0">
+      <svg width="192" height="192" viewBox="0 0 64 64" style="display:block;border-radius:8px;background:var(--bg-subtle);border:1px solid var(--border)">
+        <!-- shadow zone -->
+        <rect x="0" y="0" width="64" height="64" fill="none" stroke="var(--text-3)" stroke-width=".3" stroke-dasharray="1.5,1"/>
+        <!-- content area -->
+        <rect x="4.5" y="4.5" width="55" height="55" rx="10" fill="var(--border)" stroke="var(--border-strong)" stroke-width=".5"/>
+        <!-- labels -->
+        <text x="32" y="32" text-anchor="middle" dominant-baseline="middle" font-size="4" fill="var(--text-2)" font-family="monospace">55 × 55</text>
+        <text x="32" y="37" text-anchor="middle" dominant-baseline="middle" font-size="3" fill="var(--text-3)" font-family="monospace">rx = 10</text>
+      </svg>
+      <p style="font-size:.62rem;color:var(--text-3);margin-top:.5rem;text-align:center">Square · <code style="font-family:monospace">rx="10"</code></p>
+    </div>
+
+    <div style="flex-shrink:0">
+      <svg width="192" height="192" viewBox="0 0 64 64" style="display:block;border-radius:8px;background:var(--bg-subtle);border:1px solid var(--border)">
+        <rect x="0" y="0" width="64" height="64" fill="none" stroke="var(--text-3)" stroke-width=".3" stroke-dasharray="1.5,1"/>
+        <rect x="4.5" y="4.5" width="55" height="55" rx="27.5" fill="var(--border)" stroke="var(--border-strong)" stroke-width=".5"/>
+        <text x="32" y="32" text-anchor="middle" dominant-baseline="middle" font-size="4" fill="var(--text-2)" font-family="monospace">55 × 55</text>
+        <text x="32" y="37" text-anchor="middle" dominant-baseline="middle" font-size="3" fill="var(--text-3)" font-family="monospace">rx = 27.5</text>
+      </svg>
+      <p style="font-size:.62rem;color:var(--text-3);margin-top:.5rem;text-align:center">Circle · <code style="font-family:monospace">rx="27.5"</code></p>
+    </div>
+
+    <!-- Rules table -->
+    <div style="flex:1;min-width:280px">
+      <table class="usage-table">
+        <tr><th>Rule</th><th>Value</th></tr>
+        <tr><td>SVG size</td><td><code style="font-family:monospace;font-size:.7rem">width="64" height="64"</code></td></tr>
+        <tr><td>viewBox</td><td><code style="font-family:monospace;font-size:.7rem">0 0 64 64</code></td></tr>
+        <tr><td>No scaling</td><td>No <code style="font-family:monospace;font-size:.7rem">transform</code> on root</td></tr>
+        <tr><td><code style="font-family:monospace;font-size:.7rem">bg</code> position</td><td><code style="font-family:monospace;font-size:.7rem">x="4.5" y="4.5"</code></td></tr>
+        <tr><td><code style="font-family:monospace;font-size:.7rem">bg</code> size</td><td><code style="font-family:monospace;font-size:.7rem">width="55" height="55"</code></td></tr>
+        <tr><td><code style="font-family:monospace;font-size:.7rem">bg</code> shape</td><td><code style="font-family:monospace;font-size:.7rem">rx="10"</code> (square) or <code style="font-family:monospace;font-size:.7rem">rx="27.5"</code> (circle)</td></tr>
+        <tr><td>Shadow</td><td>Managed by script — do not edit manually</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p class="subsection-label">SVG Structure</p>
+  <p style="font-size:.9rem;color:var(--text-2);margin-bottom:1.75rem;max-width:660px;line-height:1.75">
+    The listing below is the <strong style="color:var(--text-1);font-weight:600">complete allowed content at SVG root</strong> — nothing else may appear at that level.
+    No extra <code style="font-family:monospace;font-size:.82rem">&lt;path&gt;</code>, <code style="font-family:monospace;font-size:.82rem">&lt;rect&gt;</code>, or bare gradient elements outside <code style="font-family:monospace;font-size:.82rem">&lt;defs&gt;</code>.
+    The order also reflects the paint stack: shadow first, background on top, artwork above that.
+    These rules are enforced by <code style="font-family:monospace;font-size:.82rem">check_apps.rb</code>.
+  </p>
+  <div style="height:1rem"></div>
+  <div style="display:flex;gap:3rem;align-items:flex-start;flex-wrap:wrap">
+    <table class="usage-table" style="max-width:520px">
+      <tr><th>ID</th><th>Element</th><th>Description</th></tr>
+      <tr><td><code style="font-family:monospace;font-size:.7rem">ds</code></td><td><code style="font-family:monospace;font-size:.7rem">&lt;g&gt;</code></td><td>Drop shadow — 8 gradient segments at opacity 0.25. Auto-managed by <code style="font-family:monospace;font-size:.65rem">reapply_shadows.rb</code></td></tr>
+      <tr><td><code style="font-family:monospace;font-size:.7rem">bg</code></td><td><code style="font-family:monospace;font-size:.7rem">&lt;rect&gt;</code></td><td>Background shape — carries the gradient fill color</td></tr>
+      <tr><td><code style="font-family:monospace;font-size:.7rem">art</code></td><td><code style="font-family:monospace;font-size:.7rem">&lt;g&gt;</code></td><td>Icon artwork — paths, shapes, glyphs placed over the background</td></tr>
+      <tr><td><code style="font-family:monospace;font-size:.7rem">em</code></td><td><code style="font-family:monospace;font-size:.7rem">&lt;g&gt;</code></td><td>Emblem overlay — optional badge (e.g. alert, lock, plus)</td></tr>
+    </table>
+
+    <div style="background:var(--bg-subtle);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;font-family:'SF Mono','Fira Code',monospace;font-size:.7rem;color:var(--text-2);line-height:1.8;flex-shrink:0">
+      <span style="color:var(--text-3)">&lt;svg viewBox="0 0 64 64" width="64" height="64"&gt;</span><br>
+      &nbsp;&nbsp;<span style="color:var(--text-3)">&lt;defs&gt; … &lt;/defs&gt;</span>&nbsp;&nbsp;<span style="color:var(--text-3);font-size:.62rem">← gradients, filters, clip paths</span><br>
+      &nbsp;&nbsp;<span style="color:var(--text-2)">&lt;g id="<span style="color:var(--text-1)">ds</span>"&gt;…&lt;/g&gt;</span><br>
+      &nbsp;&nbsp;<span style="color:var(--text-2)">&lt;rect id="<span style="color:var(--text-1)">bg</span>" x="4.5" y="4.5" width="55" height="55" rx="10" fill="…"/&gt;</span><br>
+      &nbsp;&nbsp;<span style="color:var(--text-2)">&lt;g id="<span style="color:var(--text-1)">art</span>"&gt;…&lt;/g&gt;</span><br>
+      &nbsp;&nbsp;<span style="color:var(--text-3)">&lt;!-- &lt;g id="em"&gt;…&lt;/g&gt; optional --&gt;</span><br>
+      <span style="color:var(--text-3)">&lt;/svg&gt;</span>
+    </div>
+  </div>
+
+  <div class="note-list">
+    <div class="note">
+      <p class="note-title">No loose definitions at root</p>
+      <p class="note-body">Gradients, filters, clip paths, and symbols must live inside <code>&lt;defs&gt;</code>. A bare <code>&lt;linearGradient&gt;</code> or <code>&lt;filter&gt;</code> placed directly at SVG root is treated as an unrecognized element and will cause <code>check_apps.rb</code> to reject the file.</p>
+    </div>
+    <div class="note">
+      <p class="note-title">Never edit <code>ds</code> manually</p>
+      <p class="note-body">The drop shadow group is regenerated automatically by <code>reapply_shadows.rb</code> from the canonical template in <code>src/apps/templates/</code>. Any manual edits will be overwritten on the next script run. The square vs. round variant is chosen based on the <code>rx</code> value of <code>bg</code>.</p>
+    </div>
+    <div class="note">
+      <p class="note-title"><code>em</code> is optional</p>
+      <p class="note-body"><code>&lt;g id="em"&gt;</code> serves two related purposes: emblem badges (a lock, a plus, an alert) and decorative elements that float above the artwork. The key distinction from <code>art</code> is that <code>em</code> content is allowed to <strong style="color:var(--text-1);font-weight:600">overflow the background bounds slightly</strong> — for example, a pencil whose tip extends just beyond the edge of the paper. The <code>art</code> group must always stay fully contained within <code>bg</code>. Use good judgment: a small intentional overflow adds dynamism; abusing it breaks the visual consistency of the theme.</p>
+    </div>
+  </div>
+</section>
+
+<div class="color-search" id="color-search">
+  <div class="cs-swatch" id="cs-swatch"></div>
+  <input type="text" class="cs-input" id="cs-input" placeholder="#hex" maxlength="7" autocomplete="off" spellcheck="false">
+  <span class="cs-hint">Esc to close</span>
+</div>
+
+<div class="blend-picker" id="blend-picker">
+  <div class="bp-blend-area">
+    <div class="bp-slot-group">
+      <div class="bp-slot" id="bp-color-a" title="Ctrl+click any color"></div>
+      <span class="bp-slot-hex" id="bp-hex-a">A</span>
+    </div>
+    <div class="bp-center-col">
+      <div class="bp-slider-col">
+        <input type="range" class="bp-range" id="bp-slider" min="0" max="100" value="50">
+        <div class="bp-pct-bar">
+          <span class="bp-pct-n" id="bp-pct-n">50%</span>
+          <span class="bp-pct-label">blend</span>
+          <span class="bp-pct-c" id="bp-pct-c">50%</span>
+        </div>
+      </div>
+      <div class="bp-presets" id="bp-presets"></div>
+    </div>
+    <div class="bp-slot-group">
+      <div class="bp-slot" id="bp-color-b" title="Ctrl+click any color"></div>
+      <span class="bp-slot-hex" id="bp-hex-b">B</span>
+    </div>
+  </div>
+  <div class="bp-sep"></div>
+  <div class="bp-result-row">
+    <div class="bp-result" id="bp-result" title="Click to copy">
+      <div class="bp-result-slot">
+        <div class="bp-result-swatch" id="bp-result-swatch"></div>
+        <span class="bp-slot-hex" id="bp-result-hex">—</span>
+      </div>
+      <span class="bp-result-lch" id="bp-result-lch">L —<br>C —<br>H —</span>
+    </div>
+    <button class="bp-dismiss" id="bp-dismiss" title="Dismiss (Esc)">×</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="palette-data.js"></script>
+<script>
+
+function lum(hex) {
+  const ch = pos => { let c=parseInt(hex.slice(pos,pos+2),16)/255; return c<=.03928?c/12.92:((c+.055)/1.055)**2.4; };
+  return .2126*ch(1)+.7152*ch(3)+.0722*ch(5);
+}
+function ink(hex) { return lum(hex)>.32?'rgba(0,0,0,.42)':'rgba(255,255,255,.62)'; }
+
+function copy(hex) {
+  navigator.clipboard.writeText(hex).then(()=>{
+    const t=document.getElementById('toast');
+    t.textContent=hex; t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),1400);
+  });
+}
+
+// ── BLEND PICKER ──────────────────────────────────────────────
+const _bp = {
+  el:      document.getElementById('blend-picker'),
+  slotA:   document.getElementById('bp-color-a'),
+  slotB:   document.getElementById('bp-color-b'),
+  hexA:    document.getElementById('bp-hex-a'),
+  hexB:    document.getElementById('bp-hex-b'),
+  pctN:    document.getElementById('bp-pct-n'),
+  pctC:    document.getElementById('bp-pct-c'),
+  slider:  document.getElementById('bp-slider'),
+  presets: document.getElementById('bp-presets'),
+  result:  document.getElementById('bp-result'),
+  swatch:  document.getElementById('bp-result-swatch'),
+  hex:     document.getElementById('bp-result-hex'),
+  lch:     document.getElementById('bp-result-lch'),
+  dismiss: document.getElementById('bp-dismiss'),
+  state:   { colorA: null, colorB: null },
+  selected:{ colorA: null, colorB: null },
+  next:    'colorA',
+};
+_bp.result.style.display = 'none';
+
+const BP_RATIOS = [[0.10,'10%'],[0.20,'20%'],[0.25,'25%'],[0.40,'40%'],[0.50,'50%'],[0.60,'60%'],[0.75,'75%'],[0.80,'80%'],[0.90,'90%']];
+
+function _bpLin(c){return c<=.04045?c/12.92:((c+.055)/1.055)**2.4;}
+function _bpSrgb(c){c=Math.max(0,Math.min(1,c));return c<=.0031308?12.92*c:1.055*c**(1/2.4)-.055;}
+
+function _bpBlend(a,b,t){
+  const p=h=>[1,3,5].map(i=>_bpLin(parseInt(h.slice(i,i+2),16)/255));
+  const [ra,ga,ba]=p(a),[rb,gb,bb]=p(b);
+  const h2=v=>Math.round(_bpSrgb(v)*255).toString(16).padStart(2,'0');
+  return '#'+h2(ra*(1-t)+rb*t)+h2(ga*(1-t)+gb*t)+h2(ba*(1-t)+bb*t);
+}
+
+function _bpToOklch(hex){
+  const [r,g,b]=[1,3,5].map(i=>_bpLin(parseInt(hex.slice(i,i+2),16)/255));
+  const x=.4122214708*r+.5363325363*g+.0514459929*b;
+  const y=.2119034982*r+.6806995451*g+.1073969566*b;
+  const z=.0883024619*r+.2817188376*g+.6299787005*b;
+  const l=Math.cbrt(.8189330101*x+.3618667424*y-.1288597137*z);
+  const m=Math.cbrt(.0329845436*x+.9293118715*y+.0361456387*z);
+  const s=Math.cbrt(.0482003018*x+.2643662691*y+.6338517070*z);
+  const L=.2104542553*l+.7936177850*m-.0040720468*s;
+  const a=1.9779984951*l-2.4285922050*m+.4505937099*s;
+  const bv=.0259040371*l+.7827717662*m-.8086757660*s;
+  const C=Math.sqrt(a*a+bv*bv);
+  const H=(Math.atan2(bv,a)*180/Math.PI+360)%360;
+  return {L,C,H};
+}
+
+function _bpBuildPresets(){
+  _bp.presets.innerHTML='';
+  BP_RATIOS.forEach(([t,label])=>{
+    const div=document.createElement('div'); div.className='bp-preset'; div.dataset.t=t;
+    const chip=document.createElement('div'); chip.className='bp-preset-chip';
+    const lbl=document.createElement('span'); lbl.className='bp-preset-label'; lbl.textContent=label;
+    div.append(chip,lbl);
+    div.addEventListener('click',()=>{
+      _bp.slider.value=Math.round(t*100);
+      _bpUpdate();
+    });
+    _bp.presets.appendChild(div);
+  });
+}
+
+function _bpUpdatePresets(){
+  const {colorA,colorB}=_bp.state;
+  const t=parseFloat(_bp.slider.value)/100;
+  _bp.presets.querySelectorAll('.bp-preset').forEach(div=>{
+    const pt=parseFloat(div.dataset.t);
+    const chip=div.querySelector('.bp-preset-chip');
+    if(colorA&&colorB) chip.style.background=_bpBlend(colorA,colorB,pt);
+    else chip.style.background='var(--border)';
+    div.classList.toggle('active',Math.abs(pt-t)<0.01);
+  });
+}
+
+function _bpUpdate(){
+  const {colorA,colorB}=_bp.state;
+  const hasResult=colorA&&colorB;
+  _bp.result.style.display=hasResult?'flex':'none';
+
+  const t=_bp.slider.value/100;
+  _bp.pctN.textContent=`${Math.round((1-t)*100)}%`;
+  _bp.pctC.textContent=`${Math.round(t*100)}%`;
+
+  _bpUpdatePresets();
+  if(!hasResult)return;
+
+  const res=_bpBlend(colorA,colorB,t);
+  _bp.swatch.style.background=res;
+  _bp.swatch.classList.add('filled');
+  _bp.hex.textContent=res;
+  _bp.slider.style.background=`linear-gradient(to right,${colorA},${colorB})`;
+
+  const {L,C,H}=_bpToOklch(res);
+  _bp.lch.innerHTML=`L ${L.toFixed(2)}<br>C ${C.toFixed(3)}<br>H ${H.toFixed(0)}°`;
+}
+
+function _bpShow(){_bp.el.classList.add('visible');}
+
+function _bpDismiss(){
+  _bp.el.classList.remove('visible');
+  _bp.state.colorA=_bp.state.colorB=null;
+  _bp.slotA.style.background=''; _bp.slotA.classList.remove('filled');
+  _bp.slotB.style.background=''; _bp.slotB.classList.remove('filled');
+  _bp.hexA.textContent='A'; _bp.hexB.textContent='B';
+  Object.values(_bp.selected).forEach(s=>s?.classList.remove('bp-selected'));
+  _bp.selected.colorA=_bp.selected.colorB=null;
+  _bp.next='colorA';
+  _bp.result.style.display='none';
+  _bp.swatch.classList.remove('filled');
+  _bp.swatch.style.background='';
+  _bp.slider.style.background='';
+  _bpUpdatePresets();
+}
+
+_bpBuildPresets();
+_bp.dismiss.addEventListener('click',_bpDismiss);
+_bp.result.addEventListener('click',()=>{const h=_bp.hex.textContent;if(h&&h!=='—')copy(h);});
+_bp.slider.addEventListener('input',_bpUpdate);
+// ──────────────────────────────────────────────────────────────
+
+// ── COLOR SEARCH ──────────────────────────────────────────────
+const _cs = {
+  el:     document.getElementById('color-search'),
+  input:  document.getElementById('cs-input'),
+  swatch: document.getElementById('cs-swatch'),
+  match:  null,
+};
+
+function _csOpen() {
+  _cs.el.classList.add('visible');
+  _cs.input.focus();
+  _cs.input.select();
+}
+
+function _csDismiss() {
+  _cs.el.classList.remove('visible');
+  _cs.input.blur();
+  _cs.input.value = '';
+  _cs.swatch.style.background = '';
+  _cs.swatch.classList.remove('has-color');
+  if (_cs.match) { _cs.match.classList.remove('search-match'); _cs.match = null; }
+}
+
+function _csSearch(hex) {
+  if (_cs.match) { _cs.match.classList.remove('search-match'); _cs.match = null; }
+  const el = document.querySelector(`.swatch[data-hex="${hex}"]`);
+  if (!el) return;
+  _cs.match = el;
+  el.classList.add('search-match');
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+_cs.input.addEventListener('input', () => {
+  let v = _cs.input.value.toLowerCase();
+  if (/^[0-9a-f]{6}$/.test(v)) v = '#' + v;
+  _cs.input.value = v;
+
+  if (_cs.match) { _cs.match.classList.remove('search-match'); _cs.match = null; }
+
+  if (/^#[0-9a-f]{6}$/.test(v)) {
+    _cs.swatch.style.background = v;
+    _cs.swatch.classList.add('has-color');
+    _csSearch(v);
+  } else {
+    _cs.swatch.style.background = '';
+    _cs.swatch.classList.remove('has-color');
+  }
+});
+// ──────────────────────────────────────────────────────────────
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { _bpDismiss(); _csDismiss(); }
+  if (e.key === "'") {
+    const tag = document.activeElement?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    e.preventDefault();
+    _csOpen();
+  }
+});
+
+function _bpSelect(hex,swatchEl){
+  const slot=_bp.next;
+  _bp.selected[slot]?.classList.remove('bp-selected');
+  _bp.selected[slot]=swatchEl;
+  _bp.state[slot]=hex;
+  const slotEl=slot==='colorA'?_bp.slotA:_bp.slotB;
+  const hexEl =slot==='colorA'?_bp.hexA:_bp.hexB;
+  slotEl.style.background=hex; slotEl.classList.add('filled');
+  hexEl.textContent=hex;
+  swatchEl.classList.add('bp-selected');
+  _bp.next=slot==='colorA'?'colorB':'colorA';
+  _bpShow();
+  _bpUpdate();
+}
+// ──────────────────────────────────────────────────────────────
+
+function renderGrid(palette, id, type) {
+  const el=document.getElementById(id);
+  palette.forEach(color=>{
+    const col=document.createElement('div');
+    col.className='color-col';
+    col.innerHTML=`<div class="col-header"><div class="col-name">${color.name}</div><div class="col-base-hex">${color.tones[400]}</div></div>`;
+    Object.entries(color.tones).forEach(([tone,hex])=>{
+      const s=document.createElement('div');
+      s.className='swatch';
+      s.dataset.hex=hex;
+      s.style.background=hex;
+      const c=ink(hex);
+      s.innerHTML=`<span class="swatch-tone" style="color:${c}">${tone}</span><span class="swatch-hex" style="color:${c}">${hex}</span>`;
+      s.addEventListener('click',e=>{
+        if(e.ctrlKey||e.metaKey){e.preventDefault();_bpSelect(hex,s);}
+        else copy(hex);
+      });
+      col.appendChild(s);
+    });
+    el.appendChild(col);
+  });
+}
+
+function getTheme() {
+  const saved=localStorage.getItem('ng-theme');
+  if (saved) return saved;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  document.getElementById('theme-btn').textContent = theme==='dark' ? '☀' : '☾';
+}
+
+applyTheme(getTheme());
+
+document.getElementById('theme-btn').addEventListener('click', ()=>{
+  const next=document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+  localStorage.setItem('ng-theme', next);
+  applyTheme(next);
+});
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e=>{
+  if (!localStorage.getItem('ng-theme')) applyTheme(e.matches ? 'dark' : 'light');
+});
+
+const { PALETTE } = PALETTES.current;
+
+renderGrid(PALETTE, 'grid-palette', 'chromatic');
+
+(function(){
+  const el=document.getElementById('grid-palette');
+  const col=document.createElement('div');
+  col.className='color-col';
+  col.innerHTML=`<div class="col-header"><div class="col-name">Static</div><div class="col-base-hex">&nbsp;</div></div>`;
+  [['white','#ffffff'],['black','#000000']].forEach(([label,hex])=>{
+    const s=document.createElement('div');
+    s.className='swatch'; s.dataset.hex=hex; s.style.background=hex;
+    const c=ink(hex);
+    s.innerHTML=`<span class="swatch-tone" style="color:${c}">${label}</span><span class="swatch-hex" style="color:${c}">${hex}</span>`;
+    s.addEventListener('click',e=>{
+      if(e.ctrlKey||e.metaKey){e.preventDefault();_bpSelect(hex,s);}
+      else copy(hex);
+    });
+    col.appendChild(s);
+  });
+  el.appendChild(col);
+})();
+</script>
+</body>
+</html>

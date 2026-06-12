@@ -2,21 +2,41 @@ require 'yaml'
 
 class Palette
   SKIP = %w[#ffffff #000000].to_set
-  ACHROMATIC_C = 0.04  # OKLCH chroma below this → treat as gray
-  GRAY_FAMILIES  = %w[gray-light gray-dark].freeze
+  ACHROMATIC_C   = 0.04   # OKLCH chroma below this → treat as gray
+  GRAY_C_MEAN    = 0.05   # families whose mean chroma is below this are auto-detected as gray
   MUTED_FAMILIES = %w[brown].freeze  # share a hue with another family; resolved by chroma proximity
 
   def self.load(yaml_path)
     data = YAML.load_file(yaml_path)
     families = {}
-    data['colors'].each do |name, tones|
-      families[name] = tones.map { |hex|
-        hex = hex.downcase
-        lch = hex_to_oklch(hex)
-        { hex: hex, lch: lch } if lch
-      }.compact
+
+    if data['points']
+      # New multi-format: points: { name: { base: {oklch:,hex:}, scale: [{oklch:,hex:}, ...] } }
+      data['points'].each do |name, point|
+        families[name] = (point['scale'] || []).filter_map do |entry|
+          if (ok = entry['oklch'])
+            lch = [ok['l'].to_f, ok['c'].to_f, ok['h'].to_f]
+            hex = entry['hex']&.downcase || '#000000'
+            { hex: hex, lch: lch }
+          elsif (hex = entry['hex']&.downcase)
+            lch = hex_to_oklch(hex)
+            lch ? { hex: hex, lch: lch } : nil
+          end
+        end
+      end
+    else
+      # Old format: colors: { name: ["#hex", ...] }
+      (data['colors'] || {}).each do |name, tones|
+        families[name] = tones.filter_map { |hex|
+          hex = hex.downcase
+          lch = hex_to_oklch(hex)
+          lch ? { hex: hex, lch: lch } : nil
+        }
+      end
     end
-    new(families)
+
+    tone_names = Array(data['tones']).map(&:to_s)
+    new(families, tone_names)
   end
 
   def map_to_closest(hexes)
@@ -25,12 +45,31 @@ class Palette
     end
   end
 
+  def code_for(hex)
+    hex = hex.downcase
+    @families.each do |name, tones|
+      tones.each_with_index do |t, i|
+        label = @tone_names[i] || i.to_s
+        return "#{name}-#{label}" if t[:hex] == hex
+      end
+    end
+    nil
+  end
+
   private
 
-  def initialize(families)
-    @families = families
-    @chromatic = families.reject { |n, _| GRAY_FAMILIES.include?(n) || MUTED_FAMILIES.include?(n) }
-    @grays     = families.select { |n, _| GRAY_FAMILIES.include?(n) }
+  def initialize(families, tone_names = [])
+    @families   = families
+    @tone_names = tone_names
+
+    # Auto-detect gray families: those whose mean chroma is below the threshold
+    gray_names = families.select { |_, tones|
+      next false if tones.empty?
+      tones.sum { |t| t[:lch][1] } / tones.size < GRAY_C_MEAN
+    }.keys.to_set
+
+    @chromatic = families.reject { |n, _| gray_names.include?(n) || MUTED_FAMILIES.include?(n) }
+    @grays     = families.select { |n, _| gray_names.include?(n) }
     @muted     = families.select { |n, _| MUTED_FAMILIES.include?(n) }
 
     @family_hues = @chromatic.transform_values do |tones|
