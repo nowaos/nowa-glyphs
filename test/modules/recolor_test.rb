@@ -1,8 +1,8 @@
 require_relative '../test_helper'
 
-describe 'recolor' do
+describe 'fix:recolor' do
   include TestHelper
-  let(:script) { 'autofix/recolor.rb' }
+  let(:script) { 'tasks/fix/recolor.rb' }
 
   it 'should create a version for off-palette icon' do
     path = copy_fixture('dirty.svg')
@@ -28,10 +28,10 @@ describe 'recolor' do
     assert_match(/Done\./, out)
   end
 
-  it 'should create a version with --non-apps' do
+  it 'should create a version with --scope' do
     path = copy_fixture('dirty.svg')
 
-    run_script(script, path, '--non-apps')
+    run_script(script, path, '--scope', 'art')
 
     assert File.exist?(abs(versioned(path)))
   end

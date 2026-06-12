@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-require_relative 'core/icon_preprocessor'
+# Audits icon structure, dimensions, bg attributes, and shadow template.
+
+require_relative '../../core/icon_preprocessor'
 
 # ANSI color codes
 RED   = "\e[31m"

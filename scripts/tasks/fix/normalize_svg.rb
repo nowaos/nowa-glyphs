@@ -1,25 +1,26 @@
-# Validates and optionally cleans SVG files.
+# Cleans SVG files: removes metadata, unused defs, and editor artifacts.
 #
-# Checks:
+# Cleans:
 #   - Metadata elements (<title>, <desc>, <metadata>)
 #   - Unused <defs> (gradients, filters, etc.)
 #   - Shapes outside the viewBox (approximate — absolute M/L/H/V coords only for <path>)
 #   - Inkscape/Sodipodi editor artifacts (namedview, inkscape:* attrs, etc.)
 #
 # Usage:
-#   ruby scripts/autofix/clean_svg.rb                                         # validate all src/apps/scalable/
-#   ruby scripts/autofix/clean_svg.rb sandbox                                  # specific directory
-#   ruby scripts/autofix/clean_svg.rb src/apps/scalable/gnome-core/org.gnome.Music.svg
-#   ruby scripts/autofix/clean_svg.rb src/apps/scalable/gnome-core/org.gnome.Music.svg --fix
-#   ruby scripts/autofix/clean_svg.rb src/apps/scalable/gnome-core/org.gnome.Music.svg --fix --multiline
+#   rake fix:normalize_svg                                                      # clean all src/apps/scalable/
+#   rake fix:normalize_svg sandbox                                              # specific directory
+#   rake fix:normalize_svg src/apps/scalable/gnome-core/org.gnome.Music.svg
+#   rake fix:normalize_svg src/apps/scalable/gnome-core/org.gnome.Music.svg --dry-run
+#   rake fix:normalize_svg src/apps/scalable/gnome-core/org.gnome.Music.svg --multiline
 
-require_relative '../core/icon_preprocessor'
+require_relative '../../core/icon_preprocessor'
 
-ROOT         = File.expand_path('../..', __dir__)
-fix          = ARGV.include?('--fix')
+ROOT      = File.expand_path('../../..', __dir__)
+dry_run   = ARGV.include?('--dry-run')
+apply     = !dry_run
 issues_count = 0
 
-IconPreprocessor.each(summary: fix, abort_if_versioned: fix) do |builder, tracker|
+IconPreprocessor.each(summary: apply, abort_if_versioned: apply) do |builder, tracker|
   meta      = tracker.metadata_nodes
   unused    = tracker.unused_def_nodes
   oob       = tracker.outside_viewbox_nodes
@@ -39,7 +40,7 @@ IconPreprocessor.each(summary: fix, abort_if_versioned: fix) do |builder, tracke
   end
   issues_count += 1
 
-  next unless fix
+  next if dry_run
 
   tracker.clean_metadata!
   tracker.clean_defs!
@@ -48,5 +49,5 @@ IconPreprocessor.each(summary: fix, abort_if_versioned: fix) do |builder, tracke
   builder.create_version(indent: true)
 end
 
-puts "\n#{issues_count} file(s) with issues." if !fix && issues_count > 0
-puts 'All clean.'                             if !fix && issues_count.zero?
+puts "\n#{dry_run ? '[dry-run] ' : ''}#{issues_count} file(s) with issues." if dry_run && issues_count > 0
+puts 'All clean.'                                                            if dry_run && issues_count.zero?

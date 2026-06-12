@@ -2,12 +2,12 @@
 # Tagged files (-tag.svg) are left untouched.
 #
 # Usage:
-#   ruby scripts/autofix/undo_changes.rb <path>           # file or directory (relative to root)
-#   ruby scripts/autofix/undo_changes.rb <path> --dry-run # preview only
+#   rake changes:undo <path>           # file or directory (relative to root)
+#   rake changes:undo <path> --dry-run # preview only
 
 require 'fileutils'
 
-ROOT    = File.expand_path('../..', __dir__)
+ROOT    = File.expand_path('../../..', __dir__)
 dry_run = ARGV.include?('--dry-run')
 
 arg = ARGV.reject { |a| a.start_with?('-') }.first

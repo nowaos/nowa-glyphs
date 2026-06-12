@@ -1,8 +1,8 @@
 require_relative '../test_helper'
 
-describe 'validate_apps' do
+describe 'audit:apps' do
   include TestHelper
-  let(:script) { 'validate_apps.rb' }
+  let(:script) { 'tasks/audit/apps.rb' }
 
   it 'should pass for valid square icon' do
     path = copy_fixture('square.svg')

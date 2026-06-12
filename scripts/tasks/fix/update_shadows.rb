@@ -2,11 +2,11 @@
 # Creates a new versioned file (e.g. icon.v2.svg) — never edits the original.
 #
 # Usage:
-#   ruby scripts/autofix/update_shadows.rb                                              # all icons in src/apps/scalable/
-#   ruby scripts/autofix/update_shadows.rb src/apps/scalable/gnome-core                 # one category
-#   ruby scripts/autofix/update_shadows.rb src/apps/scalable/gnome-core/org.gnome.Clocks.svg  # one icon
+#   rake fix:update_shadows                                                          # all icons in src/apps/scalable/
+#   rake fix:update_shadows src/apps/scalable/gnome-core                             # one category
+#   rake fix:update_shadows src/apps/scalable/gnome-core/org.gnome.Clocks.svg        # one icon
 
-require_relative '../core/icon_preprocessor'
+require_relative '../../core/icon_preprocessor'
 
 IconPreprocessor.each(summary: true, abort_if_versioned: true) do |builder, tracker|
   ds = tracker.match_in([], :any, id: 'ds')

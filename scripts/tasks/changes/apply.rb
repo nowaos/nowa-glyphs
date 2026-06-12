@@ -1,19 +1,28 @@
 # Promotes versioned files (.vN) back to their originals.
 # If one vN exists → promotes automatically.
-# If multiple vN exist for the same file → asks which to apply.
+# If multiple vN exist for the same file → aborts unless -v N is passed.
 # Tagged files (-tag.svg) are left untouched.
 # After running, no .vN files remain in the target area.
 #
 # Usage:
-#   ruby scripts/autofix/apply_changes.rb <path>           # file or directory (relative to root)
-#   ruby scripts/autofix/apply_changes.rb <path> --dry-run # preview without applying
+#   rake changes:apply <path>           # file or directory (relative to root)
+#   rake changes:apply <path> --dry-run # preview without applying
+#   rake changes:apply <path> -v 2      # apply a specific version when multiple exist
 
 require 'fileutils'
 
-ROOT    = File.expand_path('../..', __dir__)
-dry_run = ARGV.include?('--dry-run')
+ROOT = File.expand_path('../../..', __dir__)
 
-arg = ARGV.reject { |a| a.start_with?('-') }.first
+argv    = ARGV.dup
+v_idx   = argv.index('-v')
+force_v = if v_idx
+  val = argv.delete_at(v_idx + 1)&.to_i
+  argv.delete_at(v_idx)
+  val
+end
+dry_run = argv.delete('--dry-run')
+arg     = argv.reject { |a| a.start_with?('-') }.first
+
 abort 'Error: path argument required (file or directory)' unless arg
 
 target = File.join(ROOT, arg)
@@ -25,7 +34,6 @@ else
   File.join(target, '**', '*.svg')
 end
 
-# Collect all .vN files in scope, group by original path
 versioned = Dir.glob(pattern).select { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
 
 groups = versioned.group_by { |f|
@@ -36,6 +44,18 @@ groups = versioned.group_by { |f|
 if groups.empty?
   puts 'Nothing to apply.'
   exit
+end
+
+conflicts = groups.select { |_, versions| versions.size > 1 }
+
+if conflicts.any? && !force_v
+  puts "Error: multiple versions exist — pass -v N to choose which to apply:"
+  conflicts.each do |orig, versions|
+    sorted = versions.sort_by { |f| File.basename(f, '.svg').match(/\.v(\d+)\z/)[1].to_i }
+    puts "  #{orig.delete_prefix("#{ROOT}/")}:"
+    sorted.each { |f| puts "    #{f.delete_prefix("#{ROOT}/")}" }
+  end
+  exit 1
 end
 
 promoted = 0
@@ -51,13 +71,12 @@ groups.each do |orig, versions|
   chosen = if sorted.size == 1
     sorted.first
   else
-    rel = orig.delete_prefix("#{ROOT}/")
-    puts "\nMultiple versions for #{rel}:"
-    sorted.each_with_index { |v, i| puts "  [#{i + 1}] #{File.basename(v)}" }
-    print "  Which to apply? (1–#{sorted.size}, default #{sorted.size}): "
-    input = $stdin.gets&.chomp.to_i
-    input = sorted.size if input < 1 || input > sorted.size
-    sorted[input - 1]
+    match = sorted.find { |f| File.basename(f, '.svg').end_with?(".v#{force_v}") }
+    unless match
+      warn "Warning: v#{force_v} not found for #{File.basename(orig)}, skipping."
+      next
+    end
+    match
   end
 
   rel_orig   = orig.delete_prefix("#{ROOT}/")
