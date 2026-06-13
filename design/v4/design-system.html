@@ -766,7 +766,7 @@ input[type=range].bp-range:active::-webkit-slider-thumb { cursor: grabbing; }
 
 <div class="color-search" id="color-search">
   <div class="cs-swatch" id="cs-swatch"></div>
-  <input type="text" class="cs-input" id="cs-input" placeholder="#hex" maxlength="7" autocomplete="off" spellcheck="false">
+  <input type="text" class="cs-input" id="cs-input" placeholder="#hex" maxlength="9" autocomplete="off" spellcheck="false">
   <span class="cs-hint">Esc to close</span>
 </div>
 
@@ -981,6 +981,8 @@ function _csSearch(hex) {
 
 _cs.input.addEventListener('input', () => {
   let v = _cs.input.value.toLowerCase();
+  if (/^[0-9a-f]{8}$/.test(v)) v = '#' + v;
+  if (/^#[0-9a-f]{8}$/.test(v)) v = v.slice(0, 7);
   if (/^[0-9a-f]{6}$/.test(v)) v = '#' + v;
   _cs.input.value = v;
 
