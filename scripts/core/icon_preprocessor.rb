@@ -3,7 +3,7 @@ require_relative '../lib/svg_tracker'
 
 module IconPreprocessor
   class Args
-    VALUED = %w[tag v scope P].freeze
+    VALUED = %w[tag v scope P m].freeze
 
     def initialize(argv = ARGV)
       @options    = {}
@@ -107,7 +107,8 @@ module IconPreprocessor
 
       abort "Error: path argument required (file or directory)" unless args.positional
 
-      target = File.join(root, args.positional)
+      pos    = args.positional
+      target = File.absolute_path?(pos) ? pos : File.join(root, pos)
       files = if File.directory?(target)
         Dir.glob(File.join(target, '**', '*.svg'))
       elsif File.file?(target)
@@ -116,13 +117,15 @@ module IconPreprocessor
         abort "Error: '#{args.positional}' not found"
       end
 
+      files = files.reject { |f| File.symlink?(f) }
+
       if args.fetch('v')
         files = files.reject { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
       elsif abort_if_versioned && !args.fetch('tag')
         versioned = files.select { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
         unless versioned.empty?
-          abort "Error: uncommitted versioned files in selection — commit or remove them first:\n" +
-                versioned.map { |f| "  #{Pathname.new(f).relative_path_from(root)}" }.join("\n")
+          versions = versioned.filter_map { |f| File.basename(f, '.svg').match(/\.v(\d+)\z/)&.[](1).to_i }.uniq.sort.map { |v| "v#{v}" }
+          abort "Error: #{versioned.size} uncommitted versioned file(s) in selection — commit or remove them first, or pass -v N to create an additional version.\nVersions found: #{versions.join(', ')}"
         end
       end
 

@@ -35,7 +35,7 @@ class Palette
       end
     end
 
-    tone_names = Array(data['tones']).map(&:to_s)
+    tone_names = Array(data.dig('tones', 'names')).map(&:to_s)
     new(families, tone_names)
   end
 
@@ -91,7 +91,14 @@ class Palette
     l, c, h = lch
 
     if c < ACHROMATIC_C
-      @grays.values.flatten.min_by { |t| (t[:lch][0] - l).abs }[:hex]
+      sa = c * Math.cos(h * Math::PI / 180)
+      sb = c * Math.sin(h * Math::PI / 180)
+      @grays.values.flatten.min_by { |t|
+        tl, tc, th = t[:lch]
+        ta = tc * Math.cos(th * Math::PI / 180)
+        tb = tc * Math.sin(th * Math::PI / 180)
+        (l - tl)**2 + (sa - ta)**2 + (sb - tb)**2
+      }[:hex]
     else
       family = @family_hues.min_by { |_, fh| fh ? hue_dist(h, fh) : Float::INFINITY }.first
       family = chroma_tiebreak(family, l, c)

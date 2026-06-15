@@ -7,7 +7,9 @@
 #   rake fix:recolor src/... --scope bg,art,em                     # restrict to specific layers
 #   rake fix:recolor src/... -v 2                                  # force version number
 #   rake fix:recolor src/... -P color-study/nowa-v8.yaml           # custom palette
+#   rake fix:recolor src/... -m design/remap.yaml                  # forced color overrides
 
+require 'yaml'
 require_relative '../../core/icon_preprocessor'
 require_relative '../../lib/palette'
 
@@ -17,12 +19,21 @@ args = IconPreprocessor::Args.new
 palette_path = args.fetch('P') || DEFAULT_PALETTE
 palette = Palette.load(palette_path)
 
+remap = {}
+if (remap_path = args.fetch('m'))
+  remap_path = File.absolute_path?(remap_path) ? remap_path : File.join(File.expand_path('../../..', __dir__), remap_path)
+  raw = YAML.load_file(remap_path) || {}
+  remap = raw.transform_keys { |k| "##{k.to_s.downcase.delete_prefix('#')}" }
+             .transform_values { |v| "##{v.to_s.downcase.delete_prefix('#')}" }
+end
+
 IconPreprocessor.each(summary: true, abort_if_versioned: true) do |builder, tracker|
   scope  = builder.args.fetch('scope')
   colors = scope ? tracker.colors_in(scope.split(',')) : tracker.all_colors
   next if colors.empty?
 
   mapping = palette.map_to_closest(colors)
+  mapping.merge!(remap.slice(*mapping.keys))
 
   root = File.expand_path('../../..', __dir__)
   rel  = Pathname.new(tracker.path).relative_path_from(root)

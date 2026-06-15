@@ -246,3 +246,17 @@ terminals:
     fallback: maui-station
     aliases: false
 ```
+
+Redesenhar ícones:
+
+```yaml
+communication:
+  - fractal.svg
+```
+
+Adicionar atalhos:
+
+```yaml
+brave.svg:
+  - com.brave.Browser.svg
+```

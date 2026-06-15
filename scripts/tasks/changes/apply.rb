@@ -25,7 +25,7 @@ arg     = argv.reject { |a| a.start_with?('-') }.first
 
 abort 'Error: path argument required (file or directory)' unless arg
 
-target = File.join(ROOT, arg)
+target = File.absolute_path?(arg) ? arg : File.join(ROOT, arg)
 abort "Error: '#{arg}' not found" unless File.exist?(target)
 
 pattern = if File.file?(target)
