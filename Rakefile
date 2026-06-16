@@ -27,7 +27,7 @@ end
 
 Rake::TestTask.new(:test) do |t|
   filter = ARGV.select { |a| a.end_with?('.rb') }
-  t.test_files = filter.empty? ? FileList['test/modules/*_test.rb'] : filter
+  t.test_files = filter.empty? ? FileList['test/{tasks,links}/*_test.rb'] : filter
   t.verbose    = false
 end
 ARGV.select { |a| a.end_with?('.rb') }.each { |f| task f.to_sym {} }

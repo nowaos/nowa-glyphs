@@ -124,6 +124,11 @@ media:
       - reco.svg
 
 office:
+  texstudio:  # redesenhar ícone
+    aliases: false
+  org.tug.texworks.TeXworks:
+    aliases:
+      - TeXworks.svg
   org.gnome.gitlab.somas.Apostrophe:  # ex-UberWriter — verificar identidade visual atual
     aliases: false
   evince:  # Document Viewer
@@ -158,17 +163,23 @@ productivity:
     aliases: false
 
 science:
-  qalculate-gtk:  # Qalculate!
-    fallback: calculator
+  org.speedcrunch.SpeedCrunch:
+    aliases: false
+  io.github.Qalculate:  # Qalculate!
     aliases:
+      - qalculate-gtk.svg
       - qalculate.svg
       - qalculate-applet.svg
       - qalculate-qt.svg
+      - qalculate-kde.svg
+      - qalculator.svg
       - io.github.Qalculate.qalculate-qt.svg
       - io.github.qalculate.Qalculate.svg
-      - io.github.Qalculate.svg
 
 security:
+  com.onepassword.OnePassword:
+    aliases:
+      - appimagekit-1password.svg
   org.gnome.seahorse.Application:  # Seahorse — gerenciador de senhas/GPG
     aliases:
       - seahorse.svg
@@ -181,6 +192,9 @@ security:
       - appimagekit-org.keepassxc.KeePassXC.svg
 
 system:
+  org.gnome.Boxes:  # VM manager
+    aliases:
+      - gnome-boxes.svg
   boxbuddy-rs:  # BoxBuddy — GUI do Distrobox
     aliases: false
   org.gnome.Screenshot:
