@@ -12,7 +12,6 @@ fi
 
 SRC_DIR="$(cd "$(dirname "$0")" && pwd)"
 THEME_NAME="Nowa Glyphs"
-
 THEME_DIR="${DEST_DIR}/${THEME_NAME}"
 
 # Remove old installation
@@ -23,52 +22,20 @@ echo "Installing theme to: $THEME_DIR"
 # Create theme directory
 mkdir -p "$THEME_DIR"
 
-# Copy main files
-# cp -r "$SRC_DIR"/{COPYING,AUTHORS} "$THEME_DIR"
-cp -r "$SRC_DIR"/src/index.theme "$THEME_DIR"
-cp -r "$SRC_DIR"/src/cursor.theme "$THEME_DIR"
+# Copy src
+cp -r "$SRC_DIR"/src/. "$THEME_DIR"
 
-# Copy icon folders
-cp -r "$SRC_DIR"/src/{actions,animations,apps,categories,cursors,devices,emblems,mimes,places,preferences,status} "$THEME_DIR"
+# Flatten _* category subdirs
+find "$THEME_DIR" -type d -name '_*' | while read dir; do
+  find "$dir" -type f -exec mv -t "$(dirname "$dir")" {} +
+  rmdir "$dir"
+done
 
-flatten_files() {
-  local dir="$1"
-  [ -d "$dir" ] || return
-  find "$dir" -mindepth 2 -type f -exec mv -t "$dir" {} +
-  find "$dir" -mindepth 1 -type d -empty -delete
-}
-
-flatten_links() {
-  local dir="$1"
-  [ -d "$dir" ] || return
-  find "$dir" -mindepth 2 -type l -exec mv -t "$dir" {} +
-  find "$dir" -mindepth 1 -type d -empty -delete
-}
-
-# Flatten src subfolders
-flatten_files "$THEME_DIR/mimes/scalable"
-flatten_files "$THEME_DIR/apps/scalable"
-flatten_files "$THEME_DIR/actions/symbolic"
-
-# Copy symlinks
-cp -r "$SRC_DIR"/links/{actions,apps,mimes,places,preferences,status} "$THEME_DIR"
-
-# Flatten links subfolders
-flatten_links "$THEME_DIR/apps/scalable"
-flatten_links "$THEME_DIR/apps/symbolic"
-flatten_links "$THEME_DIR/actions/symbolic"
-flatten_links "$THEME_DIR/mimes/scalable"
-flatten_links "$THEME_DIR/mimes/symbolic"
-flatten_links "$THEME_DIR/preferences/32"
-flatten_links "$THEME_DIR/places/16"
-flatten_links "$THEME_DIR/places/24"
-flatten_links "$THEME_DIR/places/scalable"
-flatten_links "$THEME_DIR/places/symbolic"
-flatten_links "$THEME_DIR/status/16"
-flatten_links "$THEME_DIR/status/22"
-flatten_links "$THEME_DIR/status/24"
-flatten_links "$THEME_DIR/status/32"
-flatten_links "$THEME_DIR/status/symbolic"
+# Copy symlinks, dropping the target-named subdir
+find "$SRC_DIR/links" -type l -printf '%h\n' | sort -u | while read leaf; do
+  relative_path="${leaf#$SRC_DIR/links/}"
+  cp -P "$leaf"/* "$THEME_DIR/$(dirname "$relative_path")/"
+done
 
 # Create @2x symlinks
 (
