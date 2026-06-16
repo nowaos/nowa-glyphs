@@ -31,24 +31,44 @@ cp -r "$SRC_DIR"/src/cursor.theme "$THEME_DIR"
 # Copy icon folders
 cp -r "$SRC_DIR"/src/{actions,animations,apps,categories,cursors,devices,emblems,mimes,places,preferences,status} "$THEME_DIR"
 
-# Flatten mimes/scalable, apps/scalable and actions/symbolic src subfolders
-for FLAT_DIR in "$THEME_DIR/mimes/scalable" "$THEME_DIR/apps/scalable" "$THEME_DIR/actions/symbolic"; do
-    if [ -d "$FLAT_DIR" ]; then
-        find "$FLAT_DIR" -mindepth 2 -type f -exec mv -t "$FLAT_DIR" {} +
-        find "$FLAT_DIR" -mindepth 1 -type d -empty -delete
-    fi
-done
+flatten_files() {
+  local dir="$1"
+  [ -d "$dir" ] || return
+  find "$dir" -mindepth 2 -type f -exec mv -t "$dir" {} +
+  find "$dir" -mindepth 1 -type d -empty -delete
+}
+
+flatten_links() {
+  local dir="$1"
+  [ -d "$dir" ] || return
+  find "$dir" -mindepth 2 -type l -exec mv -t "$dir" {} +
+  find "$dir" -mindepth 1 -type d -empty -delete
+}
+
+# Flatten src subfolders
+flatten_files "$THEME_DIR/mimes/scalable"
+flatten_files "$THEME_DIR/apps/scalable"
+flatten_files "$THEME_DIR/actions/symbolic"
 
 # Copy symlinks
 cp -r "$SRC_DIR"/links/{actions,apps,mimes,places,preferences,status} "$THEME_DIR"
 
-# Flatten links/apps/scalable, links/apps/symbolic, links/actions/symbolic and links/mimes/scalable subfolders
-for LINKS_FLAT in "$THEME_DIR/apps/scalable" "$THEME_DIR/apps/symbolic" "$THEME_DIR/actions/symbolic" "$THEME_DIR/mimes/scalable" "$THEME_DIR/mimes/symbolic" "$THEME_DIR/preferences/32" "$THEME_DIR/status/16" "$THEME_DIR/status/22" "$THEME_DIR/status/24" "$THEME_DIR/status/symbolic"; do
-    if [ -d "$LINKS_FLAT" ]; then
-        find "$LINKS_FLAT" -mindepth 2 -type l -exec mv -t "$LINKS_FLAT" {} +
-        find "$LINKS_FLAT" -mindepth 1 -type d -empty -delete
-    fi
-done
+# Flatten links subfolders
+flatten_links "$THEME_DIR/apps/scalable"
+flatten_links "$THEME_DIR/apps/symbolic"
+flatten_links "$THEME_DIR/actions/symbolic"
+flatten_links "$THEME_DIR/mimes/scalable"
+flatten_links "$THEME_DIR/mimes/symbolic"
+flatten_links "$THEME_DIR/preferences/32"
+flatten_links "$THEME_DIR/places/16"
+flatten_links "$THEME_DIR/places/24"
+flatten_links "$THEME_DIR/places/scalable"
+flatten_links "$THEME_DIR/places/symbolic"
+flatten_links "$THEME_DIR/status/16"
+flatten_links "$THEME_DIR/status/22"
+flatten_links "$THEME_DIR/status/24"
+flatten_links "$THEME_DIR/status/32"
+flatten_links "$THEME_DIR/status/symbolic"
 
 # Create @2x symlinks
 (

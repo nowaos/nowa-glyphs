@@ -26,9 +26,11 @@ def define_task(task_name, script_path)
 end
 
 Rake::TestTask.new(:test) do |t|
-  t.test_files = FileList['test/modules/*_test.rb']
+  filter = ARGV.select { |a| a.end_with?('.rb') }
+  t.test_files = filter.empty? ? FileList['test/modules/*_test.rb'] : filter
   t.verbose    = false
 end
+ARGV.select { |a| a.end_with?('.rb') }.each { |f| task f.to_sym {} }
 
 Dir.glob(File.join(TASKS_DIR, '*.rb')).each do |script|
   define_task File.basename(script, '.rb'), script
