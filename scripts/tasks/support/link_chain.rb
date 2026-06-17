@@ -10,11 +10,10 @@ require 'set'
 root       = File.expand_path('../../..', __dir__)
 links_root = File.join(root, 'links')
 
-target = ARGV.first
-abort "Usage: rake support:link_chain <path>" unless target
-
-path = File.expand_path(target, root)
-abort "Path not found: #{path}" unless File.exist?(path) || File.symlink?(path)
+ARGV.delete('--')
+show_ls = ARGV.delete('--ls')
+targets  = ARGV
+abort "Usage: rake support:link_chain [-- --ls] <path> [<path> ...]" if targets.empty?
 
 def size_dir(path, links_root)
   rel   = path.delete_prefix(links_root + '/')
@@ -44,11 +43,24 @@ def resolve_chain(start_alias, map)
   chain
 end
 
-symlinks = File.symlink?(path) ? [path] : Dir.glob("#{path}/**/*").select { |p| File.symlink?(p) }
+targets.each do |target|
+  path = File.expand_path(target, root)
+  abort "Path not found: #{path}" unless File.exist?(path) || File.symlink?(path)
 
-symlinks.each do |sym|
-  map   = build_map(size_dir(sym, links_root))
-  chain = resolve_chain(File.basename(sym, '.svg'), map)
-  chain[-1] = "#{chain.last}.svg"
-  puts chain.join(' -> ')
+  puts "=== #{File.basename(path)} ===" if targets.size > 1
+
+  symlinks = File.symlink?(path) ? [path] : Dir.glob("#{path}/**/*").select { |p| File.symlink?(p) }
+
+  symlinks.each do |sym|
+    map   = build_map(size_dir(sym, links_root))
+    chain = resolve_chain(File.basename(sym, '.svg'), map)
+    chain[-1] = "#{chain.last}.svg"
+    puts chain.join(' -> ')
+  end
+
+  if show_ls && File.directory?(path)
+    puts Dir.children(path).sort.join("\n")
+  end
+
+  puts if targets.size > 1
 end

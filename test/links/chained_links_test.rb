@@ -6,14 +6,19 @@ describe 'links/' do
   it 'has no chained symlinks (alias pointing to another alias)' do
     all_symlinks = Dir.glob("#{LINKS_DIR}/**/*").select { |p| File.symlink?(p) }
 
-    target_dirs = all_symlinks.map { |p| File.basename(File.dirname(p)) }.to_set
+    rel_dir = ->(p) {
+      File.dirname(p).delete_prefix(LINKS_DIR + '/').split('/').map { |s| s.sub(/\A_/, '') }.join('/')
+    }
 
-    chained_dir_names = all_symlinks
-      .select { |p| target_dirs.include?(File.basename(p, '.svg')) }
-      .map    { |p| File.basename(p, '.svg') }
-      .to_set
+    target_dir_paths = all_symlinks.map { |p| rel_dir.(p) }.to_set
 
-    broken = all_symlinks.select { |p| chained_dir_names.include?(File.basename(File.dirname(p))) }
+    chained_dir_paths = all_symlinks.each_with_object(Set.new) do |p, set|
+      parts  = rel_dir.(p).split('/')
+      candidate = (parts[0..-2] + [File.basename(p, '.svg')]).join('/')
+      set << candidate if target_dir_paths.include?(candidate)
+    end
+
+    broken = all_symlinks.select { |p| chained_dir_paths.include?(rel_dir.(p)) }
 
     assert broken.empty?, "Symlinks inside chained (intermediate) dirs:\n" +
       broken.map { |p| "- #{p.delete_prefix(ROOT + '/')} -> #{File.readlink(p)}" }.sort.join("\n")

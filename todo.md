@@ -44,6 +44,8 @@ communication:
 
 ```yaml
 development:
+  com.github.git_cola.git-cola:  # git GUI
+    aliases: false
   io.github.fkinoshita.Wildcard:  # regex tester
     fallback: regextester
     aliases:
@@ -86,6 +88,8 @@ graphics:
       - org.tuxpaint.Tuxpaint.svg
 
 internet:
+  org.gnome.Geary:  # email client
+    aliases: false
   io.gitlab.news_flash.NewsFlash:
     aliases: false
   org.gabmus.gfeeds:
@@ -99,6 +103,13 @@ internet:
     aliases: false
 
 media:
+  com.oppzippy.OpenSCQ30:  # Sony/JBL headphone EQ control
+    aliases:
+      - openscq30_gui.svg
+  io.gitlab.daikhan.player:  # media player
+    aliases:
+      - daikhan.svg
+      - io.gitlab.daikhan.stable.svg
   org.gnome.Podcasts:
     fallback: accessories-podcast
     aliases: false
@@ -122,6 +133,8 @@ media:
     fallback: gnome-sound-recorder
     aliases:
       - reco.svg
+  asunder:  # CD ripper
+    aliases: false
 
 office:
   texstudio:  # redesenhar ícone
@@ -154,9 +167,9 @@ productivity:
     fallback: planner
     aliases: false
   org.gnome.World.Iotas:  # GNOME notes
-    fallback: bookmarks-organize
     aliases:
       - org.gnome.gitlab.cheywood.Iotas.svg
+      - org.gnome.World.Iotas.svg
   it.mijorus.collector:
     aliases: false
   com.belmoussaoui.Decoder:
@@ -192,9 +205,17 @@ security:
       - appimagekit-org.keepassxc.KeePassXC.svg
 
 system:
+  org.freefilesync.FreeFileSync:  # file sync — aproveitar estilo do ícone reload
+    aliases:
+      - FreeFileSync.svg
+  io.github.vinser.burnfix:  # screen burn-in fix tool
+    aliases:
+      - burnfix.svg
   org.gnome.Boxes:  # VM manager
     aliases:
       - gnome-boxes.svg
+      - boxes.svg
+      - org.gnome.Boxes.svg
   boxbuddy-rs:  # BoxBuddy — GUI do Distrobox
     aliases: false
   org.gnome.Screenshot:
@@ -218,6 +239,11 @@ system:
     aliases: false
 
 terminals:
+  terminator:  # split-pane terminal — links/apps/scalable/terminator/ já existe
+    aliases:
+      - io.github.gnome_terminator.terminator.svg
+      - net.tenshu.Terminator2.svg
+      - org.gnome_terminator.Terminator2.svg
   com.raggesilver.BlackBox:  # terminal
     fallback: maui-station
     aliases: false
