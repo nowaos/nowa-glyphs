@@ -261,7 +261,7 @@ body {
 .swatch {
   flex: 1;
   min-width: 0;
-  height: 38px;
+  height: 44px;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
@@ -289,6 +289,21 @@ body {
 }
 
 .swatch:hover .swatch-hex { opacity: 1; }
+
+.swatch-base-label {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: .62rem;
+  font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+  letter-spacing: .06em;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity .15s;
+  pointer-events: none;
+}
+
+.cs-open .swatch-base-label { opacity: 1; }
 
 .color-row + .color-row { margin-top: 3px; }
 
@@ -972,12 +987,14 @@ const _cs = {
 
 function _csOpen() {
   _cs.el.classList.add('visible');
+  document.body.classList.add('cs-open');
   _cs.input.focus();
   _cs.input.select();
 }
 
 function _csDismiss() {
   _cs.el.classList.remove('visible');
+  document.body.classList.remove('cs-open');
   _cs.input.blur();
   _cs.input.value = '';
   _cs.swatch.style.background = '';
@@ -1015,6 +1032,7 @@ _cs.input.addEventListener('input', () => {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') { _bpDismiss(); _csDismiss(); }
   if (e.key === "'") {
+    if (_cs.el.classList.contains('visible')) { e.preventDefault(); _csDismiss(); return; }
     const tag = document.activeElement?.tagName;
     if (tag === 'INPUT' || tag === 'TEXTAREA') return;
     e.preventDefault();
@@ -1115,7 +1133,7 @@ function renderColorRows(containerId, colors, type) {
         s.dataset.hex = hex;
         s.style.background = hex;
         const c = ink(hex);
-        s.innerHTML = `<span class="swatch-hex" style="color:${c}">${hex}</span>`;
+        s.innerHTML = `<span class="swatch-hex" style="color:${c}">${hex}</span>${tone === _base ? `<span class="swatch-base-label" style="color:${c}">BASE</span>` : ''}`;
         s.addEventListener('click', e => {
           if (e.ctrlKey || e.metaKey) { e.preventDefault(); _bpSelect(type, hex, s); }
           else copy(hex);
