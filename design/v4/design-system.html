@@ -303,7 +303,8 @@ body {
   pointer-events: none;
 }
 
-.cs-open .swatch-base-label { opacity: 1; }
+.cs-open .swatch-base-label { opacity: .55; }
+.cs-open .swatch-base-label.is-base { opacity: 1; }
 
 .color-row + .color-row { margin-top: 3px; }
 
@@ -1133,7 +1134,7 @@ function renderColorRows(containerId, colors, type) {
         s.dataset.hex = hex;
         s.style.background = hex;
         const c = ink(hex);
-        s.innerHTML = `<span class="swatch-hex" style="color:${c}">${hex}</span>${tone === _base ? `<span class="swatch-base-label" style="color:${c}">BASE</span>` : ''}`;
+        s.innerHTML = `<span class="swatch-hex" style="color:${c}">${hex}</span><span class="swatch-base-label${tone === _base ? ' is-base' : ''}" style="color:${c}">${tone}</span>`;
         s.addEventListener('click', e => {
           if (e.ctrlKey || e.metaKey) { e.preventDefault(); _bpSelect(type, hex, s); }
           else copy(hex);
