@@ -2,9 +2,10 @@ require 'minitest/autorun'
 require 'open3'
 require 'fileutils'
 
-ROOT     = File.expand_path('..', __dir__)
-FIXTURES = File.join(ROOT, 'test', 'fixtures')
-TMP_DIR  = File.join(ROOT, 'test', 'tmp')
+ROOT      = File.expand_path('..', __dir__)
+FIXTURES  = File.join(ROOT, 'test', 'fixtures')
+TMP_DIR   = File.join(ROOT, 'test', 'tmp')
+LINKS_DIR = File.join(ROOT, 'links')
 
 module TestHelper
   def setup

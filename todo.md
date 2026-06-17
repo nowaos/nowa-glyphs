@@ -2,41 +2,6 @@
 
 ## Em andamento
 
-# Ícones faltando em src/actions/symbolic/
-
-Formato:
-  icon_name: true           → criar o ícone, sem aliases
-  icon_name:                → criar o ícone + symlinks em links/status/ que valem manter
-    - alias_name (pasta)
-
-```yaml
-ui:
-  view-refresh:
-    - appointment-recurring (status/16, status/32)
-    - task-recurring (status/16, status/32)
-
-communication:
-  notifications:
-    - appointment-reminder (status/16)
-    - task-reminder (status/16)
-  im-user-online:
-    - user-online (status/16)
-    - user-available (status/16)
-  im-user-away:
-    - user-away (status/16)
-  im-user-busy:
-    - user-busy (status/16)
-  im-user-offline:
-    - user-offline (status/16)
-  im-invisible-user:
-    - user-invisible (status/16)
-  mail-mark-unread: true       # sem aliases restantes
-  irc-channel-active:
-    - irc-channel-joined (status/16)
-  irc-channel-inactive:
-    - irc-channel-parted (status/16)
-```
-
 ## Ícones a criar
 
 > `fallback`: pasta em `links/apps/scalable/` a remover após criar o ícone em `src/`

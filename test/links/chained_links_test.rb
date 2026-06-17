@@ -1,7 +1,5 @@
 require_relative '../test_helper'
 
-LINKS_DIR = File.join(ROOT, 'links') unless defined?(LINKS_DIR)
-
 describe 'links/' do
   it 'has no chained symlinks (alias pointing to another alias)' do
     all_symlinks = Dir.glob("#{LINKS_DIR}/**/*").select { |p| File.symlink?(p) }

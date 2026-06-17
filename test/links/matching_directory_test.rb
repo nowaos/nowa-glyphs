@@ -1,7 +1,5 @@
 require_relative '../test_helper'
 
-LINKS_DIR = File.join(ROOT, 'links')
-
 describe 'links/' do
   it 'grouped symlinks point to a target matching their parent directory name' do
     violations = []
