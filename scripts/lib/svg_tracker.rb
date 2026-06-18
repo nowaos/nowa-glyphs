@@ -244,7 +244,8 @@ class SvgTracker
 
     @doc.traverse do |node|
       next unless node.is_a?(Nokogiri::XML::Element)
-      next if node.ancestors.any? { |a| ignored_ancestors.include?(a.name) }
+      next if node['transform']
+      next if node.ancestors.any? { |a| ignored_ancestors.include?(a.name) || a['transform'] }
       bounds = element_bounds(node)
       next unless bounds
       bx1, by1, bx2, by2 = bounds
