@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" version="1.1" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="64" height="64" version="1.1" viewBox="0 0 64 64">
   <metadata>
     <rdf:RDF>
       <cc:Work rdf:about="">
@@ -14,20 +14,20 @@
       <feGaussianBlur stdDeviation="0.61875"/>
     </filter>
     <linearGradient id="linearGradient1053-8" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="matrix(1 0 0 1 131.5 -.5101)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#323741" offset="0"/>
-      <stop stop-color="#465064" offset="1"/>
+      <stop stop-color="#353b44" offset="0"/>
+      <stop stop-color="#484d56" offset="1"/>
     </linearGradient>
     <linearGradient id="linearGradient912" x1="41.012" x2="41.012" y1="23.605" y2="16.622" gradientTransform="matrix(1.25 0 0 1.25 -111.83 -1.4303e-6)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#5894db" offset="0"/>
-      <stop stop-color="#669fe7" offset="1"/>
+      <stop stop-color="#5a9eff" offset="0"/>
+      <stop stop-color="#5a9eff" offset="1"/>
     </linearGradient>
     <linearGradient id="linearGradient914" x1="470.87" x2="471.19" y1="453.01" y2="439.91" gradientTransform="matrix(1.3664 0 0 1.3664 -727.5 -583.3)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#5894db" offset="0"/>
-      <stop stop-color="#80b3ff" offset="1"/>
+      <stop stop-color="#5a9eff" offset="0"/>
+      <stop stop-color="#74aeff" offset="1"/>
     </linearGradient>
     <linearGradient id="a" x1="471.24" x2="471.24" y1="470.25" y2="427.7" gradientTransform="matrix(1.3664 0 0 1.3664 -727.5 -583.3)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3889e9" offset="0"/>
-      <stop stop-color="#5ea5fb" offset="1"/>
+      <stop stop-color="#3581f6" offset="0"/>
+      <stop stop-color="#5a9eff" offset="1"/>
     </linearGradient>
   <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
       <stop offset="0.65" id="stop1"/>
@@ -54,7 +54,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>

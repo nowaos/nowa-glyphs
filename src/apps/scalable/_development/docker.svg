@@ -6,7 +6,7 @@
    version="1.1"
    id="svg10"
    sodipodi:docname="docker.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -43,11 +43,12 @@
        gradientTransform="matrix(1.0000071,0,0,1.0000071,131.49606,-0.51712472)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#32d7ff"
+         stop-color="#55d6f7"
          offset="0"
-         id="stop1" />
+         id="stop1"
+         style="stop-color:#3581f6;stop-opacity:1;" />
       <stop
-         stop-color="#329bff"
+         stop-color="#408eff"
          offset="1"
          id="stop2" />
     </linearGradient>

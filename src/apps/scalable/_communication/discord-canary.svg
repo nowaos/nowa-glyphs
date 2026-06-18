@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" version="1.1" id="svg1" sodipodi:docname="discord-canary.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" version="1.1" id="svg1" sodipodi:docname="discord-canary.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
   <defs id="defs1">
     <filter id="filter2076-3-5" x="-0.048" y="-0.048" width="1.096" height="1.096" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="1.1" id="feGaussianBlur1"/>
     </filter>
     <linearGradient id="linearGradient2070-2" x1="145" x2="200" y1="59" y2="4" gradientTransform="matrix(1.0000071,0,0,1.0000071,-140.50519,0.49701557)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ffc841" offset="0" id="stop1"/>
-      <stop stop-color="#ffbe37" offset=".4925" id="stop2"/>
-      <stop stop-color="#ffc841" offset="1" id="stop3"/>
+      <stop stop-color="#f7ce43" offset="0" id="stop1"/>
+      <stop stop-color="#f9b340" offset=".4925" id="stop2"/>
+      <stop stop-color="#f7ce43" offset="1" id="stop3"/>
     </linearGradient>
     <filter id="filter1091-0" x="-0.092043996" y="-0.092043996" width="1.184088" height="1.184088" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.30215974" id="feGaussianBlur3"/>
@@ -16,11 +16,11 @@
       <feGaussianBlur stdDeviation="0.30215974" id="feGaussianBlur2"/>
     </filter>
     <linearGradient id="linearGradient2228" x1="8.5858002" x2="16.465" y1="-5.5948" y2="-13.703" gradientTransform="translate(12.390381,17.78294)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f5f5f5" offset="0" id="stop4"/>
+      <stop stop-color="#f3f3f3" offset="0" id="stop4"/>
       <stop stop-color="#fff" offset="1" id="stop5"/>
     </linearGradient>
     <linearGradient id="linearGradient2230" x1="8.9222002" x2="15.926" y1="-5.3551998" y2="-11.992" gradientTransform="translate(12.390381,17.78294)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ffdc96" offset="0" id="stop6"/>
+      <stop stop-color="#f7df95" offset="0" id="stop6"/>
       <stop stop-color="#fff" offset="1" id="stop7"/>
     </linearGradient>
     <filter id="filter2076-3-5-5" x="-0.048000001" y="-0.048000001" width="1.096" height="1.096" color-interpolation-filters="sRGB">
@@ -51,7 +51,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>

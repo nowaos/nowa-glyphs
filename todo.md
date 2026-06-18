@@ -226,4 +226,7 @@ Adicionar atalhos:
 ```yaml
 brave.svg:
   - com.brave.Browser.svg
+
+sublime-text.svg:
+  - sublime.svg
 ```

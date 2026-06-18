@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1" id="svg25" sodipodi:docname="vscodium.svg" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1" id="svg25" sodipodi:docname="vscodium.svg" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)">
   <defs id="defs15">
     <linearGradient id="linearGradient862-3" x1="7.9373" x2="7.9373" y1="15.081" y2="1.852" gradientTransform="matrix(3.7795,0,0,3.7795,94.701243,0.031541)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f1efeb" offset="0" id="stop2"/>
-      <stop stop-color="#fdfcfc" offset="1" id="stop4"/>
+      <stop stop-color="#f7f2ee" offset="0" id="stop2"/>
+      <stop stop-color="#f3f3f3" offset="1" id="stop4"/>
     </linearGradient>
     <linearGradient id="linearGradient859" x1="33.201" x2="33.201" y1="49.576" y2="17.146" gradientUnits="userSpaceOnUse" gradientTransform="translate(94.7011)">
-      <stop stop-color="#306fec" offset="0" id="stop7"/>
-      <stop stop-color="#33a5ff" offset="1" id="stop9"/>
+      <stop stop-color="#2a74ed" offset="0" id="stop7"/>
+      <stop stop-color="#21a9fa" offset="1" id="stop9"/>
     </linearGradient>
     <filter id="filter867" x="-0.11237766" y="-0.10395041" width="1.2247553" height="1.2079008" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="1.7324962" id="feGaussianBlur12"/>
@@ -17,8 +17,8 @@
     </filter>
     <linearGradient inkscape:collect="always" xlink:href="#linearGradient1051" id="linearGradient1053" x1="-127" y1="60" x2="-72" y2="5" gradientUnits="userSpaceOnUse" gradientTransform="translate(131.5,-0.50999941)"/>
     <linearGradient inkscape:collect="always" id="linearGradient1051">
-      <stop style="stop-color:#dee0e2;stop-opacity:1" offset="0" id="stop1047"/>
-      <stop style="stop-color:#f1f3f5;stop-opacity:0.99607843" offset="1" id="stop1049"/>
+      <stop style="stop-color:#dadde2;stop-opacity:1" offset="0" id="stop1047"/>
+      <stop style="stop-color:#f3f3f3;stop-opacity:0.99607843" offset="1" id="stop1049"/>
     </linearGradient>
     <linearGradient inkscape:collect="always" xlink:href="#linearGradient859" id="linearGradient3314" gradientUnits="userSpaceOnUse" gradientTransform="translate(2.0529189e-5,2.0914037e-4)" x1="33.201" y1="49.576" x2="33.201" y2="17.146"/>
   <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
@@ -46,7 +46,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>

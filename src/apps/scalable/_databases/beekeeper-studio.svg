@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" width="64" height="64" version="1.1" viewBox="0 0 64 64" id="svg6" sodipodi:docname="beekeeper-studio.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" width="64" height="64" version="1.1" viewBox="0 0 64 64" id="svg6" sodipodi:docname="beekeeper-studio.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
   <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showgrid="true" inkscape:current-layer="svg6">
     <inkscape:grid id="grid1" units="px" originx="0" originy="0" spacingx="1" spacingy="1" empcolor="#0099e5" empopacity="0.30196078" color="#0099e5" opacity="0.14901961" empspacing="5" enabled="true" visible="true"/>
   </sodipodi:namedview>
@@ -8,13 +8,13 @@
       <feGaussianBlur stdDeviation="1.1" id="feGaussianBlur1"/>
     </filter>
     <linearGradient id="linearGradient2070" x1="145" x2="200" y1="59" y2="4" gradientTransform="matrix(1.0000071,0,0,1.0000071,-140.50293,0.50004086)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ffc841" offset="0" id="stop1"/>
-      <stop stop-color="#ffbe37" offset=".4925" id="stop2"/>
-      <stop stop-color="#ffc841" offset="1" id="stop3"/>
+      <stop stop-color="#f7ce43" offset="0" id="stop1"/>
+      <stop stop-color="#f9b340" offset=".4925" id="stop2"/>
+      <stop stop-color="#f7ce43" offset="1" id="stop3"/>
     </linearGradient>
     <linearGradient id="linearGradient885" x1="75.814003" x2="75.814003" y1="21.025" y2="105.67" gradientTransform="matrix(0.47641883,0,0,0.47641883,0.64854191,-0.03511023)" gradientUnits="userSpaceOnUse">
       <stop stop-color="#fff" offset="0" id="stop4"/>
-      <stop stop-color="#ffefda" offset="1" id="stop5"/>
+      <stop stop-color="#f7f2ee" offset="1" id="stop5"/>
     </linearGradient>
     <filter id="filter2076-7" x="-0.048000001" y="-0.048000001" width="1.096" height="1.096" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="1.1" id="feGaussianBlur1-5"/>
@@ -52,7 +52,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>

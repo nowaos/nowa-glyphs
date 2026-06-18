@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" version="1.1" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" viewBox="0 0 64 64">
   <defs>
     <filter id="filter1057-3" x="-.027" y="-.027" width="1.054" height="1.054" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.61875"/>
     </filter>
     <linearGradient id="linearGradient1053-6" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="translate(131.5 -.51)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#323741" offset="0"/>
-      <stop stop-color="#465064" offset="1"/>
+      <stop stop-color="#353b44" offset="0"/>
+      <stop stop-color="#484d56" offset="1"/>
     </linearGradient>
   <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
       <stop offset="0.65" id="stop1"/>
@@ -33,7 +33,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
@@ -45,7 +44,7 @@
     <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
   </g><rect x="4.5" y="4.5" width="55" height="55" fill="url(#linearGradient1053-6)" stroke-linecap="round" stroke-width="2.7444" id="bg" rx="10"/>
   <g transform="matrix(1.3846 0 0 1.3846 -102.33 -1.2308)" id="art">
-    <path d="m84.017 18 14 10 1-8-11-8z" fill="#88d9d9"/>
-    <path d="m98.017 20-14 10 4 6 11-8h7l4-4-4-4z" fill="#00e6e7"/>
+    <path d="m84.017 18 14 10 1-8-11-8z" fill="#70e0e8"/>
+    <path d="m98.017 20-14 10 4 6 11-8h7l4-4-4-4z" fill="#55d7e1"/>
   </g>
 </svg>

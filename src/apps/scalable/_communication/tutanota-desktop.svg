@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" width="64" height="64" fill="none" version="1.1" viewBox="0 0 64 64" id="svg3" sodipodi:docname="tutanota-desktop.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" width="64" height="64" fill="none" version="1.1" viewBox="0 0 64 64" id="svg3" sodipodi:docname="tutanota-desktop.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
   <sodipodi:namedview id="namedview3" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="art"/>
   <metadata id="metadata1">
     <rdf:RDF>
@@ -9,7 +9,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
@@ -31,8 +30,8 @@
       <feGaussianBlur stdDeviation="1.1" id="feGaussianBlur2"/>
     </filter>
     <linearGradient id="linearGradient2070-0" x1="145" x2="200" y1="59" y2="4" gradientTransform="translate(-140.5 .4995)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#dc2828" offset="0" id="stop2"/>
-      <stop stop-color="#fa4141" offset="1" id="stop3"/>
+      <stop stop-color="#e21e21" offset="0" id="stop2"/>
+      <stop stop-color="#fc3f40" offset="1" id="stop3"/>
     </linearGradient>
   <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
       <stop offset="0.65" id="stop1"/>

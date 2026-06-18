@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" id="svg3" sodipodi:docname="beeper.svg" inkscape:version="1.4 (e7c3feb100, 2024-10-09)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" id="svg3" sodipodi:docname="beeper.svg" inkscape:version="1.4 (e7c3feb100, 2024-10-09)">
   <defs id="defs2">
     <linearGradient id="b" x1="7.937" x2="7.937" y1="15.081" y2="1.852" gradientTransform="matrix(3.7796,0,0,3.7796,-15.520334,-19.669334)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0e71de" style="stop-color:#0e30f4;stop-opacity:1" id="stop1"/>
-      <stop offset="1" stop-color="#25c9ff" style="stop-color:#5971f8;stop-opacity:1" id="stop2"/>
+      <stop offset="0" stop-color="#2567dc" style="stop-color:#205bcb;stop-opacity:1" id="stop1"/>
+      <stop offset="1" stop-color="#3cccef" style="stop-color:#7373ef;stop-opacity:1" id="stop2"/>
     </linearGradient>
     <filter id="c" width="1.331438" height="1.2641129" x="-0.16571899" y="-0.13205647" style="color-interpolation-filters:sRGB">
       <feGaussianBlur stdDeviation="2.011" id="feGaussianBlur2"/>
@@ -12,8 +12,8 @@
       <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1-1"/>
     </filter>
     <linearGradient id="linearGradient1053-2" x1="-127" x2="-72" y1="60" y2="5" gradientTransform="translate(131.4999,-0.50846061)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2e55e7" offset="0" id="stop1-3-7"/>
-      <stop stop-color="#0d7eef" offset="1" id="stop2-6-0"/>
+      <stop stop-color="#2567dc" offset="0" id="stop1-3-7"/>
+      <stop stop-color="#2a74ed" offset="1" id="stop2-6-0"/>
     </linearGradient>
   <radialGradient id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
       <stop offset="0.65" id="stop1"/>
@@ -40,7 +40,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
