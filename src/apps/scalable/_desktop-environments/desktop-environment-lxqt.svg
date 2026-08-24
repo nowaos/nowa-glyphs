@@ -22,8 +22,6 @@
       <stop stop-color="#408eff" offset="1" id="stop863"/>
     </linearGradient>
     
-    
-    
   <radialGradient xmlns="http://www.w3.org/2000/svg" id="gradient_ds_br" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
       <stop offset="0.65" id="stop1"/>
       <stop offset="1" stop-opacity="0" id="stop2"/>

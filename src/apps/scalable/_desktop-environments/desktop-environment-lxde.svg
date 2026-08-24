@@ -46,7 +46,6 @@
       <stop stop-color="#55d6f7" offset="0" id="stop877"/>
       <stop stop-color="#408eff" offset="1" id="stop879"/>
     </linearGradient>
-    
     <filter color-interpolation-filters="sRGB" height="1.048" width="1.048" y="-0.024" x="-0.024" id="filter2761-36">
       <feGaussianBlur id="feGaussianBlur10" stdDeviation="0.14552168"/>
     </filter>
@@ -58,7 +57,6 @@
       <stop id="stop2-3" offset="0"/>
       <stop id="stop4-5" offset="1" stop-opacity="0"/>
     </linearGradient>
-    
     <filter id="filter2761-3" x="-0.024" y="-0.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.14552168" id="feGaussianBlur878"/>
     </filter>

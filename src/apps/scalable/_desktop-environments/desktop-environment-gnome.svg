@@ -64,8 +64,6 @@
       <stop stop-color="#408eff" offset="1" id="stop861"/>
     </linearGradient>
     
-    
-    
     <filter id="filter1057-6" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur856-1"/>
     </filter>
