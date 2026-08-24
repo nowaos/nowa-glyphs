@@ -71,6 +71,9 @@ media:
   com.oppzippy.OpenSCQ30:  # Sony/JBL headphone EQ control
     aliases:
       - openscq30_gui.svg
+  de.haeckerfelix.Shortwave:  # rádio online — 1M instalações usando a arte do Tuner
+    fallback: com.github.louis77.tuner
+    aliases: false
   io.gitlab.daikhan.player:  # media player
     aliases:
       - daikhan.svg
@@ -193,6 +196,9 @@ system:
       - org.gnome.Sysprof2.svg
       - org.gnome.Sysprof3.svg
       - sysprof.svg
+  fr.romainvigier.MetadataCleaner:  # limpeza de metadados — hoje usa a arte do Bulky, que é renomeador em lote
+    fallback: bulky
+    aliases: false
   org.gnome.World.PikaBackup:  # backup
     fallback: deja-dup
     aliases: false
