@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" viewBox="0 0 64 64" id="svg4" sodipodi:docname="sm-ssc.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" viewBox="0 0 64 64" id="svg4" sodipodi:docname="sm-ssc.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
   <sodipodi:namedview id="namedview4" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="svg4"/>
   <defs id="defs3">
     <filter id="filter1057-37" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1"/>
     </filter>
     <linearGradient id="linearGradient1021" x1="-72.168" x2="-17.552" y1="59.492" y2="4.8762" gradientTransform="translate(76.449)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ff7832" offset="0" id="stop1"/>
-      <stop stop-color="#ffbe37" offset=".50754" id="stop2"/>
-      <stop stop-color="#ffdc32" offset="1" id="stop3"/>
+      <stop stop-color="#fd7f4d" offset="0" id="stop1"/>
+      <stop stop-color="#f9b340" offset=".50754" id="stop2"/>
+      <stop stop-color="#f7ce43" offset="1" id="stop3"/>
     </linearGradient>
     <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1057" x="-0.026999999" width="1.054" y="-0.026999999" height="1.054">
       <feGaussianBlur inkscape:collect="always" stdDeviation="0.61875" id="feGaussianBlur1059"/>
@@ -38,7 +38,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
@@ -49,5 +48,5 @@
     <path id="ds-t" d="m 16.5,4.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_t)" style="fill:url(#gradient_ds_t)"/>
     <path id="ds-tl" d="m 16.5,4.5 h -14 v 14 h 14 z" fill="url(#gradient_ds_tl)" style="fill:url(#gradient_ds_tl)"/>
   </g><rect y="4.5" x="4.5" height="55" width="55" id="bg" style="fill:url(#linearGradient1021);fill-opacity:1;stroke-width:4.648;stroke-linecap:round;font-variation-settings:normal;opacity:1;vector-effect:none;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" rx="10"/>
-  <g id="art"><path d="M 22.625,17 C 19.5188,17 17,19.5125 17,22.625 c 0,3.1062 2.5125,5.625 5.625,5.625 h 5.195 l -7.93,7.8912 c -2.1962,2.1962 -2.1962,5.7725 0,7.9688 2.1962,2.1963 5.7725,2.1962 7.9688,0 L 35.75,36.18 v 5.195 C 35.75,44.4812 38.2625,47 41.375,47 44.4812,47 47,44.4875 47,41.375 V 22.625 C 47,19.5188 44.4875,17 41.375,17 Z" fill="#ff5326" id="path4"/></g>
+  <g id="art"><path d="M 22.625,17 C 19.5188,17 17,19.5125 17,22.625 c 0,3.1062 2.5125,5.625 5.625,5.625 h 5.195 l -7.93,7.8912 c -2.1962,2.1962 -2.1962,5.7725 0,7.9688 2.1962,2.1963 5.7725,2.1962 7.9688,0 L 35.75,36.18 v 5.195 C 35.75,44.4812 38.2625,47 41.375,47 44.4812,47 47,44.4875 47,41.375 V 22.625 C 47,19.5188 44.4875,17 41.375,17 Z" fill="#f15907" id="path4"/></g>
 </svg>

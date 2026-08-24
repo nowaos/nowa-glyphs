@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" viewBox="0 0 64 64" id="svg20" sodipodi:docname="gnome-klotski.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1" viewBox="0 0 64 64" id="svg20" sodipodi:docname="gnome-klotski.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
   <defs id="defs6">
     <linearGradient id="linearGradient1058">
-      <stop stop-color="#136de2" offset="0" id="stop1"/>
-      <stop stop-color="#26bbcf" offset="1" id="stop2"/>
+      <stop stop-color="#2567dc" offset="0" id="stop1"/>
+      <stop stop-color="#11c4d0" offset="1" id="stop2"/>
     </linearGradient>
     <linearGradient id="linearGradient1042">
-      <stop stop-color="#ffb636" offset="0" id="stop3"/>
-      <stop stop-color="#eeed51" offset="1" id="stop4"/>
+      <stop stop-color="#f9b340" offset="0" id="stop3"/>
+      <stop stop-color="#d0e689" offset="1" id="stop4"/>
     </linearGradient>
     <filter id="filter1032" x="-0.060000002" y="-0.060000002" width="1.12" height="1.12" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.6" id="feGaussianBlur4"/>
@@ -17,8 +17,8 @@
     <linearGradient id="linearGradient1060" x1="29.919001" x2="29.975" y1="34.766998" y2="25.339001" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1058"/>
     <linearGradient id="linearGradient1068" x1="17.443001" x2="17.709999" y1="22.502001" y2="13.498" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1058"/>
     <linearGradient id="linearGradient896" x1="7.0313001" x2="7.0313001" y1="14.699" y2="2.8450999" gradientTransform="matrix(3.779602,0,0,3.779602,75.740584,3.4921313)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2e323e" offset="0" id="stop5"/>
-      <stop stop-color="#505664" offset="1" id="stop6"/>
+      <stop stop-color="#353b44" offset="0" id="stop5"/>
+      <stop stop-color="#484d56" offset="1" id="stop6"/>
     </linearGradient>
     <filter id="filter1032-6" x="-0.060000002" y="-0.060000002" width="1.12" height="1.12" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.6" id="feGaussianBlur4-2"/>
@@ -51,7 +51,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>
@@ -75,5 +74,4 @@
     <path transform="matrix(0.78125,0,0,0.78125,-0.5,-0.5)" d="m 18.561,31.359 c -1.4195,0 -2.5605,1.141 -2.5605,2.5605 v 10.24 c 0,1.4195 1.141,2.5605 2.5605,2.5605 h 10.24 c 1.4195,0 2.5586,-1.141 2.5586,-2.5605 v -10.24 c 0,-1.4195 -1.1391,-2.5605 -2.5586,-2.5605 z m 0,1.2812 h 10.24 c 0.7104,0 1.2793,0.5689 1.2793,1.2793 v 10.24 c 0,0.7104 -0.5689,1.2793 -1.2793,1.2793 h -10.24 c -0.7104,0 -1.2812,-0.5689 -1.2812,-1.2793 v -10.24 c 0,-0.7104 0.57085,-1.2793 1.2812,-1.2793 z m 1.2793,1.2793 c -0.70528,0 -1.2793,0.57402 -1.2793,1.2793 v 7.6816 c 0,0.70528 0.57402,1.2793 1.2793,1.2793 H 27.52 c 0.70528,0 1.2812,-0.57402 1.2812,-1.2793 v -7.6816 c 0,-0.70528 -0.57597,-1.2793 -1.2812,-1.2793 z" fill="url(#linearGradient1052)" id="path19" style="fill:url(#linearGradient1052)"/>
     <path transform="matrix(0.78125,0,0,0.78125,-0.5,-0.5)" d="m 33.92,16 c -1.4195,0 -2.5605,1.141 -2.5605,2.5605 v 10.24 c 0,1.4195 1.141,2.5586 2.5605,2.5586 h 10.24 c 1.4195,0 2.5605,-1.1391 2.5605,-2.5586 v -10.24 C 46.7205,17.141 45.5795,16 44.16,16 Z m 0,1.2793 h 10.24 c 0.7104,0 1.2793,0.57085 1.2793,1.2812 v 10.24 c 0,0.7104 -0.5689,1.2793 -1.2793,1.2793 H 33.92 c -0.7104,0 -1.2793,-0.5689 -1.2793,-1.2793 v -10.24 c 0,-0.7104 0.5689,-1.2812 1.2793,-1.2812 z m 1.2793,1.2812 c -0.70528,0 -1.2793,0.57402 -1.2793,1.2793 v 7.6797 c 0,0.70528 0.57402,1.2812 1.2793,1.2812 h 7.6816 c 0.70528,0 1.2793,-0.57597 1.2793,-1.2812 v -7.6797 c 0,-0.70528 -0.57402,-1.2793 -1.2793,-1.2793 z" fill="url(#linearGradient1044)" id="path20" style="fill:url(#linearGradient1044)"/>
   </g></g>
-  
 </svg>

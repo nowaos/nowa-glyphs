@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" id="Gimp" width="64" height="64" enable-background="new 0 0 1024 1024" image-rendering="optimizeSpeed" version="1.1" viewBox="0 0 64 64" sodipodi:docname="itch.io.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" id="Gimp" width="64" height="64" enable-background="new 0 0 1024 1024" image-rendering="optimizeSpeed" version="1.1" viewBox="0 0 64 64" sodipodi:docname="itch.io.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)">
   <sodipodi:namedview id="namedview3" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:current-layer="Gimp"/>
   <defs id="defs2">
     <filter id="filter1057-3" x="-0.026999999" y="-0.026999999" width="1.054" height="1.054" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="0.61875" id="feGaussianBlur1"/>
     </filter>
     <linearGradient id="linearGradient2447" x1="31.738" x2="31.738" y1="6.2139" y2="58.771" gradientTransform="translate(-2.5e-6)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1e1e1e" offset="0" id="stop1"/>
-      <stop stop-color="#3c3c3c" offset="1" id="stop2"/>
+      <stop stop-color="#191919" offset="0" id="stop1"/>
+      <stop stop-color="#3a3a3a" offset="1" id="stop2"/>
     </linearGradient>
     <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1057" x="-0.026999999" width="1.054" y="-0.026999999" height="1.054">
       <feGaussianBlur inkscape:collect="always" stdDeviation="0.61875" id="feGaussianBlur1059"/>
@@ -37,7 +37,6 @@
       <stop offset="0.65" id="stop15"/>
       <stop offset="1" stop-opacity="0" id="stop16"/>
     </radialGradient></defs>
-  
   <g id="ds" opacity="0.25">
     <path id="ds-br" d="m 47.5,48.5 h 14 v 14 h -14 z" fill="url(#gradient_ds_br)" style="fill:url(#gradient_ds_br)"/>
     <path id="ds-b" d="m 16.5,48.5 h 31 v 14 h -31 z" fill="url(#gradient_ds_b)" style="fill:url(#gradient_ds_b)"/>

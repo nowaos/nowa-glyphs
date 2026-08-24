@@ -2,17 +2,17 @@
 <svg
    width="64"
    height="64"
-   version="1"
-   id="svg2"
-   sodipodi:docname="factorio.svg"
+   version="1.1"
+   viewBox="0 0 64 64"
+   id="svg3"
+   sodipodi:docname="origin.svg"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview1"
+     id="namedview18"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -20,30 +20,38 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:current-layer="svg2" />
+     inkscape:current-layer="svg3" />
   <defs
      id="defs2">
+    <filter
+       id="filter1057-1"
+       x="-0.026999999"
+       y="-0.026999999"
+       width="1.054"
+       height="1.054"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         stdDeviation="0.61875"
+         id="feGaussianBlur1" />
+    </filter>
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1051"
-       id="linearGradient1053"
+       id="linearGradient1053-2"
        x1="-127"
+       x2="-80.659"
        y1="60"
-       x2="-72"
-       y2="5"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(131.5,-0.50999666)" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient1051">
+       y2="13.659"
+       gradientTransform="translate(131.5 -.51)"
+       gradientUnits="userSpaceOnUse">
       <stop
-         style="stop-color:#dadde2;stop-opacity:1"
+         stop-color="#fb8922"
          offset="0"
-         id="stop1047" />
+         id="stop1"
+         style="stop-color:#dadde2;stop-opacity:1;" />
       <stop
-         style="stop-color:#f3f3f3;stop-opacity:0.99607843"
+         stop-color="#f9a800"
          offset="1"
-         id="stop1049" />
+         id="stop2"
+         style="stop-color:#f3f3f3;stop-opacity:1;" />
     </linearGradient>
     <radialGradient
        id="gradient_ds_br"
@@ -54,11 +62,11 @@
        gradientTransform="matrix(13.998399,0.00477622,-0.00477841,14.004799,47.5016,48.4952)">
       <stop
          offset="0.65"
-         id="stop1" />
+         id="stop3" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop2" />
+         id="stop4" />
     </radialGradient>
     <linearGradient
        id="gradient_ds_b"
@@ -69,11 +77,11 @@
        gradientUnits="userSpaceOnUse">
       <stop
          offset="0.653846"
-         id="stop3" />
+         id="stop5" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop4" />
+         id="stop6" />
     </linearGradient>
     <radialGradient
        id="gradient_ds_bl"
@@ -84,11 +92,11 @@
        gradientTransform="matrix(0,14,-14,0,16.5,48.5)">
       <stop
          offset="0.65"
-         id="stop5" />
+         id="stop7" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop6" />
+         id="stop8" />
     </radialGradient>
     <linearGradient
        id="gradient_ds_r"
@@ -99,11 +107,11 @@
        gradientUnits="userSpaceOnUse">
       <stop
          offset="0.649038"
-         id="stop7" />
+         id="stop9" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop8" />
+         id="stop10" />
     </linearGradient>
     <linearGradient
        id="gradient_ds_l"
@@ -114,11 +122,11 @@
        gradientUnits="userSpaceOnUse">
       <stop
          offset="0.649038"
-         id="stop9" />
+         id="stop11" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop10" />
+         id="stop12" />
     </linearGradient>
     <radialGradient
        id="gradient_ds_tr"
@@ -129,11 +137,11 @@
        gradientUnits="userSpaceOnUse">
       <stop
          offset="0.65"
-         id="stop11" />
+         id="stop13" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop12" />
+         id="stop14" />
     </radialGradient>
     <linearGradient
        id="gradient_ds_t"
@@ -144,11 +152,11 @@
        gradientUnits="userSpaceOnUse">
       <stop
          offset="0.649038"
-         id="stop13" />
+         id="stop15" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop14" />
+         id="stop16" />
     </linearGradient>
     <radialGradient
        id="gradient_ds_tl"
@@ -159,11 +167,11 @@
        gradientUnits="userSpaceOnUse">
       <stop
          offset="0.65"
-         id="stop15" />
+         id="stop17" />
       <stop
          offset="1"
          stop-opacity="0"
-         id="stop16" />
+         id="stop18" />
     </radialGradient>
   </defs>
   <g
@@ -211,18 +219,20 @@
        style="fill:url(#gradient_ds_tl)" />
   </g>
   <rect
-     style="fill:url(#linearGradient1053);fill-opacity:1;stroke-width:2.74436;stroke-linecap:round"
-     id="bg"
-     width="55"
-     height="55"
      x="4.5"
      y="4.5"
+     width="55"
+     height="55"
+     fill="url(#linearGradient1053-2)"
+     stroke-linecap="round"
+     stroke-width="2.7444"
+     id="bg"
      rx="10" />
   <g
      id="art">
     <path
-       id="path1"
-       d="M 28.111328 13 L 28.111328 13.001953 A 0.977 0.977 0 0 0 27.28125 13.773438 L 26.478516 17.839844 A 15.292 15.292 0 0 0 22.501953 20.126953 L 18.552734 18.789062 A 0.98 0.98 0 0 0 17.425781 19.205078 L 13.625 25.794922 A 0.98 0.98 0 0 0 13.832031 26.982422 L 16.978516 29.742188 C 16.868516 30.483187 16.800781 31.229 16.800781 32 C 16.800781 32.771 16.868516 33.515859 16.978516 34.255859 L 13.832031 37.017578 A 0.98 0.98 0 0 0 13.625 38.205078 L 17.425781 44.794922 A 0.98 0.98 0 0 0 18.552734 45.210938 L 22.501953 43.875 A 15.296 15.296 0 0 0 26.478516 46.160156 L 27.28125 50.226562 A 0.98 0.98 0 0 0 28.201172 50.998047 L 35.800781 50.998047 A 0.98 0.98 0 0 0 36.720703 50.226562 L 37.521484 46.160156 A 15.292 15.292 0 0 0 41.5 43.875 L 45.447266 45.210938 A 0.98 0.98 0 0 0 46.576172 44.794922 L 50.376953 38.205078 A 0.98 0.98 0 0 0 50.167969 37.017578 L 47.021484 34.257812 C 47.132484 33.516813 47.199219 32.771 47.199219 32 C 47.199219 31.229 47.132484 30.484141 47.021484 29.744141 L 50.167969 26.984375 A 0.98 0.98 0 0 0 50.376953 25.796875 L 46.576172 19.205078 A 0.98 0.98 0 0 0 45.447266 18.789062 L 41.5 20.126953 A 15.294 15.294 0 0 0 37.521484 17.839844 L 36.720703 13.771484 A 0.98 0.98 0 0 0 35.800781 13 L 28.111328 13 z M 32 23.998047 L 32 24 A 8 8 0 1 1 32 39.998047 A 8 8 0 0 1 32 23.998047 z "
-       style="fill:#c07700;fill-opacity:1" />
+       id="path2"
+       style="opacity:1;fill:#fc3f40;stroke-width:0.14474;stroke-linejoin:round;fill-opacity:1"
+       d="m 19.441511,21.499106 -2.614123,4.201111 H 34.0372 l 2.633895,-4.201111 z m 20.750693,0.04006 -10.532839,16.771573 H 17.975999 l 2.695468,-4.204678 h 7.002563 l 2.674861,-4.20266 H 14.160264 l -2.674265,4.20266 H 15.32103 L 10,42.500894 h 22.205966 l 8.201911,-12.934636 2.990561,4.539801 h -2.696531 l -2.55375,4.204678 h 7.985285 l 2.77276,4.190157 H 54 Z" />
   </g>
 </svg>
