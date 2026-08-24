@@ -1,20 +1,19 @@
 require 'rake/testtask'
-require 'rdoc'
-require 'rdoc/store'
-require 'rdoc/parser/ruby'
-require 'rdoc/options'
-require 'rdoc/stats'
 
 TASKS_DIR = File.join(__dir__, 'scripts', 'tasks')
 
+# First line of the script's header comment, used as the task description.
 def rake_desc(path)
-  options = RDoc::Options.new
-  store   = RDoc::Store.new(options)
-  top     = store.add_file(path)
-  stats   = RDoc::Stats.new(store, 0)
-  RDoc::Parser::Ruby.new(top, File.read(path), options, stats).scan
-  text = top.comment&.text.to_s.strip
-  text.empty? ? nil : text.lines.first.strip
+  File.foreach(path) do |line|
+    next if line.start_with?('#!')
+    stripped = line.strip
+    next if stripped.empty?
+    break unless stripped.start_with?('#')
+
+    text = stripped.sub(/\A#+\s*/, '')
+    return text unless text.empty?
+  end
+  nil
 end
 
 def define_task(task_name, script_path)
