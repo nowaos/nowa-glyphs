@@ -7,8 +7,8 @@
    image-rendering="optimizeSpeed"
    version="1.1"
    viewBox="0 0 64 64"
-   sodipodi:docname="office-calendar.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="org.gnome.Calendar.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -76,11 +75,11 @@
        gradientTransform="translate(131.5 -.51)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#dee0e2"
+         stop-color="#dadde2"
          offset="0"
          id="stop1" />
       <stop
-         stop-color="#f1f3f5"
+         stop-color="#f3f3f3"
          stop-opacity=".99608"
          offset="1"
          id="stop2" />
@@ -267,31 +266,27 @@
      word-spacing="0px"
      id="art">
     <text
-       x="31.645834"
-       y="17.776049"
-       fill="#323232"
-       font-size="1.6584px"
-       stroke-width="0.156702"
-       style="font-size:10.6667px;line-height:1.25;text-align:center;letter-spacing:0.5px;text-anchor:middle;fill:#ed333b;fill-opacity:1"
        xml:space="preserve"
-       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:30.6667px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans Semi-Bold';text-align:center;letter-spacing:1.00000001px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:1;fill:#3a3a3a;fill-opacity:1;stroke-width:2;stroke-linecap:round;paint-order:stroke fill markers"
+       x="31.861988"
+       y="47.785847"
+       id="lbl-date"
        transform="matrix(0.26457826,0,0,0.26457826,0.40956715,0.57916182)"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inter;-inkscape-font-specification:'Inter Medium';letter-spacing:0.5px;fill:#ed333b;fill-opacity:1;stroke-width:0.156702"
-         id="tspan3">WED</tspan></text>
+         sodipodi:role="line"
+         id="tspan1"
+         x="32.861988"
+         y="47.785847"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:30.6667px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans Medium';fill:#3a3a3a;fill-opacity:1;letter-spacing:1.00000001px">27</tspan></text>
     <text
-       x="4.088449"
-       y="13.222259"
-       fill="#009bff"
-       font-size="8.0661px"
-       stroke-width="0.20165"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:1.25;font-family:Inter;-inkscape-font-specification:'Inter Medium';letter-spacing:0.529157px;fill:#323232;fill-opacity:1"
+       x="8.9339266"
+       y="5.2823176"
+       fill="#3a3a3a"
+       font-size="1.6584px"
+       stroke-width="0.0414599"
+       style="font-size:2.82218px;line-height:1.25;text-align:center;letter-spacing:0.132289px;text-anchor:middle;fill:#ef3031;fill-opacity:1"
        xml:space="preserve"
-       id="text2">    <tspan
-   x="4.088449"
-   y="13.222259"
-   fill="#009bff"
-   stroke-width="0.20165"
-   id="tspan2"
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inter;-inkscape-font-specification:'Inter Medium';letter-spacing:0.529157px;fill:#323232;fill-opacity:1">27</tspan>    </text>
+       id="lbl-weekday"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';letter-spacing:0.132289px;fill:#ef3031;fill-opacity:1;stroke-width:0.0414599"
+         id="tspan3">WED</tspan></text>
   </g>
 </svg>

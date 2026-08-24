@@ -5,8 +5,8 @@
    version="1.1"
    viewBox="0 0 64 64"
    id="svg3"
-   sodipodi:docname="org.gnome.Console.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="org.gnome.Console.v2.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -44,11 +44,11 @@
        gradientTransform="translate(131.499,-0.51)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#1d2123"
+         stop-color="#191919"
          offset="0"
          id="stop1" />
       <stop
-         stop-color="#33393e"
+         stop-color="#353b44"
          stop-opacity=".99608"
          offset="1"
          id="stop2" />
@@ -76,7 +76,7 @@
          offset="0"
          id="stop3-3" />
       <stop
-         stop-color="#323232"
+         stop-color="#3a3a3a"
          stop-opacity=".99608"
          offset="1"
          id="stop4-6" />
@@ -90,16 +90,16 @@
        gradientTransform="matrix(1.0000071,0,0,1.0000071,131.50352,-0.50986828)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#96aab4"
+         stop-color="#adb1b8"
          offset="0"
          id="stop3"
-         style="stop-color:#5e5c64;stop-opacity:1;" />
+         style="stop-color:#5b6068;stop-opacity:1;" />
       <stop
-         stop-color="#a0b4c3"
+         stop-color="#adb1b8"
          stop-opacity=".99608"
          offset="1"
          id="stop5"
-         style="stop-color:#3d3846;stop-opacity:1;" />
+         style="stop-color:#353b44;stop-opacity:1;" />
     </linearGradient>
     <radialGradient
        id="gradient_ds_br"
@@ -240,16 +240,16 @@
        gradientTransform="matrix(1.0000071,0,0,1.0000071,131.50352,-0.50986828)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#96aab4"
+         stop-color="#adb1b8"
          offset="0"
          id="stop3-7"
-         style="stop-color:#6a7074;stop-opacity:1;" />
+         style="stop-color:#6e737b;stop-opacity:1;" />
       <stop
-         stop-color="#a0b4c3"
+         stop-color="#adb1b8"
          stop-opacity=".99608"
          offset="1"
          id="stop5-5"
-         style="stop-color:#3e4246;stop-opacity:1;" />
+         style="stop-color:#353b44;stop-opacity:1;" />
     </linearGradient>
   </defs>
   <g
@@ -316,19 +316,19 @@
        rx="8" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:none;opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:none;opacity:1;vector-effect:none;fill:#f3f3f3;fill-opacity:1;stroke:none;stroke-width:2.74442;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers"
        x="23.481544"
        y="28.057123"
        id="text1"><tspan
          sodipodi:role="line"
          id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';fill:#f3f3f3;fill-opacity:1;stroke:none;stroke-width:2.74442"
          x="23.481544"
          y="28.057123">&gt;_</tspan></text>
     <path
        d="m 13.483764,28.170316 7.599114,-5.079513 v -1.45129 L 13.483764,16.56 v 1.874582 l 5.885786,3.890262 v 0.08063 l -5.885786,3.890263 z m 11.207189,3.829792 h 9.675263 v -1.632701 h -9.675263 z"
        id="text1-3"
-       style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#000000;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers;fill-opacity:1"
+       style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers"
        aria-label="&gt;_" />
     <path
        d="m 13.483764,27.170224 7.599114,-5.079513 v -1.45129 l -7.599114,-5.079513 v 1.874582 l 5.885786,3.890262 v 0.08063 l -5.885786,3.890263 z m 11.207189,3.829792 h 9.675263 v -1.632701 h -9.675263 z"
@@ -339,13 +339,13 @@
        id="g20">
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:none;vector-effect:none;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:none;vector-effect:none;fill:#f3f3f3;fill-opacity:1;stroke:none;stroke-width:2.74442;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers"
          x="23.481544"
          y="28.057123"
          id="text1-6"><tspan
            sodipodi:role="line"
            id="tspan1-7"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';fill:#f3f3f3;fill-opacity:1;stroke:none;stroke-width:2.74442"
            x="23.481544"
            y="28.057123">$_</tspan></text>
       <path
@@ -356,7 +356,7 @@
       <path
          d="m 13.000001,25.759248 c 0.94737,0.826429 2.418816,1.45129 3.849949,1.592387 v 2.922736 h 1.390819 v -2.963049 c 2.156778,-0.262039 3.52744,-1.531917 3.52744,-3.265402 0,-3.688694 -6.268765,-3.305715 -6.268765,-5.321395 0,-0.927213 0.765959,-1.491603 1.995523,-1.491603 1.290036,0 1.995524,0.423293 2.922736,1.128781 L 21.4457,17.192608 c -0.806272,-0.806272 -1.753641,-1.431132 -3.204931,-1.57223 V 12.999994 H 16.84995 v 2.640541 c -1.975367,0.241881 -3.285558,1.410976 -3.285558,3.124304 0,3.547596 6.248607,3.14446 6.248607,5.422179 0,0.927212 -0.765958,1.552073 -2.176934,1.552073 -1.45129,0 -2.660698,-0.604704 -3.729008,-1.350505 z m 11.690952,5.240768 h 9.675263 v -1.632701 h -9.675263 z"
          id="text1-4"
-         style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;display:none;fill:#e6e6e6;fill-opacity:1;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers"
+         style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;display:none;fill:#dadde2;fill-opacity:1;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers"
          aria-label="$_" />
     </g>
   </g>
