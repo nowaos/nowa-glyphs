@@ -2,7 +2,7 @@ require_relative '../test_helper'
 
 describe 'fix:recolor' do
   include TestHelper
-  let(:script) { 'tasks/fix/recolor.rb' }
+  let(:script) { 'tasks/fix/normalize_color.rb' }
 
   it 'should create a version for off-palette icon' do
     path = copy_fixture('dirty.svg')

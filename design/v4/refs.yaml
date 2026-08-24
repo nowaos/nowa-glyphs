@@ -1,0 +1,6 @@
+backgrounds:
+  light: ['#f3f3f3', '#dadde2']
+  dark: ['#353b44', '#292929']
+
+remap:
+  '#329bff': '#408eff'

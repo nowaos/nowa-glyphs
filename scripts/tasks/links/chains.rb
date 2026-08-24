@@ -2,8 +2,8 @@
 # Prints the alias chain for a symlink or all symlinks in a directory.
 #
 # Usage:
-#   rake support:link_chain links/apps/scalable/google-calculator/chrome-calculator.svg
-#   rake support:link_chain links/apps/scalable/google-calculator
+#   rake links:chains links/apps/scalable/google-calculator/chrome-calculator.svg
+#   rake links:chains links/apps/scalable/google-calculator
 
 require 'set'
 
@@ -13,7 +13,7 @@ links_root = File.join(root, 'links')
 ARGV.delete('--')
 show_ls = ARGV.delete('--ls')
 targets  = ARGV
-abort "Usage: rake support:link_chain [-- --ls] <path> [<path> ...]" if targets.empty?
+abort "Usage: rake links:chains [-- --ls] <path> [<path> ...]" if targets.empty?
 
 def size_dir(path, links_root)
   rel   = path.delete_prefix(links_root + '/')

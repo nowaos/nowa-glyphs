@@ -4,7 +4,7 @@ require 'nokogiri'
 class SvgTracker
   IGNORED_TAGS = %w[defs metadata namedview]
 
-  attr_reader :path
+  attr_reader :path, :doc
 
   def initialize(path)
     @path = path
