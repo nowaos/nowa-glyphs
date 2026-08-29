@@ -5,22 +5,28 @@
 # bottom-left (second color, darker). Any gradient the #bg used before is
 # dropped from defs. Overwrites the original file.
 #
+# Takes a single SVG file (not a directory).
+#
 # Usage:
-#   rake apps:set_bg -- src/apps/scalable/_internet --dark
 #   rake apps:set_bg -- src/apps/scalable/_internet/uget.svg --light
-#   rake apps:set_bg -- src/apps/scalable --dark --multiline
+#   rake apps:set_bg -- src/apps/scalable/_internet/uget.svg --dark --multiline
 
 require 'yaml'
 require 'nokogiri'
-require_relative '../../core/icon_preprocessor'
+require_relative '../../core/cli'
+require_relative '../../core/paths'
+require_relative '../../lib/svg_tracker'
 
-ROOT  = File.expand_path('../../..', __dir__)
-REFS  = File.join(ROOT, 'design/v4/refs.yaml')
+REFS  = Paths::ROOT / 'design/v4/refs.yaml'
 BG_ID = 'bg'
 
-args  = IconPreprocessor::Args.new
-theme = %w[light dark].find { |t| args.includes?(t) }
-abort 'Usage: rake apps:set_bg -- <path> --light|--dark' unless theme
+cli   = Cli.parse(ARGV, flags: %i[light dark indent multiline])
+theme = %w[light dark].find { |t| cli.flag?(t) }
+abort 'Usage: rake apps:set_bg -- <file.svg> --light|--dark' unless theme && cli.path
+
+target = Paths.absolute(cli.path)
+abort "Error: '#{cli.path}' is not a file" unless File.file?(target)
+abort "Error: '#{cli.path}' is a symlink" if File.symlink?(target)
 
 backgrounds = YAML.load_file(REFS)['backgrounds'] || {}
 stops       = backgrounds[theme]
@@ -90,25 +96,14 @@ def repaint_bg!(doc)
   id
 end
 
-indent    = args.includes?('indent') || args.includes?('multiline')
-multiline = args.includes?('multiline')
-changed   = 0
-skipped   = 0
+indent    = cli.multiline? || cli.indent?
+multiline = cli.multiline?
+rel       = Paths.relative(target)
 
-IconPreprocessor.each do |_builder, tracker|
-  rel = tracker.path.sub("#{ROOT}/", '')
-  id  = repaint_bg!(tracker.doc)
+tracker = SvgTracker.new(target)
+id      = repaint_bg!(tracker.doc)
+abort "Error: #{rel} has no ##{BG_ID}" if id.nil?
 
-  if id.nil?
-    warn "skipped  #{rel} (no ##{BG_ID})"
-    skipped += 1
-    next
-  end
-
-  tracker.clean_defs!
-  tracker.save(indent: indent, multiline: multiline)
-  puts "#{theme.ljust(5)}  #{rel}  ##{id}"
-  changed += 1
-end
-
-puts "Done. #{changed} file(s) updated#{skipped.zero? ? '' : ", #{skipped} skipped"}."
+tracker.clean_defs!
+tracker.save(indent: indent, multiline: multiline)
+puts "#{theme.ljust(5)}  #{rel}  ##{id}"

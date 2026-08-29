@@ -7,9 +7,7 @@ Domain-agnostic classes. Can be used and tested in isolation.
 - `svg_tracker.rb` — SVG parsing and manipulation (Nokogiri wrapper)
 
 ## core/
-Domain-aware orchestration. Knows where icons live and how the theme is structured. Depends on `lib/`.
-
-- `icon_preprocessor.rb` — batch file processing with `Builder`/`Args` API
+Domain-aware building blocks. Know where icons live and how the theme is structured. Depend on `lib/`. A task composes the ones it needs instead of inheriting a single batch helper.
 
 ## tasks/
 All runnable tasks live here, organized by namespace. Use Rake to list or run them:

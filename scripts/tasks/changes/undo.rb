@@ -6,19 +6,17 @@
 #   rake changes:undo <path> --dry-run # preview only
 
 require 'fileutils'
+require_relative '../../core/cli'
+require_relative '../../core/paths'
+require_relative '../../core/version'
 
-ROOT    = File.expand_path('../../..', __dir__)
-dry_run = ARGV.include?('--dry-run')
+cli = Cli.parse(ARGV, flags: %i[dry_run])
+abort 'Error: path argument required (file or directory)' unless cli.path
 
-arg = ARGV.reject { |a| a.start_with?('-') }.first
-abort 'Error: path argument required (file or directory)' unless arg
+target = Paths.absolute(cli.path)
+abort "Error: '#{cli.path}' not found" unless File.exist?(target)
 
-target = File.absolute_path?(arg) ? arg : File.join(ROOT, arg)
-abort "Error: '#{arg}' not found" unless File.exist?(target)
-
-pattern = File.directory?(target) ? File.join(target, '**', '*.svg') : target
-
-versioned = Dir.glob(pattern).select { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
+versioned = Version.list_in(target)
 
 if versioned.empty?
   puts 'Nothing to undo.'
@@ -26,8 +24,8 @@ if versioned.empty?
 end
 
 versioned.each do |f|
-  rel = f.delete_prefix("#{ROOT}/")
-  if dry_run
+  rel = Paths.relative(f)
+  if cli.dry_run?
     puts "[dry-run] delete #{rel}"
   else
     FileUtils.rm(f)
@@ -35,4 +33,4 @@ versioned.each do |f|
   end
 end
 
-puts "\n#{dry_run ? '[dry-run] ' : ''}#{versioned.size} versioned file(s) removed."
+puts "\n#{cli.dry_run? ? '[dry-run] ' : ''}#{versioned.size} versioned file(s) removed."

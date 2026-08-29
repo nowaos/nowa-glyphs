@@ -10,21 +10,23 @@
 #   rake fix:normalize_color src/... -m design/v5/refs.yaml               # refs file with the remap
 
 require 'yaml'
-require_relative '../../core/icon_preprocessor'
+require_relative '../../core/cli'
+require_relative '../../core/paths'
+require_relative '../../core/sources'
+require_relative '../../core/version'
+require_relative '../../lib/svg_tracker'
 require_relative '../../lib/palette'
 
-ROOT            = File.expand_path('../../..', __dir__)
-DEFAULT_PALETTE = File.join(ROOT, 'design/v4/palette.yaml')
-DEFAULT_REFS    = File.join(ROOT, 'design/v4/refs.yaml')
+DEFAULT_PALETTE = Paths::ROOT / 'design/v4/palette.yaml'
+DEFAULT_REFS    = Paths::ROOT / 'design/v4/refs.yaml'
 
-args = IconPreprocessor::Args.new
-palette_path = args.fetch('P') || DEFAULT_PALETTE
-palette = Palette.load(palette_path)
+cli     = Cli.parse(ARGV, flags: %i[indent multiline], values: %i[scope v tag P m])
+palette = Palette.load(cli.value(:P) || DEFAULT_PALETTE)
 
 # Forced overrides live under `remap:` in the refs file, alongside the
 # backgrounds apps:set_bg reads. -m points at a different refs file.
-if (refs_path = args.fetch('m'))
-  refs_path = File.absolute_path?(refs_path) ? refs_path : File.join(ROOT, refs_path)
+if (refs_path = cli.value(:m))
+  refs_path = Paths.absolute(refs_path)
   abort "Refs file not found: #{refs_path}" unless File.exist?(refs_path)
 else
   refs_path = DEFAULT_REFS
@@ -35,16 +37,24 @@ remap = (raw['remap'] || {})
         .transform_keys { |k| "##{k.to_s.downcase.delete_prefix('#')}" }
         .transform_values { |v| "##{v.to_s.downcase.delete_prefix('#')}" }
 
-IconPreprocessor.each(summary: true, abort_if_versioned: true) do |builder, tracker|
-  scope  = builder.args.fetch('scope')
-  colors = scope ? tracker.colors_in(scope.split(',')) : tracker.all_colors
+files = Sources.resolve(cli.path, fallback: Paths::SRC).reject_symlinks!
+
+adding = cli.value(:v) || cli.value(:tag)
+adding ? files.reject_versions! : Version.assert_clean!(files.to_a)
+
+fmt     = { indent: cli.multiline? || cli.indent?, multiline: cli.multiline? }
+scope   = cli.value(:scope)
+created = 0
+
+files.each do |path|
+  tracker = SvgTracker.new(path)
+  colors  = scope ? tracker.colors_in(scope.split(',')) : tracker.all_colors
   next if colors.empty?
 
   mapping = palette.map_to_closest(colors)
   mapping.merge!(remap.slice(*mapping.keys))
 
-  root = File.expand_path('../../..', __dir__)
-  rel  = Pathname.new(tracker.path).relative_path_from(root)
+  rel = Paths.relative(path)
   puts "\e[32m[#{rel}]\e[0m"
   swatch = ->(hex) {
     r, g, b = hex[1..].scan(/../).map { |c| c.to_i(16) }
@@ -57,5 +67,8 @@ IconPreprocessor.each(summary: true, abort_if_versioned: true) do |builder, trac
   puts
 
   tracker.replace_colors!(mapping)
-  builder.create_version
+  tracker.save(Version.dest(path, tag: cli.value(:tag), n: cli.value(:v)&.to_i), **fmt)
+  created += 1
 end
+
+puts "Done. #{created} file(s) processed."

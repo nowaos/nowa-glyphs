@@ -10,36 +10,18 @@
 #   rake changes:apply <path> -v 2      # apply a specific version when multiple exist
 
 require 'fileutils'
+require_relative '../../core/cli'
+require_relative '../../core/paths'
+require_relative '../../core/version'
 
-ROOT = File.expand_path('../../..', __dir__)
+cli     = Cli.parse(ARGV, flags: %i[dry_run], values: %i[v])
+force_v = cli.value(:v)&.to_i
+abort 'Error: path argument required (file or directory)' unless cli.path
 
-argv    = ARGV.dup
-v_idx   = argv.index('-v')
-force_v = if v_idx
-  val = argv.delete_at(v_idx + 1)&.to_i
-  argv.delete_at(v_idx)
-  val
-end
-dry_run = argv.delete('--dry-run')
-arg     = argv.reject { |a| a.start_with?('-') }.first
+target = Paths.absolute(cli.path)
+abort "Error: '#{cli.path}' not found" unless File.exist?(target)
 
-abort 'Error: path argument required (file or directory)' unless arg
-
-target = File.absolute_path?(arg) ? arg : File.join(ROOT, arg)
-abort "Error: '#{arg}' not found" unless File.exist?(target)
-
-pattern = if File.file?(target)
-  target.sub(/\.svg\z/, '') + '.v*.svg'
-else
-  File.join(target, '**', '*.svg')
-end
-
-versioned = Dir.glob(pattern).select { |f| File.basename(f).match?(/\.v\d+\.svg\z/) }
-
-groups = versioned.group_by { |f|
-  base = File.basename(f, '.svg').sub(/\.v\d+\z/, '')
-  File.join(File.dirname(f), "#{base}.svg")
-}
+groups = Version.groups_in(target)
 
 if groups.empty?
   puts 'Nothing to apply.'
@@ -49,11 +31,10 @@ end
 conflicts = groups.select { |_, versions| versions.size > 1 }
 
 if conflicts.any? && !force_v
-  puts "Error: multiple versions exist — pass -v N to choose which to apply:"
+  puts 'Error: multiple versions exist — pass -v N to choose which to apply:'
   conflicts.each do |orig, versions|
-    sorted = versions.sort_by { |f| File.basename(f, '.svg').match(/\.v(\d+)\z/)[1].to_i }
-    puts "  #{orig.delete_prefix("#{ROOT}/")}:"
-    sorted.each { |f| puts "    #{f.delete_prefix("#{ROOT}/")}" }
+    puts "  #{Paths.relative(orig)}:"
+    versions.each { |f| puts "    #{Paths.relative(f)}" }
   end
   exit 1
 end
@@ -66,31 +47,27 @@ groups.each do |orig, versions|
     next
   end
 
-  sorted = versions.sort_by { |f| File.basename(f, '.svg').match(/\.v(\d+)\z/)[1].to_i }
-
-  chosen = if sorted.size == 1
-    sorted.first
-  else
-    match = sorted.find { |f| File.basename(f, '.svg').end_with?(".v#{force_v}") }
-    unless match
-      warn "Warning: v#{force_v} not found for #{File.basename(orig)}, skipping."
-      next
+  chosen =
+    if versions.size == 1
+      versions.first
+    else
+      match = versions.find { |f| Version.number_of(f) == force_v }
+      unless match
+        warn "Warning: v#{force_v} not found for #{File.basename(orig)}, skipping."
+        next
+      end
+      match
     end
-    match
-  end
 
-  rel_orig   = orig.delete_prefix("#{ROOT}/")
-  rel_chosen = chosen.delete_prefix("#{ROOT}/")
-
-  if dry_run
-    puts "[dry-run] #{rel_chosen} → #{rel_orig}"
-    sorted.each { |v| puts "[dry-run] delete #{v.delete_prefix("#{ROOT}/")}" }
+  if cli.dry_run?
+    puts "[dry-run] #{Paths.relative(chosen)} → #{Paths.relative(orig)}"
+    versions.each { |v| puts "[dry-run] delete #{Paths.relative(v)}" }
   else
     FileUtils.cp(chosen, orig)
-    sorted.each { |v| FileUtils.rm(v) }
+    versions.each { |v| FileUtils.rm(v) }
     puts "✓ #{File.basename(chosen)} → #{File.basename(orig)}"
     promoted += 1
   end
 end
 
-puts "\nDone. #{promoted} file(s) promoted." unless dry_run
+puts "\nDone. #{promoted} file(s) promoted." unless cli.dry_run?
