@@ -92,6 +92,9 @@ media:
   io.gitlab.adhami3310.Footage:
     fallback: curlew
     aliases: false
+  stremio:  # media streaming center
+    fallback: mpv
+    aliases: false
   io.github.celluloid_player.Celluloid:  # media player
     fallback: gnome-mpv
     aliases:
