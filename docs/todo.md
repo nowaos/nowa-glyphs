@@ -119,7 +119,7 @@ office:
     aliases: false
   io.github.diegoivan.pdf_metadata_editor:
     aliases: false
-  fbreader:  # ebook reader
+  fbreader:  # ebook reader, colloid -> calibre
     fallback: calibre-gui
     aliases:
       - FBReader.svg
