@@ -1,7 +1,7 @@
 require_relative 'paths'
 
 # Canonical icon fragments under design/templates/apps/ (e.g. the drop-shadow
-# group merged in by fix:update_shadows).
+# group merged in by fix:normalize_shadow).
 
 module Template
   module_function

@@ -5,13 +5,13 @@
 # Formula: rx_inner = rx_outer - (outer_size - inner_size) / 2
 #
 # Usage:
-#   rake support:calc_inner_rx -- 48
+#   rake design:inner_rx -- 48
 
 OUTER_SIZE = 55
 OUTER_RX   = 10
 
 ARGV.delete('--')
-abort "Usage: rake support:calc_inner_rx -- <inner_size>" if ARGV.empty?
+abort "Usage: rake design:inner_rx -- <inner_size>" if ARGV.empty?
 
 inner = ARGV[0].to_f
 padding = (OUTER_SIZE - inner) / 2.0

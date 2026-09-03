@@ -1,8 +1,8 @@
 require_relative '../test_helper'
 
-describe 'fix:update_shadows' do
+describe 'fix:normalize_shadow' do
   include TestHelper
-  let(:script) { 'tasks/fix/update_shadows.rb' }
+  let(:script) { 'tasks/fix/normalize_shadow.rb' }
 
   it 'should create a versioned file for square icon' do
     path = copy_fixture('square.svg')

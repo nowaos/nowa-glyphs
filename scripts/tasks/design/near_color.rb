@@ -5,10 +5,10 @@
 # (wl-copy).
 #
 # Usage:
-#   rake support:near_color -- "#4a90d9"
-#   rake support:near_color -- 4a90d9          # # is optional
-#   rake support:near_color                    # hex comes from the clipboard
-#   rake support:near_color -- 4a90d9 -P design/v4/palette.yaml
+#   rake design:near_color -- "#4a90d9"
+#   rake design:near_color -- 4a90d9          # # is optional
+#   rake design:near_color                    # hex comes from the clipboard
+#   rake design:near_color -- 4a90d9 -P design/v4/palette.yaml
 
 require_relative '../../lib/palette'
 
@@ -42,7 +42,7 @@ rescue Errno::ENOENT
 end
 
 from_clipboard = ARGV.empty?
-inputs         = from_clipboard ? [clipboard_read] : ARGV.dup
+input          = from_clipboard ? clipboard_read : ARGV.first
 
 palette = Palette.load(palette_path)
 
@@ -51,18 +51,13 @@ swatch = ->(hex) {
   "\e[48;2;#{r};#{g};#{b}m  \e[0m"
 }
 
-inputs.each do |arg|
-  hex = "##{arg.strip.delete_prefix('#').downcase}"
-  unless hex.match?(/\A#[0-9a-f]{6}\z/)
-    puts "  #{hex}: invalid hex"
-    next
-  end
+hex = "##{input.strip.delete_prefix('#').downcase}"
+abort "  #{hex}: invalid hex" unless hex.match?(/\A#[0-9a-f]{6}\z/)
 
-  nearest = palette.map_to_closest([hex])[hex]
-  code    = palette.code_for(nearest)
-  label   = code ? " (#{code})" : ''
+nearest = palette.map_to_closest([hex])[hex]
+code    = palette.code_for(nearest)
+label   = code ? " (#{code})" : ''
 
-  puts "  #{swatch.(hex)} #{hex}  →  #{swatch.(nearest)} #{nearest}#{label}"
+puts "  #{swatch.(hex)} #{hex}  →  #{swatch.(nearest)} #{nearest}#{label}"
 
-  clipboard_write(nearest) if from_clipboard
-end
+clipboard_write(nearest) if from_clipboard

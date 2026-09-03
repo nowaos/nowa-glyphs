@@ -3,9 +3,9 @@
 # Writes the JS file alongside the YAML (same directory).
 #
 # Usage:
-#   rake support:generate_palette_js design/v7/palette.yaml
-#   rake support:generate_palette_js design/v7
-#   rake support:generate_palette_js design/v7 design/v8 design/v8_2
+#   rake design:update_palette_js design/v7/palette.yaml
+#   rake design:update_palette_js design/v7
+#   rake design:update_palette_js design/v7 design/v8 design/v8_2
 
 require 'yaml'
 

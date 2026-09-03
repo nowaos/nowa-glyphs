@@ -2,9 +2,9 @@
 # Creates a new versioned file (e.g. icon.v2.svg) — never edits the original.
 #
 # Usage:
-#   rake fix:update_shadows                                                          # all icons in src/apps/scalable/
-#   rake fix:update_shadows src/apps/scalable/gnome-core                             # one category
-#   rake fix:update_shadows src/apps/scalable/gnome-core/org.gnome.Clocks.svg        # one icon
+#   rake fix:normalize_shadow                                                        # all icons in src/apps/scalable/
+#   rake fix:normalize_shadow src/apps/scalable/gnome-core                           # one category
+#   rake fix:normalize_shadow src/apps/scalable/gnome-core/org.gnome.Clocks.svg      # one icon
 
 require_relative '../../core/cli'
 require_relative '../../core/paths'

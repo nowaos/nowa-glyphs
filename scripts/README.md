@@ -25,7 +25,7 @@ Namespaces are named after what the task acts on, not what it does:
 - `changes/` — promote or discard the versioned (`.vN`) files a task produced
 - `fix/` — mechanical corrections applied in bulk across many files
 - `links/` — inspect or create the symlinks under `links/`
-- `support/` — calculations and generated artifacts for design work
+- `design/` — calculations and generated artifacts for design work (plus the top-level `design` task, which opens the design system in a browser)
 
 `fix/` and `apps/` both write to icons; the line between them is scope. A task that
 sweeps a directory correcting the same thing everywhere belongs in `fix/`; a task
