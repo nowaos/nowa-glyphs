@@ -221,6 +221,29 @@ terminals:
   com.raggesilver.BlackBox:  # terminal
     fallback: maui-station
     aliases: false
+
+settings:  # sobreviventes da auditoria _preferences (docs/audit.md)
+  org.gnome.ColorViewer:  # Color Profile Viewer (hughsie) — os 3 abaixo usam a mesma arte na loja
+    fallback: preferences-color
+    aliases:
+      - gnome-color-manager.svg
+      - org.gnome.ColorProfileViewer.svg
+  displaycal:  # DisplayCAL — calibração de monitor (wxWidgets, multiplataforma)
+    fallback: system-config-displaycal
+    aliases:
+      - net.displaycal.DisplayCAL.svg
+  codes.merritt.FeelingFinder:  # seletor de emoji
+    fallback: preferences-desktop-emoticons
+    aliases: false
+  io.github.halfmexican.Mingle:  # combinador de emoji — alias atual tem prefixo errado (com.github)
+    aliases:
+      - com.github.halfmexican.Mingle.svg
+  it.mijorus.smile:  # seletor de emoji
+    aliases: false
+  org.gnome.Tecla:  # visualizador de layout de teclado (padrão do GNOME 45+)
+    fallback: preferences-desktop-keyboard
+    aliases:
+      - tecla.svg
 ```
 
 Redesenhar ícones:
