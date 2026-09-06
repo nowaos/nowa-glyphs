@@ -2,6 +2,8 @@
 # Lists symlink names in links/ whose target matches the given filename(s).
 #
 # With --add, creates the given aliases pointing at a single icon instead.
+# With --rm, deletes every alias pointing at the given icon(s) and removes the
+# emptied directory.
 # The .svg suffix is optional everywhere.
 #
 # Usage:
@@ -9,6 +11,8 @@
 #   rake links:aliases -- browser-tor.svg midori.svg
 #   rake links:aliases -- protonvpn-logo --add com.protonvpn.www
 #   rake links:aliases -- protonvpn-logo --add com.protonvpn.www protonvpn.svg
+#   rake links:aliases -- minetime --rm
+#   rake links:aliases -- minetime almond --rm
 
 require 'fileutils'
 
@@ -21,6 +25,7 @@ ARGV.delete('--')
 USAGE = <<~TXT
   Usage: rake links:aliases -- <filename.svg> [<filename.svg> ...]
          rake links:aliases -- <icon> --add <alias> [<alias> ...]
+         rake links:aliases -- <icon> [<icon> ...] --rm
 TXT
 
 svg = ->(name) { "#{File.basename(name.to_s, '.svg')}.svg" }
@@ -31,11 +36,13 @@ aliases_of = lambda do |target|
   end
 end
 
+remove    = ARGV.delete('--rm')
 split     = ARGV.index('--add')
 targets   = split ? ARGV[0...split] : ARGV
 new_names = split ? ARGV[(split + 1)..].to_a : nil
 
 abort USAGE if targets.empty? || (new_names && new_names.empty?)
+abort '--rm and --add are mutually exclusive' if remove && new_names
 
 # --- create mode -----------------------------------------------------------
 if new_names
@@ -74,6 +81,38 @@ if new_names
     File.symlink(svg.(icon), link)
     puts "created  #{icon}/#{svg.(name)} -> #{svg.(icon)}"
   end
+  exit
+end
+
+# --- remove mode ---------------------------------------------------------
+if remove
+  removed = 0
+
+  targets.each do |target|
+    target  = svg.(target)
+    matches = aliases_of.(target).sort
+
+    if matches.empty?
+      puts "#{target}: (no aliases)"
+      next
+    end
+
+    dirs = matches.map { |m| File.dirname(m) }.uniq
+    matches.each do |m|
+      File.delete(m)
+      puts "removed  #{m.delete_prefix(links_root + '/')}"
+      removed += 1
+    end
+
+    dirs.each do |dir|
+      next unless Dir.empty?(dir)
+
+      Dir.rmdir(dir)
+      puts "rmdir    #{dir.delete_prefix(links_root + '/')}"
+    end
+  end
+
+  puts "#{removed} symlink(s) removed"
   exit
 end
 
