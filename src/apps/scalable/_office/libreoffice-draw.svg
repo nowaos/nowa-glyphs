@@ -22,7 +22,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:current-layer="art"
-     showgrid="false">
+     showgrid="true">
     <inkscape:grid
        id="grid19"
        units="px"
@@ -36,7 +36,7 @@
        opacity="0.14901961"
        empspacing="2"
        enabled="true"
-       visible="false" />
+       visible="true" />
   </sodipodi:namedview>
   <defs
      id="defs11367">
@@ -230,28 +230,6 @@
          offset="1"
          id="stop2-7" />
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1"
-       id="linearGradient18"
-       x1="49"
-       y1="15"
-       x2="46"
-       y2="18"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(2,-2)" />
-    <linearGradient
-       id="linearGradient1"
-       inkscape:collect="always">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.60000002;"
-         offset="0"
-         id="stop17" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.40000001;"
-         offset="0.24599358"
-         id="stop18" />
-    </linearGradient>
   </defs>
   <g
      id="ds"
@@ -309,7 +287,7 @@
      id="art">
     <g
        id="glyph"
-       transform="matrix(-1.9999967,0,0,1.9999967,43.99998,97.999878)">
+       transform="matrix(-1.9999967,0,0,1.9999967,43.99998,95.999878)">
       <circle
          cx="2"
          cy="-33"
@@ -326,8 +304,8 @@
          id="path6-12" />
     </g>
     <path
-       id="sheet-split"
-       style="display:inline;fill:url(#linearGradient18);fill-opacity:1;stroke-width:2.74436;stroke-linecap:round"
-       d="m 36.5,4.5 23,23 v -6 l -17,-17 z" />
+       id="ear"
+       style="opacity:0.2;fill:#000000;fill-opacity:1;stroke-width:2.74436;stroke-linecap:round"
+       d="m 39.5,4.5 20,20 v -10 c 0,-5.54 -4.46,-10 -10,-10 z" />
   </g>
 </svg>

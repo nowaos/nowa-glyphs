@@ -214,28 +214,6 @@
          offset="1"
          id="stop2-3" />
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1"
-       id="linearGradient18"
-       x1="49"
-       y1="15"
-       x2="46"
-       y2="18"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(2,-2)" />
-    <linearGradient
-       id="linearGradient1"
-       inkscape:collect="always">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.60000002;"
-         offset="0"
-         id="stop17" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.40000001;"
-         offset="0.24599358"
-         id="stop18" />
-    </linearGradient>
   </defs>
   <g
      id="ds"
@@ -293,7 +271,7 @@
      id="art">
     <g
        id="glyph"
-       transform="matrix(2,0,0,2,0,-2)">
+       transform="matrix(2,0,0,2,0,-4)">
       <path
          d="m 9,13 c -0.554,0 -1,0.446 -1,1 v 7 c 0,0.554 0.446,1 1,1 h 6 v -1 h -2 v -1 h 2 v -1 h -2 v -1 h 8 v -4 c 0,-0.554 -0.446,-1 -1,-1 z m 0,1 h 3 v 1 H 9 Z m 4,0 h 3 v 1 h -3 z m 4,0 h 3 v 1 h -3 z m -8,2 h 3 v 1 H 9 Z m 4,0 h 3 v 1 h -3 z m 4,0 h 3 v 1 h -3 z m -8,2 h 3 v 1 H 9 Z m 0,2 h 3 v 1 H 9 Z"
          fill="#fafafa"
@@ -304,8 +282,8 @@
          id="path6-1" />
     </g>
     <path
-       id="sheet-split"
-       style="display:inline;fill:url(#linearGradient18);fill-opacity:1;stroke-width:2.74436;stroke-linecap:round"
-       d="m 36.5,4.5 23,23 v -6 l -17,-17 z" />
+       id="ear"
+       style="opacity:0.25;fill:#000000;fill-opacity:1;stroke-width:2.74436;stroke-linecap:round"
+       d="m 39.5,4.5 20,20 v -10 c 0,-5.54 -4.46,-10 -10,-10 z" />
   </g>
 </svg>
