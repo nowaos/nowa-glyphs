@@ -161,6 +161,8 @@ science:
       - io.github.qalculate.Qalculate.svg
 
 security:
+  app.drey.KeyRack:  # Key Rack — GNOME World, lê/edita segredos do chaveiro (≠ Secrets); ~18k installs, upstream lento (0.6.0, set/2024). Alias removido de org.gnome.World.Secrets
+    aliases: false
   com.onepassword.OnePassword:
     aliases:
       - appimagekit-1password.svg

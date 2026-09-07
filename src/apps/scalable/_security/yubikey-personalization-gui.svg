@@ -5,7 +5,7 @@
    version="1.1"
    id="svg8"
    sodipodi:docname="yubikey-personalization-gui.svg"
-   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -73,11 +73,13 @@
       <stop
          stop-color="#02db96"
          offset="0"
-         id="stop3" />
+         id="stop3"
+         style="stop-color:#72a42d;stop-opacity:1;" />
       <stop
          stop-color="#13d39b"
          offset="1"
-         id="stop4" />
+         id="stop4"
+         style="stop-color:#9aca3c;stop-opacity:1;" />
     </linearGradient>
     <radialGradient
        id="gradient_ds_br"
