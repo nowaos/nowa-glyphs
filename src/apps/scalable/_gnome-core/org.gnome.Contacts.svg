@@ -1791,7 +1791,8 @@
        style="fill:url(#gradient_ds_tl)" />
   </g>
   <g
-     id="under">
+     id="under"
+     style="display:none">
     <g
        id="g3"
        clip-path="url(#clipPath3)"
