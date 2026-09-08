@@ -5,8 +5,8 @@
    version="1.1"
    viewBox="0 0 64 64"
    id="svg3"
-   sodipodi:docname="terminal.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="terminal-2.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -103,13 +103,13 @@
          stop-color="#96aab4"
          offset="0"
          id="stop3"
-         style="stop-color:#6a7074;stop-opacity:1;" />
+         style="stop-color:#6e737b;stop-opacity:1;" />
       <stop
          stop-color="#a0b4c3"
          stop-opacity=".99608"
          offset="1"
          id="stop5"
-         style="stop-color:#3e4246;stop-opacity:1;" />
+         style="stop-color:#3a3a3a;stop-opacity:1;" />
     </linearGradient>
     <radialGradient
        id="gradient_ds_br"
@@ -291,53 +291,18 @@
        x="7"
        height="50"
        width="50"
-       id="bg-6"
+       id="bg-screen"
        style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:url(#linearGradient1);fill-opacity:1;stroke-width:2.7444;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        rx="8" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:none;opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers"
-       x="23.481544"
-       y="28.057123"
-       id="text1"><tspan
-         sodipodi:role="line"
-         id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442"
-         x="23.481544"
-         y="28.057123">&gt;_</tspan></text>
     <path
-       d="m 13.483764,28.170316 7.599114,-5.079513 v -1.45129 L 13.483764,16.56 v 1.874582 l 5.885786,3.890262 v 0.08063 l -5.885786,3.890263 z m 11.207189,3.829792 h 9.675263 v -1.632701 h -9.675263 z"
-       id="text1-3"
-       style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#000000;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers;fill-opacity:1"
+       d="m 13.5,28.110408 7.599114,-5.079513 v -1.45129 L 13.5,16.500092 v 1.874582 l 5.885786,3.890262 v 0.08063 L 13.5,26.235829 Z M 24.707189,31.9402 h 9.675263 v -1.632701 h -9.675263 z"
+       id="prompt-shadow"
+       style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers"
        aria-label="&gt;_" />
     <path
-       d="m 13.483764,27.170224 7.599114,-5.079513 v -1.45129 l -7.599114,-5.079513 v 1.874582 l 5.885786,3.890262 v 0.08063 l -5.885786,3.890263 z m 11.207189,3.829792 h 9.675263 v -1.632701 h -9.675263 z"
-       id="text1-3-2"
-       style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#5fc3e3;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers;fill-opacity:1"
+       d="m 13.5,27.110316 7.599114,-5.079513 v -1.45129 L 13.5,15.5 v 1.874582 l 5.885786,3.890262 v 0.08063 L 13.5,25.235737 Z m 11.207189,3.829792 h 9.675263 v -1.632701 h -9.675263 z"
+       id="prompt"
+       style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;display:inline;fill:#5fc3e3;fill-opacity:1;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers"
        aria-label="&gt;_" />
-    <g
-       id="g20">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:none;vector-effect:none;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke fill markers"
-         x="23.481544"
-         y="28.057123"
-         id="text1-6"><tspan
-           sodipodi:role="line"
-           id="tspan1-7"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:2.74442"
-           x="23.481544"
-           y="28.057123">$_</tspan></text>
-      <path
-         d="m 13.000001,26.759254 c 0.94737,0.826429 2.418816,1.45129 3.849949,1.592387 v 2.922736 h 1.390819 v -2.963049 c 2.156778,-0.262039 3.52744,-1.531917 3.52744,-3.265402 0,-3.688694 -6.268765,-3.305715 -6.268765,-5.321395 0,-0.927213 0.765959,-1.491603 1.995523,-1.491603 1.290036,0 1.995524,0.423293 2.922736,1.128781 L 21.4457,18.192614 c -0.806272,-0.806272 -1.753641,-1.431132 -3.204931,-1.57223 V 14 H 16.84995 v 2.640541 c -1.975367,0.241881 -3.285558,1.410976 -3.285558,3.124304 0,3.547596 6.248607,3.14446 6.248607,5.422179 0,0.927212 -0.765958,1.552073 -2.176934,1.552073 -1.45129,0 -2.660698,-0.604704 -3.729008,-1.350505 z m 11.690952,5.240768 h 9.675263 v -1.632701 h -9.675263 z"
-         id="text1-4-4"
-         style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;display:none;fill:#000000;fill-opacity:1;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers"
-         aria-label="$_" />
-      <path
-         d="m 13.000001,25.759248 c 0.94737,0.826429 2.418816,1.45129 3.849949,1.592387 v 2.922736 h 1.390819 v -2.963049 c 2.156778,-0.262039 3.52744,-1.531917 3.52744,-3.265402 0,-3.688694 -6.268765,-3.305715 -6.268765,-5.321395 0,-0.927213 0.765959,-1.491603 1.995523,-1.491603 1.290036,0 1.995524,0.423293 2.922736,1.128781 L 21.4457,17.192608 c -0.806272,-0.806272 -1.753641,-1.431132 -3.204931,-1.57223 V 12.999994 H 16.84995 v 2.640541 c -1.975367,0.241881 -3.285558,1.410976 -3.285558,3.124304 0,3.547596 6.248607,3.14446 6.248607,5.422179 0,0.927212 -0.765958,1.552073 -2.176934,1.552073 -1.45129,0 -2.660698,-0.604704 -3.729008,-1.350505 z m 11.690952,5.240768 h 9.675263 v -1.632701 h -9.675263 z"
-         id="text1-4"
-         style="font-weight:500;font-size:20.1568px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro Medium';text-align:center;letter-spacing:0px;text-anchor:middle;display:none;fill:#e6e6e6;fill-opacity:1;stroke-width:2.74442;stroke-linecap:round;paint-order:stroke fill markers"
-         aria-label="$_" />
-    </g>
   </g>
 </svg>
